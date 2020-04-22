@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal de Registro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://megacursos.com/themes/megacursos/assets/css/app.css" type="text/css">
+
+    <style>
+        .row {
+            margin: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row h-100">
+            <div class="col-12 d-flex justify-content-center mt-5">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Apachurrale</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- // Register Modal -->
+    <div class="modal-register">
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header m-0">
+                        <img src="https://megacursos.com/themes/megacursos/assets/images/logo.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 col-12 px-5 col-form order-2 order-lg-1">
+                                    <div class="header">
+                                        <h2 class="title-mega">Crea una nueva cuenta gratis</h2>
+                                        <p class="general-info">
+                                            ¿Ya tienes una cuenta?, <a href="#">Haz click aquí</a>.
+                                        </p>
+                                    </div>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-12 col-xl-6">
+                                                <div class="form-group">
+                                                    <label for="inputName">Tu Nombre  <small>*</small></label>
+                                                    <input type="email" class="form-control form-control-lg" id="inputName" aria-describedby="emailHelp">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-6">
+                                                <div class="form-group">
+                                                    <label for="inputLastname">Tu Apellido <small>*</small></label>
+                                                    <input type="email" class="form-control form-control-lg" id="inputLastname" aria-describedby="emailHelp">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="inputEmail">Tu Correo <small>*</small></label>
+                                                    <input type="email" class="form-control form-control-lg" id="inputEmail" aria-describedby="emailHelp">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-6">
+                                                <div class="form-group">
+                                                    <label for="inputPassword">Contraseña  <small>*</small></label>
+                                                    <input type="password" class="form-control form-control-lg" id="inputPassword">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xl-6">
+                                                <div class="form-group">
+                                                    <label for="inputConfirmPassword">Repetir contraseña  <small>*</small></label>
+                                                    <input type="password" class="form-control form-control-lg" id="inputConfirmPassword">
+                                                </div>
+                                            </div>
+                                            <div class="submit">
+                                                <button type="submit" class="btn btn-warning btn-block">Crear cuenta</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-lg-6 col-12 col-benefits order-1 order-lg-2">
+                                    <div class="header">
+                                        <h3>Beneficios de registrarse</h3>
+                                    </div>
+                                    <ul class="benefits-items p-0">
+                                        <li class="benefits-item benefits-item-columns">
+                                            <div class="benefits-header">
+                                                <span class="benefits-icon"><i class="fas fa-check"></i></span>
+                                                <span class="benefits-title">
+                                                Todas las clases gratis
+                                            </span>
+                                            </div>
+                                            <span class="benefits-text">
+                                            Podrás ver de manera gratuita las primeras clases de todos los cursos, para que puedas comenzar tu aprendizaje de cualquier disciplina sin costo. 
+                                        </span>
+                                        </li>
+                                        <li class="benefits-item benefits-item-columns">
+                                            <div class="benefits-header">
+                                                <span class="benefits-icon"><i class="fas fa-check"></i></span>
+                                                <span class="benefits-title">
+                                                Temarios y capturas
+                                            </span>
+                                            </div>
+                                            <span class="benefits-text">
+                                            Tras registrarte recibirás un único email en el que tendrás ordenados los enlaces a todos los temarios, capturas inéditas de cada curso, etc así como información reservada para usuarios registrados. 
+                                        </span>
+                                        </li>
+                                        <li class="benefits-item benefits-item-columns">
+                                            <div class="benefits-header">
+                                                <span class="benefits-icon"><i class="fas fa-check"></i></span>
+                                                <span class="benefits-title">
+                                                Concursos, foro y grupos de Facebook
+                                            </span>
+                                            </div>
+                                            <span class="benefits-text">
+                                            Tras registrarte tendrás acceso a una sección especial con enlaces a diversas webs de servicios gratuitos patrocinados por Megacursos como un foro, páginas de concursos con premios en metálico e incluso grupos de facebook con más de 250,000 usuarios de nuestra propiedad, donde serás recibido como un usuario premium. 
+                                        </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // End Register Modal -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

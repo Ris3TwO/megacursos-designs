@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de clases generales</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://megacursos.com/themes/megacursos/assets/css/app.css" type="text/css">
+</head>
+
+<body>
+
+    <!-- Breadcrumb -->
+    <div class="container-fluid menu-bread mt-5">
+        <div class="megaBreadcrumb nopadding over">
+            <div class="text">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active">
+                            <a class="breadbtn" href="/">Inicio</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a class="breadbtn" href="#">
+                                Primer nivel
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a class="breadbtn" href="#">
+                                Segundo nivel
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a class="breadbtn" href="#">
+                                Tercer nivel
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <!-- Title for sections -->
+            <div class="col-md-6 offset-md-3 px-lg-5">
+                <div class="text-center">
+                    <h2 class="title-mega">Esta es la propiedad <code>.title-mega</code></h2>
+                    <p class="general-info text-center">
+                        Texto centrado con la clase <code>.general-info</code> en un parrafo
+                    </p>
+                </div>
+            </div>
+            <!-- Accordion FAQ -->
+            <div class="col-md-8 offset-md-2 mt-md-3">
+                <div class="accordion accordion-faq" id="accordionFaq">
+                    <div class="card">
+                        <div class="card-header" id="fqOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="header-left">
+                                <h2 class="mb-0">
+                                    ¿Cómo puedo usar este accordion?
+                                </h2>
+                            </div>
+                            <div class="header-right">
+                                <span class="icon-toggle"></span>
+                            </div>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="fqOne" data-parent="#accordionFaq">
+                            <div class="card-body">
+                                <p class="general-info mb-0">
+                                    Simplemente añádelo como cualquier elemento en la página que lo necesites y listo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header collapsed" id="fqTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="header-left">
+                                <h2 class="mb-0">
+                                    Otro accordión
+                                </h2>
+                            </div>
+                            <div class="header-right">
+                                <span class="icon-toggle"></span>
+                            </div>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="fqTwo" data-parent="#accordionFaq">
+                            <div class="card-body">
+                                <p class="general-info mb-0">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolores aspernatur totam doloribus voluptatibus nesciunt, sequi minus aliquam quia impedit consequatur maiores eaque, eveniet nobis, nostrum fuga a nemo molestias.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header collapsed" id="fqThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="header-left">
+                                <h2 class="mb-0">
+                                    Otro accordión
+                                </h2>
+                            </div>
+                            <div class="header-right">
+                                <span class="icon-toggle"></span>
+                            </div>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="fqThree" data-parent="#accordionFaq">
+                            <div class="card-body">
+                                <p class="general-info mb-0">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorum quibusdam illum, possimus amet neque, obcaecati, beatae totam cumque facilis dolores consequuntur porro aliquid omnis optio iste debitis nesciunt excepturi!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 offset-md-3 px-lg-5">
+                <div class="note-block mt-md-5 mx-sm-1 mx-lg-4">
+                    <p class="note-block-info mx-2 mx-lg-4">
+                        <b>Nota:</b> Este es el block con la clase <code>.note-block</code> e <code>.note-block-info</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

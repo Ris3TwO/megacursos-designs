@@ -30,7 +30,7 @@ function scssTask() {
         .pipe(sass()) // compile SCSS to CSS
         .pipe(postcss(plugins)) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-        .pipe(dest('css')); // put final CSS in css folder
+        .pipe(dest('assets/css')); // put final CSS in css folder
 }
 
 function watchTask() {

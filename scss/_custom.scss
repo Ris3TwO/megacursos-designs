@@ -80,11 +80,31 @@ body {
 }
 
 .btn-warning {
-    background-color: #fcc11c;
+    background-color: $terciario;
     color: $blanco;
-    padding: .7rem .75rem;
+    padding: .55rem .75rem;
+    font-weight: 600;
+    border: 2px solid $terciario;
     @include extra-large {
-        font-size: 0.9rem;
+        font-size: 1rem;
+    }
+    &:hover {
+        background-color: darken($terciario, 5);
+        color: $blanco;
+    }
+}
+
+.btn-lighter {
+    padding: .55rem .75rem;
+    border: 2px solid $terciario;
+    color: $terciario;
+    font-weight: 600;
+    @include extra-large {
+        font-size: 1rem;
+    }
+    &:hover {
+        background-color: darken($blanco, 5);
+        color: $terciario;
     }
 }
 
@@ -601,6 +621,126 @@ body {
     }
 }
 
+// col-form 
+.col-form {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    background-color: $blanco;
+    .header {
+        margin-top: .5rem !important;
+        margin-bottom: 3rem !important;
+        text-align: center !important;
+        .title-mega {
+            font-size: 1.4rem;
+            @include extra-large {
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .general-info {
+        text-align: center;
+        margin-top: .5rem !important;
+        color: $negro;
+        font-size: 0.8rem;
+        a {
+            color: #e56874;
+        }
+    }
+    .submit {
+        display: flex;
+        flex: 0 0 60%;
+        max-width: 60%;
+        margin-left: 20%;
+        margin-top: 1rem;
+        @include medium {
+            margin-top: 2rem;
+        }
+        @include small {
+            flex: 0 0 40%;
+            max-width: 40%;
+            margin-left: 30%;
+        }
+        @include medium {
+            flex: 0 0 60%;
+            max-width: 60%;
+            margin-left: 20%;
+        }
+        @include large {
+            flex: 0 0 40%;
+            max-width: 40%;
+            margin-left: 30%;
+        }
+    }
+}
+
+// Col-benefits
+.col-benefits {
+    background-color: #f5f5f5;
+    padding: 2rem 0 2rem 2rem !important;
+    @include medium {
+        padding: 2rem 0 2rem 3rem !important;
+    }
+    @include extra-large {
+        padding: 3rem 0 3rem 4rem !important;
+    }
+    .header {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        display: flex;
+        align-items: center;
+        h3 {
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.4rem;
+            @include extra-large {
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .benefits-items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 0.5rem;
+        .benefits-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-top: .5rem;
+            padding-right: 2rem;
+            @include large {
+                padding-right: 2rem;
+            }
+            @include extra-large {
+                padding-right: 6rem !important;
+            }
+            .benefits-header {
+                display: flex;
+                .benefits-title {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .benefits-icon {
+                    align-self: flex-start;
+                    color: #00c234;
+                    font-size: 16px;
+                    margin-right: 10px;
+                    margin-top: 2px;
+                }
+            }
+            .benefits-text {
+                margin-top: .5rem;
+                font-size: 13px;
+                color: #919191;
+                @include extra-large {
+                    padding-left: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
 // Youtube Player
 .youtube-player {
     position: relative;
@@ -649,6 +789,7 @@ body {
         height: auto;
         cursor: pointer;
         transition: .4s all;
+        margin-top: 1rem;
     }
 }
 
@@ -915,6 +1056,9 @@ body {
         margin: 0;
         padding: 0;
     }
+    .card-body {
+        min-height: 2rem !important;
+    }
     .masthead {
         height: 40vh;
         min-height: 1050px;
@@ -1047,7 +1191,7 @@ body {
                     }
                     &.active {
                         color: #000;
-                        background-color: #f8f8f8;
+                        background-color: transparent;
                         cursor: default;
                         position: relative;
                         border-right-color: transparent !important;
@@ -1154,7 +1298,6 @@ body {
             }
             // Descriptions
             .descriptions {
-                background-color: #f9f9f9;
                 margin-bottom: 10px;
                 .descriptions-items {
                     display: flex;
@@ -1187,7 +1330,6 @@ body {
             }
             // Benefits
             .benefits {
-                background-color: #f9f9f9;
                 padding: 10px 15px;
                 margin-bottom: 10px;
                 .benefits-content {
@@ -1232,6 +1374,16 @@ body {
             .studentData {
                 .card-body {
                     min-height: 4rem;
+                }
+            }
+            // General
+            .accordion-faq {
+                .card-body {
+                    p {
+                        @include medium {
+                            margin-left: 0 !important;
+                        }
+                    }
                 }
             }
             // Access And Download
@@ -1930,134 +2082,132 @@ body {
                     border: solid 2px #d4d4d4;
                     border-top: 0;
                     padding-bottom: 2rem;
-                    .card-body {
-                        min-height: 2rem;
-                        padding: 0.8rem;
-                        p {
-                            color: $negro;
-                            font-size: 12px;
-                            transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;
-                            width: 100%;
-                            @include medium {
-                                width: 70%;
-                                text-align: justify;
+                }
+                .card-body {
+                    min-height: 2rem;
+                    padding: 0.8rem;
+                    p {
+                        color: $negro;
+                        font-size: 12px;
+                        transition: height 1s, width 1s, padding 1s, visibility 1s, opacity 0.5s ease-out;
+                        width: 100%;
+                        @include medium {
+                            width: 70%;
+                            text-align: justify;
+                        }
+                    }
+                    .lecture-container {
+                        display: flex;
+                        background-color: $blanco;
+                        color: #686f7a;
+                        letter-spacing: .3px;
+                        line-height: 1.33;
+                        &.lecture-container-preview {
+                            .content-summary,
+                            .title,
+                            .preview-text {
+                                color: $danger;
                             }
                         }
-                        .lecture-container {
+                        .left-content {
                             display: flex;
-                            background-color: $blanco;
-                            border: 1px solid #e8e9eb;
-                            border-top: none;
-                            color: #686f7a;
-                            letter-spacing: .3px;
-                            line-height: 1.33;
-                            &.lecture-container-preview {
-                                .content-summary,
-                                .title,
-                                .preview-text {
-                                    color: $danger;
-                                }
-                            }
-                            .left-content {
+                            align-items: flex-start;
+                            width: 70%;
+                            .top {
+                                flex-direction: column-reverse;
                                 display: flex;
-                                align-items: flex-start;
-                                width: 70%;
-                                .top {
-                                    flex-direction: column-reverse;
+                                width: 100%;
+                                .title {
+                                    color: #007791;
+                                    font-size: 14px;
+                                    margin-top: -2px;
+                                    align-content: center;
                                     display: flex;
-                                    width: 100%;
-                                    .title {
-                                        color: #007791;
-                                        font-size: 14px;
-                                        margin-top: -2px;
-                                        align-content: center;
-                                        display: flex;
+                                    cursor: pointer;
+                                    &:before {
+                                        font-family: "font awesome 5 free";
+                                        content: "\f144";
+                                        display: inline-block;
+                                        padding-right: 10px;
+                                        vertical-align: middle;
+                                        font-weight: 900;
+                                        font-size: 16px;
+                                        color: #000b6b;
+                                    }
+                                    .down-arrow {
+                                        color: #505763;
                                         cursor: pointer;
-                                        &:before {
-                                            font-family: "font awesome 5 free";
-                                            content: "\f144";
-                                            display: inline-block;
-                                            padding-right: 10px;
-                                            vertical-align: middle;
-                                            font-weight: 900;
-                                            font-size: 16px;
-                                            color: #000b6b;
-                                        }
-                                        .down-arrow {
-                                            color: #505763;
-                                            cursor: pointer;
-                                            display: inline-block;
-                                            margin-left: 10px;
-                                            &.collapsed {
-                                                &:after {
-                                                    font-family: "font awesome 5 free";
-                                                    content: "\f078";
-                                                    display: inline-block;
-                                                    vertical-align: middle;
-                                                    font-weight: 900;
-                                                    font-size: 11px;
-                                                }
-                                            }
+                                        display: inline-block;
+                                        margin-left: 10px;
+                                        &.collapsed {
                                             &:after {
                                                 font-family: "font awesome 5 free";
-                                                content: "\f077";
+                                                content: "\f078";
                                                 display: inline-block;
                                                 vertical-align: middle;
                                                 font-weight: 900;
                                                 font-size: 11px;
                                             }
                                         }
+                                        &:after {
+                                            font-family: "font awesome 5 free";
+                                            content: "\f077";
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            font-weight: 900;
+                                            font-size: 11px;
+                                        }
                                     }
-                                }
-                            }
-                            .details {
-                                display: flex;
-                                justify-content: flex-end;
-                                flex-wrap: wrap;
-                                margin-left: auto;
-                                width: 30%;
-                                font-size: 14px;
-                                .preview-text {
-                                    color: $danger;
-                                    text-decoration: underline;
-                                }
-                                .content-summary {
-                                    color: #a7a7a7 !important;
-                                    flex-direction: row-reverse;
-                                    display: flex;
-                                    text-align: right;
-                                    white-space: nowrap;
-                                    width: 40%;
                                 }
                             }
                         }
-                        .description-collapse {
-                            &.show {
-                                border: none !important;
-                                padding-bottom: 0 !important;
+                        .details {
+                            display: flex;
+                            justify-content: flex-end;
+                            flex-wrap: wrap;
+                            margin-left: auto;
+                            width: 30%;
+                            font-size: 14px;
+                            .preview-text {
+                                color: $danger;
+                                text-decoration: underline;
                             }
-                            .content {
+                            .content-summary {
+                                color: #a7a7a7 !important;
+                                flex-direction: row-reverse;
                                 display: flex;
-                                .img-description {
-                                    flex: 0 0 4rem;
-                                    margin-left: 1.5rem;
-                                    margin-right: 0.5rem;
-                                    align-self: flex-start;
-                                    margin-top: 1rem;
-                                    font-size: 12px;
-                                    max-width: 50px;
+                                text-align: right;
+                                white-space: nowrap;
+                                width: 40%;
+                            }
+                        }
+                    }
+                    .description-collapse {
+                        &.show {
+                            border: none !important;
+                            padding-bottom: 0 !important;
+                        }
+                        .content {
+                            display: flex;
+                            .img-description {
+                                flex: 0 0 4rem;
+                                margin-left: 1.5rem;
+                                margin-right: 0.5rem;
+                                align-self: flex-start;
+                                margin-top: 1rem;
+                                font-size: 12px;
+                                max-width: 50px;
+                                @include medium {
+                                    flex: 0 1 10rem;
+                                    align-self: center;
+                                    margin-top: 0;
+                                    margin-right: 1rem;
+                                    max-width: 75px;
+                                }
+                                img {
+                                    min-width: 50px;
                                     @include medium {
-                                        flex: 0 1 10rem;
-                                        align-self: center;
-                                        margin-top: 0;
-                                        margin-right: 1rem;
-                                        max-width: 75px;
-                                    }
-                                    img {
-                                        min-width: 50px;
-                                        @include medium {
-                                            min-width: 75px;
-                                        }
+                                        min-width: 75px;
                                     }
                                 }
                             }
@@ -2084,7 +2234,6 @@ body {
         .viewed {
             padding-top: 1rem;
             padding-bottom: 1rem;
-            background: #eff6fa;
             .viewed_title_container {
                 border-bottom: solid 1px transparent;
                 position: relative;
@@ -2453,112 +2602,278 @@ body {
                 margin-right: -15px !important;
                 margin-left: -15px !important;
                 .col-form {
-                    padding-bottom: 1.5rem;
-                    padding-top: 1.5rem;
                     z-index: 1050;
-                    background-color: $blanco;
-                    .header {
-                        margin-top: .5rem !important;
-                        margin-bottom: 3rem !important;
-                        text-align: center !important;
-                        .title-mega {
-                            font-size: 1.4rem;
-                            @include extra-large {
-                                font-size: 1.7rem;
-                            }
-                        }
-                        .general-info {
-                            text-align: center;
-                            margin-top: .5rem !important;
-                            color: $negro;
-                            font-size: 0.8rem;
-                            a {
-                                color: #e56874;
-                            }
-                        }
+                }
+                .col-benefits {
+                    @include extra-large {
+                        box-shadow: -35px -33px 17px 45px rgba(0, 0, 0, .12);
                     }
-                    .submit {
-                        display: flex;
-                        flex: 0 0 60%;
-                        max-width: 60%;
-                        margin-left: 20%;
-                        margin-top: 1rem;
-                        @include medium {
-                            margin-top: 2rem;
-                        }
-                        @include small {
-                            flex: 0 0 40%;
-                            max-width: 40%;
-                            margin-left: 30%;
+                }
+            }
+        }
+    }
+}
+
+// Register Page
+.register-section {
+    .div-card {
+        @include medium {
+            margin-left: -5rem;
+            width: 105%;
+            box-shadow: 17px 0px 41px -16px rgba(179, 177, 179, 0.65);
+            margin-top: 3.5rem;
+        }
+        .general-info {
+            text-align-last: center;
+            @include medium {
+                margin-top: 1rem !important;
+            }
+        }
+    }
+    .col-left,
+    .col-form {
+        .image-left {
+            position: relative;
+            background-image: url("https://megacursos.com/themes/megacursos/assets/img/banner-register.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 284px;
+            @include small {
+                height: 434px;
+            }
+            @include large {
+                height: 587px;
+            }
+            img {
+                &.over {
+                    position: absolute;
+                    top: 35%;
+                    left: 16%;
+                    width: 60%;
+                    @include large {
+                        top: 35%;
+                        left: 16%;
+                        padding: 3rem;
+                    }
+                    @include large {
+                        top: 38%;
+                    }
+                }
+            }
+        }
+    }
+    .col-left {
+        @include medium {
+            margin-left: -15px !important;
+        }
+        .image-left {
+            display: none;
+            @include medium {
+                display: block;
+            }
+        }
+        .col-benefits {
+            padding-top: 0rem;
+            background-color: unset !important;
+            @include medium {
+                padding: 2rem !important;
+            }
+            @include large {
+                padding: 1.5rem !important;
+                padding-left: 5rem !important;
+                padding-bottom: 3rem !important;
+            }
+            .benefits-items {
+                .benefits-item {
+                    padding-right: 5rem !important;
+                }
+            }
+        }
+        ul {
+            li {
+                margin-top: .5rem;
+                @include large {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+    .col-form {
+        .image-left {
+            display: block;
+            @include medium {
+                display: none;
+            }
+        }
+        .data {
+            @include large {
+                padding-left: 4.7rem !important;
+                padding-right: 4.7rem !important;
+            }
+            .appbotons {
+                @include medium {
+                    background-color: unset !important;
+                }
+                a {
+                    img {
+                        min-width: 210px;
+                        max-height: 63px;
+                        margin-top: .5rem;
+                        @include large {
+                            margin-top: 0rem;
                         }
                     }
                 }
-                .col-benefits {
-                    background-color: #f5f5f5;
-                    padding: 2rem 0 2rem 2rem !important;
-                    @include medium {
-                        padding: 2rem 0 2rem 3rem !important;
+            }
+        }
+    }
+}
+
+// Cart Menu
+.cart {
+    .fa-stack {
+        font-size: 1.5em;
+        width: 2em !important;
+    }
+    .fa-stack[data-count]:after {
+        position: absolute;
+        top: 0%;
+        content: attr(data-count);
+        font-size: 40%;
+        padding: .5em;
+        border-radius: 50%;
+        line-height: .75em;
+        color: white;
+        text-align: center;
+        background: #dc3545;
+    }
+    .empty {
+        padding: .5rem;
+        color: $negro;
+    }
+    .cart-mega {
+        .dropdown {
+            .dropdown-products {
+                min-height: 4rem !important;
+                width: 320px;
+                @include large {
+                    width: 380px;
+                    margin-top: 1rem;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-color: transparent transparent $blanco;
+                    @include large {
+                        top: -20px;
+                        right: 23px;
+                        border-width: 0px 13px 20px;
                     }
-                    @include extra-large {
-                        padding: 3rem 0 3rem 4rem !important;
-                        box-shadow: -35px -33px 17px 45px rgba(0, 0, 0, .12);
+                }
+                .title {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+                .cart-info {
+                    color: $negro;
+                    @include large {
+                        padding: .5rem 1rem 1.5rem;
                     }
-                    .header {
-                        padding-top: 1rem !important;
-                        padding-bottom: 1rem !important;
-                        display: flex;
-                        align-items: center;
-                        h3 {
-                            text-align: left;
-                            font-weight: 600;
-                            font-size: 1.4rem;
-                            @include extra-large {
-                                font-size: 1.7rem;
-                            }
+                    p {
+                        color: $negro;
+                    }
+                    .btn-primary {
+                        background: transparent linear-gradient(96deg, #5BD463 0%, #D0F8A3 100%) 0% 0% no-repeat padding-box;
+                        border: 1px solid transparent;
+                        text-transform: uppercase;
+                        font-size: .7rem;
+                        padding: .6rem .75rem;
+                        font-weight: 600;
+                    }
+                }
+                .cart-items {
+                    border-top: 1px solid gray;
+                    border-bottom: 1px solid gray;
+                    max-height: 243px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+                    scrollbar-width: thin;
+                    &::-webkit-scrollbar {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                    }
+                    &::-webkit-scrollbar:vertical {
+                        width: 10px;
+                    }
+                    &::-webkit-scrollbar-button:increment,
+                    &::-webkit-scrollbar-button {
+                        display: none;
+                    }
+                    &::-webkit-scrollbar:horizontal {
+                        height: 10px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #797979;
+                        border-radius: 20px;
+                        border: 2px solid #f1f2f3;
+                    }
+                    &::-webkit-scrollbar-track {
+                        border-radius: 10px;
+                    }
+                    .cart-item {
+                        display: grid;
+                        grid-template-columns: 18% 78% 5%;
+                        @include large {
+                            grid-template-columns: 18% 78% 5%;
+                            padding: 1.5rem 0;
                         }
-                    }
-                    .benefits-items {
-                        display: flex;
-                        align-items: flex-start;
-                        justify-content: space-between;
-                        flex-wrap: wrap;
-                        padding-top: 0.5rem;
-                        .benefits-item {
+                        &:not(:first-child) {
+                            border-top: 1px solid #dddddd;
+                        }
+                        .data {
                             display: flex;
+                            justify-content: space-between;
                             flex-wrap: wrap;
-                            align-items: center;
-                            padding-top: .5rem;
-                            padding-right: 2rem;
-                            @include large {
-                                padding-right: 2rem;
+                            .header {
+                                .subtitle {
+                                    font-size: .8rem;
+                                    margin-top: -.5rem;
+                                    color: #9b9b9b;
+                                }
                             }
-                            @include extra-large {
-                                padding-right: 6rem !important;
-                            }
-                            .benefits-header {
+                            .prices {
+                                align-self: flex-end;
                                 display: flex;
-                                .benefits-title {
-                                    font-size: 18px;
-                                    font-weight: 600;
+                                .discount {
+                                    color: $danger;
+                                    font-size: 1.15rem;
                                 }
-                                .benefits-icon {
-                                    align-self: flex-start;
-                                    color: #00c234;
-                                    font-size: 16px;
-                                    margin-right: 10px;
-                                    margin-top: 2px;
+                                .regular {
+                                    margin-left: .5rem;
+                                    font-size: .7rem;
+                                    text-decoration: line-through;
+                                    color: #9b9b9b;
                                 }
                             }
-                            .benefits-text {
-                                margin-top: .5rem;
-                                font-size: 13px;
-                                color: #919191;
-                                @include extra-large {
-                                    padding-left: 1.8rem;
+                        }
+                        .actions {
+                            .btn {
+                                color: #9f9f9f;
+                                padding: 0;
+                                @include large {
+                                    font-size: 14px;
                                 }
                             }
                         }
                     }
+                }
+                .cart-footer {
+                    padding: 1.5rem 1.5rem 1rem 1.5rem;
                 }
             }
         }

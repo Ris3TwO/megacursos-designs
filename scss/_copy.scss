@@ -1,0 +1,71 @@
+// Register Page
+.register-section {
+    .div-card {
+        @include medium {
+            margin-left: -5rem;
+            width: 105%;
+            box-shadow: 17px 0px 41px -16px rgba(179, 177, 179, 0.65);
+            margin-top: 3.5rem;
+        }
+        .general-info {
+            text-align-last: center;
+            @include medium {
+                margin-top: 1rem !important;
+            }
+        }
+    }
+    .col-left {
+        @include medium {
+            margin-left: -15px !important;
+        }
+        .col-benefits {
+            background-color: unset !important;
+            @include medium {
+                padding: 2rem !important;
+            }
+            @include large {
+                padding: 5rem !important;
+                padding-bottom: 3rem !important;
+            }
+            .benefits-items {
+                .benefits-item {
+                    padding-right: 5rem !important;
+                }
+            }
+        }
+        ul {
+            li {
+                margin-top: .5rem;
+                @include large {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+    .col-form {
+        .data {
+            @include large {
+                padding-left: 4.7rem !important;
+                padding-right: 4.7rem !important;
+            }
+            .appbotons {
+                @include medium {
+                    background-color: unset !important;
+                }
+                a {
+                    img {
+                        min-width: 210px;
+                        max-height: 63px;
+                        margin-top: .5rem;
+                        @include medium {
+                            min-width: 210px;
+                        }
+                        @include large {
+                            margin-top: 0rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

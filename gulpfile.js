@@ -14,7 +14,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 const files = {
-    scssPath: 'scss/*.scss'
+    scssPath: 'assets/scss/*.scss'
 }
 
 function scssTask() {
@@ -34,7 +34,7 @@ function scssTask() {
 }
 
 function watchTask() {
-    watch(['scss/*.scss'], parallel(scssTask));
+    watch(['assets/scss/*.scss'], parallel(scssTask));
 }
 
 exports.default = series(parallel(scssTask), watchTask);

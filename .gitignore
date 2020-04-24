@@ -12,4 +12,5 @@ node_modules/
 .npm
 
 # Compiled css directory
-css/
+assets/css/app.css
+assets/css/app.css.map

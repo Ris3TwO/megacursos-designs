@@ -8,7 +8,7 @@ html {
     @include box-sizing(inherit);
 }
 
-body { 
+body {
     font-family: $fuente_principal;
     background-color: $blanco;
 }
@@ -2832,7 +2832,7 @@ body {
                             grid-template-columns: 18% 78% 5%;
                             padding: 1.5rem 0;
                         }
-                        &:not(:first-child) {
+                        &:not(:first-child):not(:nth-child(2)) {
                             border-top: 1px solid #dddddd;
                         }
                         .data {

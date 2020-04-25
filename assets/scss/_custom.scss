@@ -147,6 +147,10 @@ body {
     background-color: $blanco;
     border: 1px solid #686f7a;
     font-weight: 600;
+    &:hover {
+        background-color: darken($blanco, 5);
+        color: $negro;
+    }
 }
 
 .title-mega {
@@ -744,7 +748,7 @@ body {
 // Youtube Player
 .youtube-player {
     position: relative;
-    padding-bottom: 56.23%;
+    padding-bottom: 69.23%;
     height: 0;
     max-width: 100%;
     background: $negro;
@@ -777,7 +781,6 @@ body {
     }
     img {
         width: 100%;
-        margin: auto;
         display: block;
         max-width: 100%;
         position: absolute;
@@ -789,7 +792,7 @@ body {
         height: auto;
         cursor: pointer;
         transition: .4s all;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -1172,11 +1175,12 @@ body {
         // Tabs
         .navs-vertical {
             .nav-pills {
+                background-color: #fbfbfb;
                 border-bottom: 1px solid transparent;
                 .nav-link {
                     border: 1px solid transparent;
                     color: #BEBEBF;
-                    font-weight: 600;
+                    font-weight: 500;
                     line-height: 1.42857;
                     padding: .5rem 0.95rem;
                     @include small {
@@ -1198,11 +1202,11 @@ body {
                         &:after {
                             content: '';
                             width: 5px;
-                            height: 25px;
+                            height: 20px;
                             background: $danger;
                             position: absolute;
-                            left: -3px;
-                            top: 18%;
+                            left: 0px;
+                            top: 24%;
                         }
                     }
                 }
@@ -1315,11 +1319,16 @@ body {
                                 color: $blanco;
                                 font-size: 12px;
                                 border-radius: 50%;
-                                box-shadow: 0px 0px 2px #888;
                                 padding: 0 0.2rem;
                                 background-color: #00d270;
                                 margin-right: 15px;
                                 margin-top: 2px;
+                                @include medium {
+                                    margin-right: 8px;
+                                    margin-top: 4px;
+                                    font-size: 10px;
+                                    padding: 0 .15rem;
+                                }
                             }
                             .descriptions-text {
                                 font-size: 15px;
@@ -1360,11 +1369,16 @@ body {
                                 color: #fff;
                                 font-size: 12px;
                                 border-radius: 50%;
-                                box-shadow: 0px 0px 2px #888;
                                 padding: 0 0.2rem;
                                 background-color: #28a745;
                                 margin-right: 15px;
                                 margin-top: 2px;
+                                @include medium {
+                                    font-size: 10px;
+                                    padding: 0 0.15rem;
+                                    margin-right: 8px;
+                                    margin-top: 4px;
+                                }
                             }
                         }
                     }
@@ -1505,12 +1519,16 @@ body {
                 color: #505763;
                 padding: 3px;
                 margin-top: 3rem;
+                &:not(:last-child) {
+                    .shopping-cart {
+                        -webkit-box-shadow: 0 0 2px 2px rgba(20, 23, 28, .1), 0 3px 1px 0 rgba(20, 23, 28, .1);
+                        box-shadow: 0 0 2px 2px rgba(20, 23, 28, .1), 0 3px 1px 0 rgba(20, 23, 28, .1);
+                    }
+                }
                 .shopping-cart {
                     color: #505763;
                     padding-top: 1rem;
                     padding-bottom: 2rem;
-                    -webkit-box-shadow: 0 0 2px 2px rgba(20, 23, 28, .1), 0 3px 1px 0 rgba(20, 23, 28, .1);
-                    box-shadow: 0 0 2px 2px rgba(20, 23, 28, .1), 0 3px 1px 0 rgba(20, 23, 28, .1);
                     .btn-block {
                         padding: 0.45rem 12px;
                         font-size: 18px;
@@ -1528,6 +1546,9 @@ body {
                             font-weight: 700;
                             font-size: 14px;
                             color: $negro;
+                            @include large {
+                                font-size: 16px;
+                            }
                         }
                         .in-page-offset-anchor {
                             position: absolute;
@@ -1841,6 +1862,9 @@ body {
             border-right: solid 0 #dcdacb;
             border-bottom: solid 0 #dcdacb;
             background: $blanco;
+            .card-header {
+                background-color: $blanco;
+            }
         }
         .curriculum-wrapper {
             margin-top: .5rem !important;
@@ -1865,7 +1889,6 @@ body {
                 &:focus {
                     text-decoration: none;
                     color: #454b55;
-                    background-color: #f2f3f5
                 }
             }
             .mb-0 {
@@ -2015,7 +2038,6 @@ body {
                         align-items: center;
                         border: solid 2px #d4d4d4;
                         border-bottom: none;
-                        background: #f9f9f9;
                         cursor: pointer;
                         height: auto;
                         padding: 14px 15px;
@@ -2345,6 +2367,7 @@ body {
         }
         .comments {
             display: none;
+            border-bottom: 1px solid #dddddd;
             .media {
                 img {
                     width: 50px;
@@ -2377,9 +2400,37 @@ body {
                 }
             }
         }
-        .btn-quaternary {
-            color: $danger;
-            padding: 8px 12px;
+        .commets-buttons {
+            .btn {
+                border-radius: 0rem;
+                &.btn-quaternary {
+                    padding: 8px 12px;
+                }
+                &.btn-quaternary {
+                    color: $danger;
+                }
+                &.btn-quarenty {
+                    font-weight: 600;
+                    i {
+                        @include medium {
+                            font-size: 1.4rem;
+                        }
+                        @include large {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        .comment-box {
+            background-color: #f6f6f6;
+            label {
+                font-weight: 600;
+            }
+            .form-control {
+                border-radius: 0 !important;
+                border: 1px solid transparent;
+            }
         }
     }
     /* Modal */

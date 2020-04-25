@@ -19,19 +19,30 @@
             console.log(document.getElementById(id));
             var item = document.getElementById(id);
             var x = document.getElementsByClassName('cart-item');
-            
-            var spiner =  document.getElementById('cart-load');  
-           spiner.style.display = null;
-           for (i = 0; i < x.length; i++) {
+            var cart = document.getElementById("cart-div");
+            console.log(cart.childElementCount);
+            var spiner = document.getElementById('cart-load');
+            spiner.style.display = null;
+            for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
             setTimeout(() => {
-                
+
                 spiner.style.display = "none";
                 for (i = 0; i < x.length; i++) {
-                x[i].style.display = "";
-            }
-            item.parentElement.removeChild(item)
+                    x[i].style.display = "";
+                }
+                item.parentElement.removeChild(item)
+                console.log(cart.childElementCount);
+
+                if (cart.childElementCount == 2) {
+                    console.log(cart.childElementCount);
+
+                    document.getElementById("cart-empty").style.display = null;
+                } else {
+                    document.getElementById("cart-empty").style.display = "none";
+                }
+
             }, 500);
 
         }
@@ -95,13 +106,15 @@
                                 <p>Tienes 2 cursos en tu carrito</p>
                                 <div class="btn btn-primary btn-block">Todos nuestros cursos a 20% de descuento</div>
                             </div>
-                            <div class="cart-items">
-                                <div id="cart-load"  class="w-100 text-center mt-4" style="display: none;" >
+                            <div id="cart-div" class="cart-items">
+                                <div id="cart-load" class="w-100 text-center mt-4" style="display: none;">
                                     <div class=" spinner-border" role="status">
                                         <span class="sr-only">Loading...</span>
                                     </div>
                                 </div>
-                              
+                                <div id="cart-empty" class="empty" style="display: none;">
+                                    <p> Tu cesta está vacía </p>
+                                </div>
                                 <div class="cart-item mx-4" id="1">
                                     <div class="image">
                                         <img class="img-fluid"
@@ -125,72 +138,7 @@
                                                 class="fas fa-trash-alt    "></i></button>
                                     </div>
                                 </div>
-                                <div class="cart-item mx-4">
-                                    <div class="image">
-                                        <img class="img-fluid"
-                                            src="https://megacursos.com/uploads/images/medium/08cb3fec9dfb2a75c35a68d9ef3d12ef.png"
-                                            alt="">
-                                    </div>
-                                    <div class="data px-md-3">
-                                        <div class="header">
-                                            <h3 class="title">Megacurso Photoshop</h3>
-                                            <div class="subtitle">Maestro en 35h</div>
-                                        </div>
-                                        <div class="prices">
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="discount">70.000 COP</h5>
-                                                <h5 class="regular">70.000 COP</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actions">
-                                        <button class="btn btn-sm"><i class="fas fa-trash-alt    "></i></button>
-                                    </div>
-                                </div>
-                                <div class="cart-item mx-4">
-                                    <div class="image">
-                                        <img class="img-fluid"
-                                            src="https://megacursos.com/uploads/images/medium/08cb3fec9dfb2a75c35a68d9ef3d12ef.png"
-                                            alt="">
-                                    </div>
-                                    <div class="data px-md-3">
-                                        <div class="header">
-                                            <h3 class="title">Megacurso Photoshop</h3>
-                                            <div class="subtitle">Maestro en 35h</div>
-                                        </div>
-                                        <div class="prices">
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="discount">70.000 COP</h5>
-                                                <h5 class="regular">70.000 COP</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actions">
-                                        <button class="btn btn-sm"><i class="fas fa-trash-alt    "></i></button>
-                                    </div>
-                                </div>
-                                <div class="cart-item mx-4">
-                                    <div class="image">
-                                        <img class="img-fluid"
-                                            src="https://megacursos.com/uploads/images/medium/08cb3fec9dfb2a75c35a68d9ef3d12ef.png"
-                                            alt="">
-                                    </div>
-                                    <div class="data px-md-3">
-                                        <div class="header">
-                                            <h3 class="title">Megacurso Photoshop</h3>
-                                            <div class="subtitle">Maestro en 35h</div>
-                                        </div>
-                                        <div class="prices">
-                                            <div class="d-flex align-items-center">
-                                                <h5 class="discount">70.000 COP</h5>
-                                                <h5 class="regular">70.000 COP</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="actions">
-                                        <button class="btn btn-sm"><i class="fas fa-trash-alt    "></i></button>
-                                    </div>
-                                </div>
+                               
                             </div>
                             <div class="cart-footer">
                                 <div class="amount">

@@ -32,9 +32,9 @@
                 item.parentElement.removeChild(item)
                 console.log(cart.childElementCount);
 
-                if (cart.childElementCount == 2) {
+                if (cart.childElementCount == 1) {
                     console.log(cart.childElementCount);
-
+                    document.getElementById("cart-container").style.display = "none"
                     document.getElementById("cart-empty").style.display = null;
                 } else {
                     document.getElementById("cart-empty").style.display = "none";
@@ -99,7 +99,7 @@
                             <div id="cart-empty" class="empty" style="display:none;">
                                 <p> Tu cesta está vacía </p>
                             </div>
-                            <div class="cart-container">
+                            <div id="cart-container" class="cart-container">
 
                                 <div class="cart-info">
                                     <p>Tienes 2 cursos en tu carrito</p>

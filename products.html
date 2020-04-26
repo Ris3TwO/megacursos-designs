@@ -5218,17 +5218,14 @@
                     if ($(".comments:hidden").length == 0) {
                         $("#load").fadeOut('slow');
                     }
-                    var heightComment = $('.comments').height() * 3;
-                    console.log(heightComment);
                     if ($(window).width() < 700) {
                         $('html,body').animate({
-                            scrollTop: $(this).offset().top - heightComment
+                            scrollTop: $(this).offset().top - 130
                         }, 1500);
                     } else {
                         $('html,body').animate({
-                            scrollTop: $(this).offset().top - heightComment
+                            scrollTop: $(this).offset().top - 100
                         }, 1500);
-                        console.log($(this).offset().top - heightComment);
                     }
                 });
             });

@@ -27,8 +27,37 @@
         .owl-stage {
             display: none;
         }
-        .fade-in-bottom{-webkit-animation:fade-in-bottom 1s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-bottom 1s cubic-bezier(.39,.575,.565,1.000) both}
-        @-webkit-keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+        
+        .fade-in-bottom {
+            -webkit-animation: fade-in-bottom 1s cubic-bezier(.39, .575, .565, 1.000) both;
+            animation: fade-in-bottom 1s cubic-bezier(.39, .575, .565, 1.000) both
+        }
+        
+        @-webkit-keyframes fade-in-bottom {
+            0% {
+                -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+                opacity: 0
+            }
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade-in-bottom {
+            0% {
+                -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+                opacity: 0
+            }
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                opacity: 1
+            }
+        }
     </style>
     <script>
         function apachurrame(){
@@ -5111,7 +5140,7 @@
                             </div>
                         </div>
 
-                        <form id="box-comment"  class="fade-in-bottom row row-normal no-gutters  mt-4 comment-box p-5 justify-content-center" id="comment-box" style="display: none;">
+                        <form id="box-comment" class="fade-in-bottom row row-normal no-gutters  mt-4 comment-box p-5 justify-content-center" id="comment-box" style="display: none;">
                             <div class="col-12 col-md-6 px-2">
                                 <label for="exampleFormControlTextarea1">Nombre</label>
                                 <input type="text" class="form-control form-control-lg">
@@ -5386,7 +5415,9 @@
     </script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]',{speed:1500});
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1500
+        });
     </script>
 </body>
 

@@ -231,6 +231,36 @@ body {
     }
 }
 
+.g-info-meet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #727272;
+    .mdi {
+        font-size: 20px;
+        color: $danger;
+        margin-right: .35rem;
+    }
+}
+
+.g-alert-meet {
+    display: grid;
+    grid-template-columns: 6% 90%;
+    .icon {
+        margin-top: -.2rem;
+        .mdi {
+            font-size: 20px;
+            color: $danger;
+            margin-right: .35rem;
+        }
+    }
+    .text {
+        font-size: .85rem;
+        color: #7b7b7b;
+        text-align: justify;
+    }
+}
+
 .accordion-faq {
     .card {
         border-left: solid thin #dcdacb;
@@ -2957,6 +2987,34 @@ body {
 
 // Plans Page
 .plans-section {
+    // General css
+    .benefits {
+        .benefits-items {
+            margin: 0;
+            padding: 1rem 0;
+            .benefits-item {
+                margin: .5rem 0;
+                list-style: none;
+                display: grid;
+                grid-template-columns: 10% 90%;
+                .icon {
+                    color: #00d13f;
+                    margin-right: .5rem;
+                    span {
+                        &::before {
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .text {
+                    align-self: center;
+                    text-align: left;
+                    font-size: .85rem;
+                    color: #7b7b7b;
+                }
+            }
+        }
+    }
     .masthead {
         height: 45vh;
         min-height: 200px;
@@ -3063,33 +3121,6 @@ body {
         margin-top: 1rem;
         @include medium {
             margin-top: -7rem;
-        }
-        .benefits {
-            .benefits-items {
-                margin: 0;
-                padding: 1rem 0;
-                .benefits-item {
-                    margin: .5rem 0;
-                    list-style: none;
-                    display: grid;
-                    grid-template-columns: 10% 90%;
-                    .icon {
-                        color: #00d13f;
-                        margin-right: .5rem;
-                        span {
-                            &::before {
-                                font-weight: 600;
-                            }
-                        }
-                    }
-                    .text {
-                        align-self: center;
-                        text-align: left;
-                        font-size: .8rem;
-                        color: #7b7b7b;
-                    }
-                }
-            }
         }
         .card {
             border: none;
@@ -3201,10 +3232,185 @@ body {
         }
     }
     .extras {
+        @include medium {
+            margin: 7rem 0 !important;
+        }
+        .suggested {
+            padding: 1rem;
+            @include gradient(#5bd463,
+            #bcf298);
+            text-align: center;
+            border-radius: .55rem .55rem 0 0;
+            max-width: 50%;
+            @include medium {
+                max-width: 20%;
+            }
+            @include extra-large {
+                max-width: 22%;
+            }
+            .recommended {
+                color: $blanco;
+            }
+        }
         .col-plans,
         .col-premium {
-            border-radius: .25rem;
-            box-shadow: 7px 8px 31px -5px rgba(0, 0, 0, 0.35);
+            padding: 2rem;
+            border-radius: .55rem;
+            box-shadow: 11px 12px 31px -5px rgba(0, 0, 0, 0.19);
+            background-color: #fff;
+            position: relative;
+            z-index: 100;
+            .head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img {
+                    @include medium {
+                        max-width: 80px;
+                    }
+                }
+                .right {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        @include large {
+                            font-size: .7rem;
+                        }
+                        font-weight: 600;
+                        color: #707070;
+                    }
+                    input[switch] {
+                        display: none;
+                        &+label {
+                            font-size: 1em;
+                            line-height: 1;
+                            width: 4rem;
+                            height: 1.65rem;
+                            background-color: #ddd;
+                            background-image: none;
+                            border-radius: 2rem;
+                            padding: 0.1666666667rem;
+                            cursor: pointer;
+                            display: inline-block;
+                            text-align: center;
+                            position: relative;
+                            font-family: inherit;
+                            transition: all 0.3s ease-in-out;
+                            &:before {
+                                /* Label */
+                                text-transform: uppercase;
+                                color: #707070;
+                                content: attr(data-off-label);
+                                display: block;
+                                font-family: inherit;
+                                font-family: FontAwesome, inherit;
+                                font-weight: 500;
+                                font-size: 0.7rem;
+                                line-height: 1.24rem;
+                                position: absolute;
+                                right: 0.2166666667rem;
+                                margin: 0.2166666667rem;
+                                top: 0;
+                                text-align: center;
+                                min-width: 1.6666666667rem;
+                                overflow: hidden;
+                                transition: all 0.3s ease-in-out;
+                            }
+                            &:after {
+                                /* Slider */
+                                content: '';
+                                position: absolute;
+                                left: 0rem;
+                                background-color: #707070;
+                                box-shadow: none;
+                                border-radius: 2rem;
+                                height: 1.6666666667rem;
+                                width: 1.6666666667rem;
+                                transition: all 0.3s ease-in-out;
+                                top: 0;
+                            }
+                        }
+                        &:checked {
+                            &+label {
+                                background-color: #00d13f;
+                                background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.2));
+                                &:before {
+                                    color: #fff;
+                                    content: attr(data-on-label);
+                                    right: auto;
+                                    left: 0.2166666667rem;
+                                }
+                                &:after {
+                                    left: 2.3666666667rem;
+                                    background-color: #00d13f;
+                                    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .body {
+                .title {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }
+                .benefits {
+                    .benefits-item {
+                        @include medium {
+                            grid-template-columns: 6% 90%;
+                        }
+                    }
+                }
+                .g-alert-meet {
+                    .text {
+                        a {
+                            color: #707070;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .col-premium {
+            .body {
+                margin-bottom: .9rem;
+            }
+        }
+    }
+    .we-offer,
+    .all-courses {
+        h2 {
+            &.title {
+                font-weight: 600;
+            }
+        }
+    }
+    .we-offer {
+        .card-container {
+            display: flex;
+        }
+        .card-offer {
+            background-color: $blanco;
+            border: 1px solid #707070;
+            border-radius: .50rem;
+            padding: 1rem .5rem;
+            @include medium {
+                padding: 2rem 1.5rem;
+            }
+            .card-offer-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-top: 1.5rem;
+            }
+            p {
+                color: #7b7b7b;
+                font-size: 1.05rem;
+                margin-bottom: 0;
+            }
         }
     }
 }

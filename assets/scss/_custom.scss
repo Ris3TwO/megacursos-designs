@@ -3131,9 +3131,6 @@ body {
                         &.card-text {
                             color: #7b7b7b;
                             font-size: .8rem;
-                            @include medium {
-                                padding: 0 2rem;
-                            }
                             @include extra-large {
                                 padding: 0 3rem;
                             }

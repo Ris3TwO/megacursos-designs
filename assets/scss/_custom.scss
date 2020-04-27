@@ -33,6 +33,14 @@ body {
     height: 60vh;
 }
 
+.hv-65 {
+    height: 65vh;
+}
+
+.hv-70 {
+    height: 70vh;
+}
+
 // Breadcrumb
 .menu-bread {
     background-color: $blanco !important;
@@ -2989,8 +2997,62 @@ body {
     }
     .currencies {
         background-color: #f4f2fa;
-        h1 {
-            font-weight: 600;
+        .content {
+            @include medium {
+                margin-top: -7rem;
+            }
+            h1 {
+                font-weight: 600;
+            }
+            .dropdown {
+                box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.17);
+                &.show {
+                    .dropdown-toggle::after {
+                        transform: rotate(-180deg);
+                    }
+                }
+                .btn-light {
+                    color: #ababab;
+                    background-color: $blanco;
+                    padding: .7rem .9rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include medium {
+                        width: 13rem;
+                    }
+                    &.dropdown-toggle::after {
+                        display: inline-block;
+                        margin-left: .255em;
+                        vertical-align: .05em;
+                        content: "\f078";
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                        font-size: 14px;
+                        color: $danger;
+                        border: none;
+                        transition: transform .3s linear;
+                    }
+                }
+                .dropdown-menu {
+                    transition: transform .3s ease-out;
+                    @include medium {
+                        min-width: 13rem;
+                    }
+                    &.show {
+                        @include medium {
+                            padding: .8rem;
+                        }
+                        transition: transform .3s ease-in;
+                    }
+                }
+            }
+        }
+    }
+    .plans {
+        margin-top: -7rem;
+        .col-most-sell {
+            margin-top: -2rem;
         }
     }
 }

@@ -2997,62 +2997,214 @@ body {
     }
     .currencies {
         background-color: #f4f2fa;
-        .content {
+        .container-fluid {
+            height: 35vh !important;
             @include medium {
-                margin-top: -7rem;
+                height: 65vh !important;
             }
-            h1 {
-                font-weight: 600;
-            }
-            .dropdown {
-                box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.17);
-                &.show {
-                    .dropdown-toggle::after {
-                        transform: rotate(-180deg);
-                    }
+            .row {
+                height: 35vh !important;
+                @include medium {
+                    height: 65vh !important;
                 }
-                .btn-light {
-                    color: #ababab;
-                    background-color: $blanco;
-                    padding: .7rem .9rem;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                .content {
                     @include medium {
-                        width: 13rem;
+                        margin-top: -7rem;
                     }
-                    &.dropdown-toggle::after {
-                        display: inline-block;
-                        margin-left: .255em;
-                        vertical-align: .05em;
-                        content: "\f078";
-                        font-family: 'Font Awesome 5 Free';
-                        font-weight: 900;
-                        font-size: 14px;
-                        color: $danger;
-                        border: none;
-                        transition: transform .3s linear;
+                    h1 {
+                        font-weight: 600;
                     }
-                }
-                .dropdown-menu {
-                    transition: transform .3s ease-out;
-                    @include medium {
-                        min-width: 13rem;
-                    }
-                    &.show {
-                        @include medium {
-                            padding: .8rem;
+                    .dropdown {
+                        box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.17);
+                        &.show {
+                            .dropdown-toggle::after {
+                                transform: rotate(-180deg);
+                            }
                         }
-                        transition: transform .3s ease-in;
+                        .btn-light {
+                            color: #ababab;
+                            background-color: $blanco;
+                            padding: .7rem .9rem;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            @include medium {
+                                width: 13rem;
+                            }
+                            &.dropdown-toggle::after {
+                                display: inline-block;
+                                margin-left: .255em;
+                                vertical-align: .05em;
+                                content: "\f078";
+                                font-family: 'Font Awesome 5 Free';
+                                font-weight: 900;
+                                font-size: 14px;
+                                color: $danger;
+                                border: none;
+                                transition: transform .3s linear;
+                            }
+                        }
+                        .dropdown-menu {
+                            @include medium {
+                                min-width: 13rem;
+                            }
+                            &.show {
+                                @include medium {
+                                    padding: .8rem;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
     .plans {
-        margin-top: -7rem;
+        margin-top: 1rem;
+        @include medium {
+            margin-top: -7rem;
+        }
+        .benefits {
+            .benefits-items {
+                margin: 0;
+                padding: 1rem 0;
+                .benefits-item {
+                    margin: .5rem 0;
+                    list-style: none;
+                    display: grid;
+                    grid-template-columns: 10% 90%;
+                    .icon {
+                        color: #00d13f;
+                        margin-right: .5rem;
+                        span {
+                            &::before {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .text {
+                        align-self: center;
+                        text-align: left;
+                        font-size: .8rem;
+                        color: #7b7b7b;
+                    }
+                }
+            }
+        }
+        .card {
+            border: none;
+            border-radius: .75rem;
+            box-shadow: 0px 5px 10px 9px rgba(0, 0, 0, 0.11);
+            .card-header {
+                border-radius: calc(.75rem - 1px) calc(.75rem - 1px) 0 0;
+                border-bottom: none;
+            }
+            .card-body {
+                @include large {
+                    padding: 1.25rem 3rem;
+                }
+                .badge-disc {
+                    .badge {
+                        padding: .65em .7em;
+                        border-radius: .45rem;
+                        &.badge-success {
+                            background-color: #32cc7a;
+                        }
+                    }
+                }
+                .head {
+                    padding: 1rem 0 2rem;
+                    border-bottom: 1px solid #b8b8b8;
+                    .card-title {
+                        font-size: 1.35rem;
+                        color: #328acc;
+                    }
+                    h2 {
+                        &.card-text {
+                            font-weight: 600;
+                            @include medium {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                    p {
+                        &.card-text {
+                            color: #7b7b7b;
+                            font-size: .8rem;
+                            @include extra-large {
+                                padding: 0 3rem;
+                            }
+                        }
+                    }
+                }
+                .button {
+                    .btn {
+                        padding: 0.35rem .75rem;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+        .col-month {
+            .card {
+                border: none;
+                @include medium {
+                    border-bottom-right-radius: 0;
+                }
+                .card-header {
+                    @include gradient(#328acc,
+                    #66b7f5);
+                    @include medium {
+                        margin-right: -.2rem;
+                        border-top-right-radius: 0;
+                    }
+                }
+            }
+        }
         .col-most-sell {
-            margin-top: -2rem;
+            z-index: 100;
+            @include medium {
+                margin-top: -2rem;
+            }
+            .card {
+                .card-header {
+                    @include gradient(#fca21c,
+                    #f8dc97);
+                }
+                .card-body {
+                    margin-bottom: 3.5rem;
+                    .head {
+                        padding: 0 0 1rem;
+                    }
+                }
+            }
+        }
+        .col-year {
+            .card {
+                @include medium {
+                    border-bottom-left-radius: 0rem;
+                }
+                .card-header {
+                    @include gradient(#53c35b,
+                    #c4f49c);
+                    @include medium {
+                        margin-left: -.2rem;
+                        border-top-left-radius: 0;
+                    }
+                }
+                .card-body {
+                    .head {
+                        padding: 0 0 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .extras {
+        .col-plans,
+        .col-premium {
+            border-radius: .25rem;
+            box-shadow: 7px 8px 31px -5px rgba(0, 0, 0, 0.35);
         }
     }
 }

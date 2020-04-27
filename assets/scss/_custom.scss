@@ -3235,11 +3235,31 @@ body {
         @include medium {
             margin: 7rem 0 !important;
         }
+        .suggested {
+            padding: 1rem;
+            @include gradient(#5bd463,
+            #bcf298);
+            text-align: center;
+            border-radius: .55rem .55rem 0 0;
+            max-width: 50%;
+            @include medium {
+                max-width: 20%;
+            }
+            @include extra-large {
+                max-width: 22%;
+            }
+            .recommended {
+                color: $blanco;
+            }
+        }
         .col-plans,
         .col-premium {
             padding: 2rem;
-            border-radius: .25rem;
-            box-shadow: 11px 12px 31px -5px rgba(0, 0, 0, 0.25);
+            border-radius: .55rem;
+            box-shadow: 11px 12px 31px -5px rgba(0, 0, 0, 0.19);
+            background-color: #fff;
+            position: relative;
+            z-index: 100;
             .head {
                 display: flex;
                 justify-content: space-between;
@@ -3340,7 +3360,9 @@ body {
                 }
                 .benefits {
                     .benefits-item {
-                        grid-template-columns: 6% 90%;
+                        @include medium {
+                            grid-template-columns: 6% 90%;
+                        }
                     }
                 }
                 .g-alert-meet {
@@ -3356,6 +3378,39 @@ body {
         .col-premium {
             .body {
                 margin-bottom: .9rem;
+            }
+        }
+    }
+    .we-offer,
+    .all-courses {
+        h2 {
+            &.title {
+                font-weight: 600;
+            }
+        }
+    }
+    .we-offer {
+        .card-container {
+            display: flex;
+        }
+        .card-offer {
+            background-color: $blanco;
+            border: 1px solid #707070;
+            border-radius: .50rem;
+            padding: 1rem .5rem;
+            @include medium {
+                padding: 2rem 1.5rem;
+
+            }
+            .card-offer-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-top: 2rem;
+                @include medium {}
+            }
+            p {
+                color: #7b7b7b;
+                font-size: 1.15rem;
             }
         }
     }

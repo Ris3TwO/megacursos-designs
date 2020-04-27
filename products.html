@@ -34,7 +34,10 @@
         function apachurrame(){
            var caja =  document.getElementById("box-comment");
            caja.style.display = null;
-           caja.click();
+           var scroll = new SmoothScroll();
+            var anchor = document.querySelector('#box-comment');
+            var options = { speed: 5000, easing: 'easeOutCubic' };
+            scroll.animateScroll(anchor,null,options);
         }
     </script>
 </head>
@@ -5104,7 +5107,7 @@
                                 <button class="btn btn-block btn-quaternary" id="loadMore" type="button">Mostrar más comentarios</button>
                             </div>
                             <div class="col-md-4">
-                              <a href="#box-comment" onclick="apachurrame()"> <button class="btn btn-block btn-quarenty d-flex justify-content-around align-items-center px-5" type="button" ><i class="far fa-edit    "></i> Escribir comentario</button></a>
+                              <button onclick="apachurrame()" type= "button" class="btn btn-block btn-quarenty d-flex justify-content-around align-items-center px-5" type="button" ><i class="far fa-edit    "></i> Escribir comentario</button>
                             </div>
                         </div>
 

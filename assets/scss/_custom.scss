@@ -3239,7 +3239,7 @@ body {
         .col-premium {
             padding: 2rem;
             border-radius: .25rem;
-            box-shadow: 7px 8px 31px -5px rgba(0, 0, 0, 0.35);
+            box-shadow: 11px 12px 31px -5px rgba(0, 0, 0, 0.25);
             .head {
                 display: flex;
                 justify-content: space-between;
@@ -3334,6 +3334,10 @@ body {
                 }
             }
             .body {
+                .title {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }
                 .benefits {
                     .benefits-item {
                         grid-template-columns: 6% 90%;

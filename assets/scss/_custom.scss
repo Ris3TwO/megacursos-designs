@@ -13,8 +13,24 @@ body {
     background-color: $blanco;
 }
 
+.hv-40 {
+    height: 40vh;
+}
+
+.hv-45 {
+    height: 45vh;
+}
+
 .hv-50 {
     height: 50vh;
+}
+
+.hv-55 {
+    height: 55vh;
+}
+
+.hv-60 {
+    height: 60vh;
 }
 
 // Breadcrumb
@@ -946,7 +962,7 @@ body {
                     flex-basis: 75%;
                 }
                 @include large {
-                    flex-basis: 50%;
+                    flex-basis: 42%;
                 }
             }
         }
@@ -2803,6 +2819,9 @@ body {
         padding: .5rem;
         color: $negro;
     }
+    p {
+        color: $negro;
+    }
     .cart-mega {
         .dropdown {
             .dropdown-products {
@@ -2833,9 +2852,6 @@ body {
                     color: $negro;
                     @include large {
                         padding: .5rem 1rem 1.5rem;
-                    }
-                    p {
-                        color: $negro;
                     }
                     .btn-primary {
                         background: transparent linear-gradient(96deg, #5BD463 0%, #D0F8A3 100%) 0% 0% no-repeat padding-box;
@@ -2927,6 +2943,54 @@ body {
                     padding: 1.5rem 1.5rem 1rem 1.5rem;
                 }
             }
+        }
+    }
+}
+
+// Plans Page
+.plans-section {
+    .masthead {
+        height: 45vh;
+        min-height: 200px;
+        background-image: url('https://megacursos.com/themes/megacursos/assets/img/planes/header.png');
+        background-size: cover;
+        background-position: initial;
+        background-repeat: no-repeat;
+        position: relative;
+        color: $blanco !important;
+        .col-head {
+            display: flex !important;
+            flex-wrap: wrap;
+            justify-content: center;
+            h1 {
+                font-weight: 600;
+                flex-basis: 100%;
+                margin: 0 0 .47em 0;
+                @include large {
+                    font-size: 2.4rem;
+                }
+            }
+            .lead {
+                color: $blanco !important;
+                flex-basis: 100%;
+                margin: 0 auto;
+                .mega {
+                    font-weight: 500;
+                    color: $terciario;
+                }
+                @include medium {
+                    flex-basis: 75%;
+                }
+                @include large {
+                    flex-basis: 44%;
+                }
+            }
+        }
+    }
+    .currencies {
+        background-color: #f4f2fa;
+        h1 {
+            font-weight: 600;
         }
     }
 }

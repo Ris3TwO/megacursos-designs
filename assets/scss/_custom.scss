@@ -3647,6 +3647,11 @@ body {
                 @include medium {
                     max-height: 70vh;
                 }
+                .button {
+                    .btn {
+                        border-radius: 0rem;
+                    }
+                }
             }
         }
     }

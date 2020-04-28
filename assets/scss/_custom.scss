@@ -267,8 +267,10 @@ body {
 
 .g-alert-meet {
     display: grid;
-    grid-template-columns: 6% 90%;
-
+    grid-template-columns: 10% 90%;
+    @include medium {
+        grid-template-columns: 6% 90%;
+    }
     .icon {
         margin-top: -.2rem;
 
@@ -3544,32 +3546,43 @@ body {
 
 // Plans Page
 .plans-section {
-
-    // General css
     .nav-link {
-        color: #b7b7b7;
+        color: #707070;
         border: unset !important;
         border-bottom: 3px solid transparent;
         padding-bottom: 0.2rem !important;
 
         &.active {
-            color: #dc3545 !important;
+            color: $danger !important;
+            margin-bottom: -0.2rem;
             font-weight: inherit !important;
             border-bottom: 3px solid !important;
         }
 
     }
-
+    // General css
     .after::after {
-        background-color: #e6f1f9;
+        background-color: #e5f0f8;
         content: '';
         display: block;
         position: absolute;
-        top: 3.5rem;
-        left: 3.5rem;
-        right: 3.5rem;
-        bottom: 3.5rem;
+        top: .5rem;
+        left: .5rem;
+        right: .5rem;
+        bottom: .5rem;
         z-index: -1;
+        @include medium {
+            top: 3.5rem;
+            left: 3.5rem;
+            right: 3.5rem;
+            bottom: 3.5rem;
+        }
+        @include extra-large {
+            top: 4.5rem;
+            left: 4.5rem;
+            right: 4.5rem;
+            bottom: 4.5rem;
+        }
     }
 
     .benefits {
@@ -4076,6 +4089,198 @@ body {
                 color: #7b7b7b;
                 font-size: 1.05rem;
                 margin-bottom: 0;
+            }
+        }
+    }
+    .all-courses {
+        margin-top: 2rem;
+        @include medium {
+            margin-top: 5rem;
+        }
+        
+        .owl-carousel {
+            .owl-item {
+                margin-right: 14px !important;
+                margin-left: 10px !important;
+                @include small {
+                    margin-left: 12px !important;
+                }
+                @include medium {
+                    margin-right: 10px !important;
+                    margin-left: 0 !important;
+                }
+                @include large {
+                    margin-right: 30px !important;
+                }
+            }
+            .owl-stage-outer {
+                padding: .5rem;
+            }
+            .owl-dots {
+                span {
+                    width: 6px;
+                    height: 6px;
+                    margin: 2px;
+                    background: none;
+                }
+                .owl-dot {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    margin: 0 10px;
+                    border: 1px solid #7d7d7d;
+                    border-radius: 8px;
+                    &.active {
+                        span {
+                            background: $danger;
+                        }
+                    }
+                }
+            }
+        }
+        .viewed {
+            padding: 1rem;
+            background: $blanco;
+            border-radius: .55rem;
+            box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.12);
+            max-width: 100%;
+            @include medium {
+                margin-bottom: -16rem !important;
+            }
+            @include extra-large {
+                margin-bottom: -17rem !important;
+            }
+        }
+        .viewed_title_container {
+            position: relative;
+            width: 100%;
+            @include medium {
+                padding: 0 1rem;
+            }
+        }
+        .viewed_title {
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+        .viewed_nav_container {
+            position: absolute;
+            // right: -5px;
+            right: 0;
+            bottom: 14px;
+            @include medium {
+                margin-bottom: -2rem;
+            }
+            @include large {
+                right: -4%;
+            }
+        }
+        .viewed_nav {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .viewed_nav i {
+            background: $danger;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 14px;
+            vertical-align: middle;
+            padding: 5px;
+            color: $blanco;
+            font-size: 18px;
+            padding: 5px 8px;
+            transition: all 200ms ease;
+        }
+        .viewed_nav:hover i {
+            background: darken($danger, 5);
+        }
+        .viewed_prev {
+            margin-right: 15px;
+        }
+        .viewed_slider_container {
+            overflow: hidden;
+            @include medium {
+                padding-top: 20px;
+            }
+        }
+        .viewed_item {
+            width: 100%;
+            background: #FFFFFF;
+            border-radius: 8px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .viewed_image {
+            width: 230px;
+            padding: 1rem;
+            @include medium {
+                padding: 0rem;
+                width: 138px;
+            }
+        }
+        .viewed_image img {
+            display: block;
+            max-width: 100%;
+        }
+        .viewed_content {
+            width: 100%;
+        }
+        .viewed_name a {
+            font-size: 14px;
+            color: #707070;
+            transition: all 200ms ease;
+        }
+        .viewed_name a:hover {
+            color: darken(#707070, 3);
+        }
+        .item_marks {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+        }
+        .item_mark {
+            display: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: #FFFFFF;
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 36px;
+            text-align: center;
+        }
+        .item_discount {
+            background: #df3b3b;
+            margin-right: 5px;
+        }
+        .item_new {
+            background: #0e8ce4;
+        }
+        .viewed_item.discount .item_discount {
+            display: inline-block;
+        }
+        .viewed_item.is_new .item_new {
+            display: inline-block;
+        }
+    }
+    .our-plans {
+        max-height: 40vh;
+        @include medium {
+            max-height: 70vh;
+        }
+        .container {
+            max-height: 40vh;
+            @include medium {
+                max-height: 70vh;
+            }
+            .row {
+                max-height: 40vh;
+                @include medium {
+                    max-height: 70vh;
+                }
             }
         }
     }

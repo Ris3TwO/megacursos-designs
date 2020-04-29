@@ -286,6 +286,7 @@ body {
             padding: 1rem 1.25rem;
             display: flex;
             cursor: pointer;
+            background-color: $blanco;
             &.collapsed {
                 border-bottom: 1px solid rgba(0, 0, 0, .125);
                 margin-bottom: 0 !important;
@@ -1513,6 +1514,7 @@ body {
             .block-text {
                 p {
                     text-align: center !important;
+                    margin-left: 0 !important;
                 }
             }
             .header-static {
@@ -2496,6 +2498,22 @@ body {
                 border: 1px solid transparent;
             }
         }
+        .g-alert-meet {
+            @include extra-large {
+                grid-template-columns: 4% 96%;
+            }
+            .icon {
+                margin-top: -.3rem;
+                .mdi {
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+            .text {
+                font-size: 1rem;
+                color: $negro;
+            }
+        }
     }
     /* Modal */
     .modal-content {
@@ -3038,7 +3056,10 @@ body {
     .benefits {
         .benefits-items {
             margin: 0;
-            padding: 1rem 0;
+            padding: 1rem;
+            @include medium {
+                padding: 1rem 0;
+            }
             .benefits-item {
                 margin: .5rem 0;
                 list-style: none;
@@ -3095,7 +3116,7 @@ body {
                     flex-basis: 75%;
                 }
                 @include large {
-                    flex-basis: 44%;
+                    flex-basis: 48%;
                 }
             }
         }
@@ -3116,14 +3137,21 @@ body {
                     @include medium {
                         margin-top: -7rem;
                     }
-                    h1 {
+                    .p-title {
                         font-weight: 600;
+                        font-size: 2em;
+                        margin: 0.67em 0;
+                    }
+                    .currency {
+                        color: $negro;
+                        margin-top: 0;
+                        margin-bottom: 1rem;
                     }
                     .dropdown {
                         box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.17);
                         &.show {
                             .dropdown-toggle::after {
-                                transform: rotate(-180deg);
+                                transform: rotate(-180deg) !important;
                             }
                         }
                         .btn-light {
@@ -3133,6 +3161,8 @@ body {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            width: 13rem;
+                            min-height: auto;
                             @include medium {
                                 width: 13rem;
                             }
@@ -3146,10 +3176,16 @@ body {
                                 font-size: 14px;
                                 color: $danger;
                                 border: none;
-                                transition: transform .3s linear;
+                                transition: transform .3s linear !important;
+                                position: unset;
+                                top: unset;
+                                right: unset;
+                                transform: none;
                             }
                         }
                         .dropdown-menu {
+                            width: 13rem;
+                            min-height: unset;
                             @include medium {
                                 min-width: 13rem;
                             }
@@ -3190,6 +3226,7 @@ body {
             .card-header {
                 border-radius: calc(.75rem - 1px) calc(.75rem - 1px) 0 0;
                 border-bottom: none;
+                padding: .75rem 1.25rem;
             }
             .card-body {
                 @include large {
@@ -3225,6 +3262,9 @@ body {
                             font-size: .8rem;
                             @include extra-large {
                                 padding: 0 3rem;
+                            }
+                            b {
+                                font-weight: 600;
                             }
                         }
                     }
@@ -3536,6 +3576,7 @@ body {
             border-radius: .55rem;
             box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.12);
             max-width: 100%;
+            margin-bottom: -14rem;
             @include medium {
                 margin-bottom: -16rem !important;
             }
@@ -3661,16 +3702,25 @@ body {
     .our-plans {
         max-height: 40vh;
         @include medium {
+            max-height: 50vh;
+        }
+        @include extra-large {
             max-height: 70vh;
         }
         .container {
             max-height: 40vh;
             @include medium {
+                max-height: 50vh;
+            }
+            @include extra-large {
                 max-height: 70vh;
             }
             .row {
                 max-height: 40vh;
                 @include medium {
+                    max-height: 45vh;
+                }
+                @include extra-large {
                     max-height: 70vh;
                 }
                 .button {

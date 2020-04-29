@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
 
     <style>
@@ -60,13 +61,16 @@
         }
     </style>
     <script>
-        function apachurrame(){
-           var caja =  document.getElementById("box-comment");
-           caja.style.display = null;
-           var scroll = new SmoothScroll();
+        function apachurrame() {
+            var caja = document.getElementById("box-comment");
+            caja.style.display = null;
+            var scroll = new SmoothScroll();
             var anchor = document.querySelector('#box-comment');
-            var options = { speed: 5000, easing: 'easeOutCubic' };
-            scroll.animateScroll(anchor,null,options);
+            var options = {
+                speed: 5000,
+                easing: 'easeOutCubic'
+            };
+            scroll.animateScroll(anchor, null, options);
         }
     </script>
 </head>
@@ -5001,7 +5005,7 @@
                     <div class="col-md-12">
                         <h2 class="mb-md-4">Lo que dicen de nuestro curso</h2>
                         <div class="row row-normal mt-2 mt-md-0">
-                            <div class="comments mb-md-4">
+                            <div class="comments col-12 mb-md-4">
                                 <div class="media mt-3 mt-md-4">
                                     <img src="https://megacursos.com/themes/megacursos/assets/images/avataricon2.png" class="mr-md-5 mr-2 rounded" alt="Carlos Lúcar">
                                     <div class="media-body">
@@ -5017,7 +5021,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comments mb-md-4">
+                            <div class="comments col-12 mb-md-4">
                                 <div class="media mt-3 mt-md-4">
                                     <img src="https://megacursos.com/themes/megacursos/assets/images/avataricon2.png" class="mr-md-5 mr-2 rounded" alt="Carlos Lúcar">
                                     <div class="media-body">
@@ -5033,7 +5037,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comments mb-md-4">
+                            <div class="comments col-12 mb-md-4">
                                 <div class="media mt-3 mt-md-4">
                                     <img src="https://megacursos.com/themes/megacursos/assets/images/avataricon2.png" class="mr-md-5 mr-2 rounded" alt="Carlos Lúcar">
                                     <div class="media-body">
@@ -5049,7 +5053,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comments mb-md-4">
+                            <div class="comments col-12 mb-md-4">
                                 <div class="media mt-3 mt-md-4">
                                     <img src="https://megacursos.com/themes/megacursos/assets/images/avataricon2.png" class="mr-md-5 mr-2 rounded" alt="Carlos Lúcar">
                                     <div class="media-body">
@@ -5065,7 +5069,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comments mb-md-4">
+                            <div class="comments col-12 mb-md-4">
                                 <div class="media mt-3 mt-md-4">
                                     <img src="https://megacursos.com/themes/megacursos/assets/images/avataricon2.png" class="mr-md-5 mr-2 rounded" alt="Carlos Lúcar">
                                     <div class="media-body">
@@ -5081,7 +5085,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comments mb-md-4">
+                            <div class="comments col-12 mb-md-4">
                                 <div class="media mt-3 mt-md-4">
                                     <img src="https://megacursos.com/themes/megacursos/assets/images/avataricon2.png" class="mr-md-5 mr-2 rounded" alt="Carlos Lúcar">
                                     <div class="media-body">
@@ -5097,7 +5101,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comments mb-md-4">
+                            <div class="comments col-12 mb-md-4">
                                 <div class="media mt-3 mt-md-4">
                                     <img src="https://megacursos.com/themes/megacursos/assets/images/avataricon2.png" class="mr-md-5 mr-2 rounded" alt="Carlos Lúcar">
                                     <div class="media-body">
@@ -5113,7 +5117,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="comments mb-md-4">
+                            <div class="comments col-12 mb-md-4">
                                 <div class="media mt-3 mt-md-4">
                                     <img src="https://megacursos.com/themes/megacursos/assets/images/avataricon2.png" class="mr-md-5 mr-2 rounded" alt="Carlos Lúcar">
                                     <div class="media-body">
@@ -5136,11 +5140,11 @@
                                 <button class="btn btn-block btn-quaternary" id="loadMore" type="button">Mostrar más comentarios</button>
                             </div>
                             <div class="col-md-4">
-                              <button onclick="apachurrame()" type= "button" class="btn btn-block btn-quarenty d-flex justify-content-around align-items-center px-5" type="button" ><i class="far fa-edit    "></i> Escribir comentario</button>
+                                <button onclick="apachurrame()" type="button" class="btn btn-block btn-quarenty d-flex justify-content-around align-items-center px-5" type="button"><i class="far fa-edit    "></i> Escribir comentario</button>
                             </div>
                         </div>
 
-                        <form id="box-comment" class="fade-in-bottom row row-normal no-gutters  mt-4 comment-box p-5 justify-content-center" id="comment-box" style="display: none;">
+                        <form id="box-comment" class="fade-in-bottom row row-normal no-gutters mt-4 comment-box p-5 justify-content-center" id="comment-box" style="display: none;">
                             <div class="col-12 col-md-6 px-2">
                                 <label for="exampleFormControlTextarea1">Nombre</label>
                                 <input type="text" class="form-control form-control-lg">
@@ -5163,6 +5167,16 @@
                                 </div>
                             </div>
                         </form>
+
+                        <div class="g-alert-meet mt-3">
+                            <div class="icon">
+                                <span class="mdi mdi-information-outline"></span>
+                            </div>
+                            <div class="text">
+                                Si tienes alguna duda acerca de este producto, lo mejor es que te pongas <a class="act-prof" href="#">en contacto con nostros en nuestro chat 24h, teléfono 24h</a> o email aquí para resolver tu duda ahora mismo. Los comentarios
+                                pueden tardar más en responderse.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -5329,14 +5343,15 @@
                         }, 1500);
                     } else {
                         $('html,body').animate({
-                            scrollTop: $(this).offset().top - 100
+                            scrollTop: $(this).offset().top - 300
                         }, 1500);
                     }
                 });
             });
 
             var masthead = $('.productDetails').height();
-            var height = masthead + 80;
+            var calc = (masthead / 8);
+            var height = masthead + calc;
             $(".masthead").css("height", height + "px");
 
             if ($(window).width() < 700) {

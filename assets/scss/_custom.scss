@@ -1237,17 +1237,22 @@ body {
         }
         .product-hours {
             display: flex;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             position: absolute;
             background-color: #32cc7a;
-            top: 50%;
+            top: 40%;
             left: calc(10% - .9rem);
             color: $blanco;
             text-align: center;
-            width: 4.4em;
-            height: 4.4em;
+            width: 7.4em;
+            height: 7.4em;
             border-radius: 50%;
+            h3 {
+                margin: 0;
+                padding: 0;
+            }
             p {
                 color: $blanco;
                 font-size: 1rem;

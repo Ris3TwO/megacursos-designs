@@ -1233,22 +1233,10 @@ body {
     }
     .ultra-img {
         .product-image {
-            position: relative;
         }
         .product-hours {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            position: absolute;
-            background-color: #32cc7a;
-            top: 40%;
-            left: calc(10% - .9rem);
-            color: $blanco;
-            text-align: center;
-            width: 7.4em;
-            height: 7.4em;
-            border-radius: 50%;
+            width: 150px;
+            height: 150px;
             h3 {
                 margin: 0;
                 padding: 0;

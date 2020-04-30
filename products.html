@@ -5299,7 +5299,7 @@
             hour = minute * 60,
             day = hour * 24;
 
-        let countDown = new Date('Apr 30, 2020 00:00:00').getTime();
+        let countDown = new Date('Sep 30, 2020 00:00:00').getTime();
         // let countDown = new Date('<?php echo date('
         //     M d, Y H: i: s ', strtotime($coupon_end_date)); ?>').getTime();
 
@@ -5337,14 +5337,17 @@
                     if ($(".comments:hidden").length == 0) {
                         $("#load").fadeOut('slow');
                     }
+                    var ele = $(this).closest("section").find(".container");
                     if ($(window).width() < 700) {
                         $('html,body').animate({
-                            scrollTop: $(this).offset().top - 130
+                            scrollTop: $(ele).offset().top - 130
                         }, 1500);
                     } else {
                         $('html,body').animate({
-                            scrollTop: $(this).offset().top - 300
+                            scrollTop: $(this).closest('.comments').next().offset().top
+                                // scrollTop: $(ele).offset().top - 300
                         }, 1500);
+                        return false;
                     }
                 });
             });
@@ -5426,12 +5429,6 @@
             });
 
 
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 1500
         });
     </script>
 </body>

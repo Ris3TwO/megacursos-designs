@@ -1157,6 +1157,14 @@ body {
     .mega-contener-product {
         padding-top: 1rem;
         color: $blanco;
+        &.ultra-contener {
+            .ultra {
+                text-transform: capitalize;
+            }
+            .headline {
+                color: $danger;
+            }
+        }
         h2 {
             font-weight: 600;
             font-size: 38px;
@@ -1220,6 +1228,29 @@ body {
                 i {
                     color: $danger;
                 }
+            }
+        }
+    }
+    .ultra-img {
+        .product-image {
+            position: relative;
+        }
+        .product-hours {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            position: absolute;
+            background-color: #32cc7a;
+            top: 50%;
+            left: calc(10% - .9rem);
+            color: $blanco;
+            text-align: center;
+            width: 4.4em;
+            height: 4.4em;
+            border-radius: 50%;
+            p {
+                color: $blanco;
+                font-size: 1rem;
             }
         }
     }
@@ -3366,8 +3397,15 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 img {
-                    @include medium {
-                        max-width: 80px;
+                    &:nth-child(1) {
+                        position: relative;
+                        max-width: 94px;
+                    }
+                    &:nth-child(2) {
+                        position: absolute;
+                        padding: 0.1rem;
+                        max-width: 4.3rem;
+                        left: 46px;
                     }
                 }
                 .right {
@@ -3377,7 +3415,8 @@ body {
                     justify-content: center;
                     align-items: center;
                     p {
-                        @include large {
+                        font-size: .95rem;
+                        @include medium {
                             font-size: .7rem;
                         }
                         font-weight: 600;
@@ -3522,6 +3561,9 @@ body {
                 color: #7b7b7b;
                 font-size: 1.05rem;
                 margin-bottom: 0;
+            }
+            img {
+                max-width: 94px;
             }
         }
     }

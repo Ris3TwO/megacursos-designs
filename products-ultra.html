@@ -14,7 +14,7 @@
 
     <style>
         .row {
-            margin: 0;
+            margin: 0 !important;
         }
         
         p {
@@ -138,13 +138,13 @@
                     <div class="col-xs-5 col-md-5 col-sm-5 order-1 order-md-12 m-auto ultra-img">
                         <div class="text-center d-flex flex-row-reverse align-items-center">
                             <img class="img-fluid product-image" src="https://megacursos.com/uploads/images/full/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" alt="">
-                            <div class="product-hours mr-n5 text-white bg-success  rounded-circle d-flex flex-column justify-content-center " >
+                            <div class="product-hours mr-n5 text-white rounded-circle d-flex flex-column justify-content-center " >
                                 <h3>
                                     + 1600 H 
                                 </h3>
-                                        <p class="m-0">
-                                            de clases
-                                        </p>
+                                <p class="m-0">
+                                    de clases
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -609,14 +609,14 @@
                                         <ul class="benefits-items">
                                             <li class="benefits-item benefits-item-columns">
                                                 <span class="benefits-icon">
-                                                                    <i class="fas fa-check"></i>
-                                                                </span>
+                                                    <i class="fas fa-check"></i>
+                                                </span>
                                                 <span class="benefits-text">Tu nombre y apellidos oficiales (te los pediremos para prepararte el diploma)</span>
                                             </li>
                                             <li class="benefits-item benefits-item-columns">
                                                 <span class="benefits-icon">
-                                                                    <i class="fas fa-check"></i>
-                                                                </span>
+                                                    <i class="fas fa-check"></i>
+                                              </span>
                                                 <span class="benefits-text">El curso que has tomado</span>
                                             </li>
                                             <li class="benefits-item benefits-item-columns">
@@ -5354,11 +5354,13 @@
             });
 
             var masthead = $('.productDetails').height();
-            var calc = (masthead / 8);
-            var height = masthead + calc;
-            $(".masthead").css("height", height + "px");
 
             if ($(window).width() < 700) {
+                // Height of container
+                var height = masthead + 150;
+                $(".masthead").css("height", height + "px");
+
+                // <!-- Properties -->
                 $('#nav-picker').css({
                     "display": "block"
                 });
@@ -5377,6 +5379,9 @@
                 });
                 console.log('mobile')
             } else {
+                var height = masthead + 100;
+                $(".masthead").css("height", height + "px");
+
                 $('#nav-picker').css({
                     "display": "none"
                 });
@@ -5395,6 +5400,9 @@
             $(window).on('resize', function() {
                 var win = $(this);
                 if (win.width() < 700) {
+                    // Height of container
+                    var height = masthead + 130;
+                    $(".masthead").css("height", height + "px");
                     $('#nav-picker').css({
                         "display": "block"
                     });
@@ -5413,6 +5421,9 @@
                     });
                     console.log('mobile')
                 } else {
+                    var height = masthead + 100;
+                    $(".masthead").css("height", height + "px");
+
                     $('#nav-picker').css({
                         "display": "none"
                     });

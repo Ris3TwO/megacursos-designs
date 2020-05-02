@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 
     <style>
         .row {
-            margin: 0 !important;
+            margin: 0;
         }
         
         p {
@@ -24,41 +26,6 @@
             font-weight: 300;
             line-height: 1.7em;
             color: #999;
-        }
-        
-        .owl-stage {
-            display: none;
-        }
-        
-        .fade-in-bottom {
-            -webkit-animation: fade-in-bottom 1s cubic-bezier(.39, .575, .565, 1.000) both;
-            animation: fade-in-bottom 1s cubic-bezier(.39, .575, .565, 1.000) both
-        }
-        
-        @-webkit-keyframes fade-in-bottom {
-            0% {
-                -webkit-transform: translateY(50px);
-                transform: translateY(50px);
-                opacity: 0
-            }
-            100% {
-                -webkit-transform: translateY(0);
-                transform: translateY(0);
-                opacity: 1
-            }
-        }
-        
-        @keyframes fade-in-bottom {
-            0% {
-                -webkit-transform: translateY(50px);
-                transform: translateY(50px);
-                opacity: 0
-            }
-            100% {
-                -webkit-transform: translateY(0);
-                transform: translateY(0);
-                opacity: 1
-            }
         }
     </style>
     <script>
@@ -106,7 +73,7 @@
         <header class="masthead" style="background-image: url(&quot;https://megacursos.com/uploads/images/full/b2f29c398d8ada95e85c977cb098fcd9.png&quot;); height: 483.4px;">
             <div class="container-fluid productDetails">
                 <div class="row px-lg-6">
-                    <div class="col-xs-7 col-md-7 col-sm-7 p-0 m-0 order-12 order-md-1">
+                    <div class="col-xs-7 col-md-7 col-sm-12 p-0 m-0 order-12 order-md-1">
                         <div class="mega-contener-product ultra-contener">
                             <h3 class="ultra">Ultra</h3>
                             <h2>Dios del universo 1.653h</h2>
@@ -133,10 +100,10 @@
                             <div class="learn">
                                 <a href="https://megacursos.com/themes/megacursos/assets/images/megacorses-page-banner.jpg" class="fancybox" data-fancybox="gallery" title="Descubre más acerca del curso">Descubre más acerca del curso</a>
                             </div>
-
                         </div>
+                        
                     </div>
-                    <div class="col-xs-5 col-md-5 col-sm-5 order-1 order-md-12 m-auto ultra-img">
+                    <div class="col-xs-5 col-md-5 col-sm-12 order-1 order-md-12 m-auto ultra-img">
                         <div class="text-center d-flex flex-row-reverse align-items-center">
                             <img class="img-fluid product-image" src="https://megacursos.com/uploads/images/full/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" alt="">
                             <div class="product-hours mr-n5 text-white rounded-circle d-flex flex-column justify-content-center " >
@@ -150,11 +117,65 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-8 col-md-9 col-12 order-12 col-sliders mx-md-4 px-md-2">
+                <div class="packs">
+                    <div class="container p-0">
+                        <div class="row">
+                            <div class="packs_slider_container">
+                                <div class="packs_nav_container">
+                                    <!-- <div class="packs_nav packs_prev"><i class="fas fa-chevron-left"></i></div> -->
+                                    <div class="packs_nav packs_next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Recently packs Slider -->
+
+                                <div class="owl-carousel owl-theme packs_slider">
+
+                                    <!-- Recently packs Item -->
+                                    <div class="owl-item">
+                                        <div class="packs_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div class="packs_image"><img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" alt=""></div>
+                                            <div class="packs_content text-center">
+                                                <div class="packs_name">
+                                                    After effects                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Recently packs Item -->
+                                    <div class="owl-item">
+                                        <div class="packs_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div class="packs_image"><img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" alt=""></div>
+                                            <div class="packs_content text-center">
+                                                <div class="packs_name">
+                                                    After effects                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Recently packs Item -->
+                                    <div class="owl-item">
+                                        <div class="packs_item discount d-flex flex-column align-items-center justify-content-center text-center">
+                                            <div class="packs_image"><img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" alt=""></div>
+                                            <div class="packs_content text-center">
+                                                <div class="packs_name">
+                                                    After effects                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
         <!-- // Tab start -->
-        <div class="col-xs-12 tabContainer">
+        <div class="col-xs-12 tabContainer ultraContainer">
             <div class="container-fluid">
                 <!-- // -->
                 <div class="col-xs-12 p-0 m-0">
@@ -5297,6 +5318,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer="defer"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer="defer"></script>
 
+    <script src="assets/js/owl.carousel.js"></script>
+
     <script type="text/javascript">
         // Countdown
         const second = 1000,
@@ -5343,7 +5366,7 @@
                         $("#load").fadeOut('slow');
                     }
                     var ele = $(this).closest("section").find(".container");
-                    if ($(window).width() < 700) {
+                    if ($(window).width() < 768) {
                         $('html,body').animate({
                             scrollTop: $(ele).offset().top - 130
                         }, 1500);
@@ -5359,9 +5382,9 @@
 
             var masthead = $('.productDetails').height();
 
-            if ($(window).width() < 700) {
+            if ($(window).width() < 768) {
                 // Height of container
-                var height = masthead + 150;
+                var height = masthead + 30;
                 $(".masthead").css("height", height + "px");
 
                 // <!-- Properties -->
@@ -5383,7 +5406,7 @@
                 });
                 console.log('mobile')
             } else {
-                var height = masthead + 100;
+                var height = masthead + 20;
                 $(".masthead").css("height", height + "px");
 
                 $('#nav-picker').css({
@@ -5403,7 +5426,7 @@
 
             $(window).on('resize', function() {
                 var win = $(this);
-                if (win.width() < 700) {
+                if (win.width() < 768) {
                     // Height of container
                     var height = masthead + 130;
                     $(".masthead").css("height", height + "px");
@@ -5444,6 +5467,59 @@
                 }
             });
 
+
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            initPacksSlider();
+
+            function initPacksSlider() {
+                if ($('.packs_slider').length) {
+                    var packsSlider = $('.packs_slider');
+
+                    packsSlider.owlCarousel({
+                        loop: false,
+                        margin: 5,
+                        autoplay: false,
+                        autoplayTimeout: 6000,
+                        nav: false,
+                        dots: true,
+                        responsive: {
+                            0: {
+                                items: 2
+                            },
+                            575: {
+                                items: 4
+                            },
+                            768: {
+                                items: 6
+                            },
+                            991: {
+                                items: 8
+                            },
+                            1199: {
+                                items: 10
+                            }
+                        }
+                    });
+
+                    if ($('.packs_prev').length) {
+                        var prev = $('.packs_prev');
+                        prev.on('click', function() {
+                            packsSlider.trigger('prev.owl.carousel');
+                        });
+                    }
+
+                    if ($('.packs_next').length) {
+                        var next = $('.packs_next');
+                        next.on('click', function() {
+                            packsSlider.trigger('next.owl.carousel');
+                        });
+                    }
+                }
+            }
 
         });
     </script>

@@ -271,6 +271,143 @@ body {
     }
 }
 
+// Owl-carousel packs 
+.packs {
+    padding: 1rem;
+    background: $blanco;
+    border-radius: .55rem;
+    box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.12);
+    max-width: 100%;
+}
+
+.packs_title_container {
+    position: relative;
+    width: 100%;
+    @include medium {
+        padding: 0 1rem;
+    }
+}
+
+.packs_title {
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.packs_nav_container {
+    position: absolute;
+    // right: -5px;
+    right: 0;
+    bottom: 14px;
+}
+
+.packs_nav {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.packs_nav i {
+    background: $danger;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 14px;
+    vertical-align: middle;
+    color: $blanco;
+    font-size: 22px;
+    padding: 8px 10px;
+    transition: all 200ms ease;
+    position: relative;
+    z-index: 120;
+    &:hover,
+    &:focus {
+        background: darken($danger, 5);
+    }
+}
+
+.packs_nav:hover i {
+    background: darken($danger, 5);
+}
+
+.packs_prev {
+    margin-right: 15px;
+}
+
+.packs_slider_container {
+    overflow: hidden;
+    width: 100%;
+    @include medium {
+        padding-top: 20px;
+    }
+}
+
+.packs_item {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.packs_image {
+    width: 230px;
+    @include medium {
+        padding: 0rem;
+        width: 138px;
+    }
+}
+
+.packs_image img {
+    display: block;
+    max-width: 100%;
+}
+
+.packs_content {
+    width: 100%;
+}
+
+.packs_name a {
+    font-size: 14px;
+    color: #707070;
+    transition: all 200ms ease;
+}
+
+.packs_name a:hover {
+    color: darken(#707070, 3);
+}
+
+.owl-dots {
+    span {
+        width: 6px;
+        height: 6px;
+        margin: 2px;
+        background: none !important;
+    }
+    .owl-dot {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0 10px;
+        border: 1px solid #7d7d7d;
+        border-radius: 8px;
+        &.active {
+            span {
+                background: $danger !important;
+                width: 8px;
+                height: 8px;
+                margin: 2px 1px;
+                @include medium {
+                    width: 12px;
+                    height: 12px;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
 .accordion-faq {
     .card {
         border-left: solid thin #dcdacb;
@@ -862,130 +999,6 @@ body {
     }
 }
 
-// Owl-carousel viewed 
-.viewed {
-    padding: 1rem;
-    background: $blanco;
-    border-radius: .55rem;
-    box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.12);
-    max-width: 100%;
-}
-
-.viewed_title_container {
-    position: relative;
-    width: 100%;
-    @include medium {
-        padding: 0 1rem;
-    }
-}
-
-.viewed_title {
-    margin-bottom: 14px;
-    font-weight: 600;
-}
-
-.viewed_nav_container {
-    position: absolute;
-    // right: -5px;
-    right: 0;
-    bottom: 14px;
-}
-
-.viewed_nav {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.viewed_nav i {
-    background: $danger;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 14px;
-    vertical-align: middle;
-    padding: 5px;
-    color: $blanco;
-    font-size: 18px;
-    padding: 5px 8px;
-    transition: all 200ms ease;
-    &:hover,
-    &:focus {
-        background: darken($danger, 5);
-    }
-}
-
-.viewed_nav:hover i {
-    background: darken($danger, 5);
-}
-
-.viewed_prev {
-    margin-right: 15px;
-}
-
-.viewed_slider_container {
-    overflow: hidden;
-    @include medium {
-        padding-top: 20px;
-    }
-}
-
-.viewed_item {
-    width: 100%;
-    background: #FFFFFF;
-    border-radius: 8px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.viewed_image {
-    width: 230px;
-    padding: 1rem;
-    @include medium {
-        padding: 0rem;
-        width: 138px;
-    }
-}
-
-.viewed_image img {
-    display: block;
-    max-width: 100%;
-}
-
-.viewed_content {
-    width: 100%;
-}
-
-.viewed_name a {
-    font-size: 14px;
-    color: #707070;
-    transition: all 200ms ease;
-}
-
-.viewed_name a:hover {
-    color: darken(#707070, 3);
-}
-
-.item_marks {
-    position: absolute;
-    top: 18px;
-    left: 18px;
-}
-
-.item_mark {
-    display: none;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    color: #FFFFFF;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 36px;
-    text-align: center;
-}
-
 // Diploma Page
 .diploma-section {
     .container-fluid {
@@ -1363,10 +1376,10 @@ body {
         .product-hours {
             margin-right: -3.25rem !important;
             width: 6.5rem;
-            height: 6.5rem;
+            height: 5.5rem;
             background-color: #32cc7a;
-            @include medium {
-                width: 6.5rem;
+            @include small {
+                width: 5.5rem;
                 height: 5.5rem;
             }
             @include large {
@@ -1377,7 +1390,7 @@ body {
             h3 {
                 margin: 0;
                 padding: 0;
-                font-size: 1.45rem;
+                font-size: 1.25rem;
                 @include medium {
                     font-size: 1.25rem;
                 }
@@ -1399,7 +1412,69 @@ body {
             }
         }
     }
+    .col-sliders {
+        transform: translateY(1.5rem);
+        // @include medium {
+        //     transform: translateY(-4rem);
+        // }
+        // @include large {
+        //     transform: translateY(-4.5rem);
+        // }
+        // @include extra-large {
+        //     transform: translateY(1.5rem);
+        // }
+        .packs_slider_container {
+            padding: 0 1.5rem;
+            @include small {
+                padding: 0;
+            }
+            .packs_nav_container {
+                bottom: unset;
+                top: 40%;
+                @include medium {
+                    top: 36%;
+                    right: -1%;
+                }
+            }
+            .owl-carousel .owl-stage-outer {
+                padding: 0 .5rem;
+                @include medium {
+                    padding: 0;
+                }
+            }
+        }
+        .packs_item {
+            padding: 0;
+            width: 90px;
+            @include medium {
+                padding: .5rem 0;
+            }
+            .packs_image {
+                width: 40px;
+            }
+            .packs_content {
+                padding-top: .5rem;
+                .packs_name {
+                    @include medium {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
     // Content
+    .ultraContainer {
+        margin-top: 7.5rem !important;
+        @include small {
+            margin-top: 1.5rem !important;
+        }
+        @include medium {
+            margin-top: 4.5rem !important;
+        }
+        @include small {
+            padding: 2.5rem;
+        }
+    }
     .tabContainer {
         padding: 2rem;
         padding-right: 0;
@@ -2496,6 +2571,9 @@ body {
     .gallery-container {
         padding-top: 3rem;
         .viewed {
+            background: none;
+            border-radius: 0;
+            box-shadow: unset;
             padding-top: 1rem;
             padding-bottom: 1rem;
             .viewed_title_container {
@@ -2531,6 +2609,10 @@ body {
                             font-size: 18px;
                             padding: 5px;
                             transition: all 200ms ease;
+                            background: unset;
+                            width: unset;
+                            height: unset;
+                            border-radius: unset;
                         }
                         &.viewed_prev {
                             margin-right: 10px;
@@ -3259,6 +3341,113 @@ body {
             }
         }
     }
+    // Owl-carousel viewed 
+    .viewed {
+        padding: 1rem;
+        background: $blanco;
+        border-radius: .55rem;
+        box-shadow: 0px 0px 26px 3px rgba(0, 0, 0, 0.12);
+        max-width: 100%;
+    }
+    .viewed_title_container {
+        position: relative;
+        width: 100%;
+        @include medium {
+            padding: 0 1rem;
+        }
+    }
+    .viewed_title {
+        margin-bottom: 14px;
+        font-weight: 600;
+    }
+    .viewed_nav_container {
+        position: absolute;
+        // right: -5px;
+        right: 0;
+        bottom: 14px;
+    }
+    .viewed_nav {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .viewed_nav i {
+        background: $danger;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 14px;
+        vertical-align: middle;
+        padding: 5px;
+        color: $blanco;
+        font-size: 18px;
+        padding: 5px 8px;
+        transition: all 200ms ease;
+        &:hover,
+        &:focus {
+            background: darken($danger, 5);
+        }
+    }
+    .viewed_nav:hover i {
+        background: darken($danger, 5);
+    }
+    .viewed_prev {
+        margin-right: 15px;
+    }
+    .viewed_slider_container {
+        overflow: hidden;
+        @include medium {
+            padding-top: 20px;
+        }
+    }
+    .viewed_item {
+        width: 100%;
+        background: #FFFFFF;
+        border-radius: 8px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .viewed_image {
+        width: 230px;
+        padding: 1rem;
+        @include medium {
+            padding: 0rem;
+            width: 138px;
+        }
+    }
+    .viewed_image img {
+        display: block;
+        max-width: 100%;
+    }
+    .viewed_content {
+        width: 100%;
+    }
+    .viewed_name a {
+        font-size: 14px;
+        color: #707070;
+        transition: all 200ms ease;
+    }
+    .viewed_name a:hover {
+        color: darken(#707070, 3);
+    }
+    .item_marks {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+    }
+    .item_mark {
+        display: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        color: #FFFFFF;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 36px;
+        text-align: center;
+    }
     .masthead {
         height: 45vh;
         min-height: 200px;
@@ -3752,27 +3941,6 @@ body {
             .owl-stage-outer {
                 padding: .5rem;
             }
-            .owl-dots {
-                span {
-                    width: 6px;
-                    height: 6px;
-                    margin: 2px;
-                    background: none;
-                }
-                .owl-dot {
-                    display: inline-block;
-                    width: 12px;
-                    height: 12px;
-                    margin: 0 10px;
-                    border: 1px solid #7d7d7d;
-                    border-radius: 8px;
-                    &.active {
-                        span {
-                            background: $danger;
-                        }
-                    }
-                }
-            }
         }
     }
     .our-plans {
@@ -3806,5 +3974,37 @@ body {
                 }
             }
         }
+    }
+}
+
+// Animations
+.fade-in-bottom {
+    -webkit-animation: fade-in-bottom 1s cubic-bezier(.39, .575, .565, 1.000) both;
+    animation: fade-in-bottom 1s cubic-bezier(.39, .575, .565, 1.000) both
+}
+
+@-webkit-keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
     }
 }

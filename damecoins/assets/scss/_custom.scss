@@ -1,0 +1,195 @@
+html {
+    @include box-sizing(border-box);
+}
+
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+}
+
+body {
+    font-family: $main_source;
+    background-color: $light;
+}
+
+.hv-40 {
+    height: 40vh;
+}
+
+.hv-45 {
+    height: 45vh;
+}
+
+.hv-50 {
+    height: 50vh;
+}
+
+.hv-55 {
+    height: 55vh;
+}
+
+.hv-60 {
+    height: 60vh;
+}
+
+.hv-65 {
+    height: 65vh;
+}
+
+.hv-70 {
+    height: 70vh;
+}
+
+.navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+}
+
+.btn {}
+
+.btn-light {
+    color: $light;
+    position: relative;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: linear-gradient(110.42deg, #4C84FF 15.4%, #85FFFF 102.57%);
+    box-shadow: 8px 6px 20px rgba(76, 132, 255, 0.5);
+    border-radius: 10px;
+}
+
+// Header
+.header {
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+    min-height: 100vh;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2286.32px;
+        height: 1367.09px;
+        left: -520px;
+        top: -738.81px;
+        background: linear-gradient(91.48deg, #3552A2 -0.6%, #09173E 56.01%);
+        border-radius: 0px 0px 0px 300px;
+        transform: rotate(-38.68deg);
+    }
+    .container-fluid {
+        width: 90%;
+        &:first-child {
+            &::before {
+                content: '';
+                position: absolute;
+                width: 779.74px;
+                height: 1072.55px;
+                left: 779.75px;
+                top: -248.4px;
+                background: #4C84FF;
+                opacity: 0.21;
+                border-radius: 45px;
+                transform: rotate(47.34deg);
+            }
+        }
+    }
+    .nav-item {
+        .nav-link {
+            color: $light;
+            &:hover {
+                color: darken($light, 4);
+                text-decoration: underline;
+            }
+        }
+        .btn {
+            width: 120px;
+        }
+        .btn-primary {
+            width: 180px;
+        }
+    }
+    .buy-cryptos {
+        @include extra-large {
+            margin-top: 5rem;
+        }
+        .buy-crypto {
+            span {
+                color: $green;
+            }
+            @include extra-large {
+                font-size: 3rem;
+                color: $light;
+            }
+        }
+        .about {
+            font-size: 24px;
+            color: $light;
+            font-weight: normal;
+        }
+        .register-button {
+            .btn {
+                @include large {
+                    padding: .75rem .75rem;
+                    font-size: 1.35rem;
+                    border-radius: .70rem;
+                }
+            }
+        }
+        .steps {
+            position: relative;
+            &:before {
+                display: block;
+                height: 64%;
+                content: '';
+                position: absolute;
+                left: 0;
+                border-left: 1px dashed $light;
+                margin-top: .7rem;
+            }
+            .step {
+                margin-bottom: 1rem;
+                list-style: none;
+                position: relative;
+                color: $light;
+                font-weight: 300;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    margin-top: .3rem;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    left: -3rem;
+                    background: linear-gradient(180deg, #D7EEDF 0%, #23D160 100%);
+                }
+            }
+        }
+    }
+    .form-content {
+        position: relative;
+        &::before {
+            content: '';
+            background: linear-gradient(95.34deg, #4070F4 21.35%, #23509D 93%);
+            opacity: 0.21;
+            border-radius: 45px;
+            transform: rotate(47.34deg);
+            position: absolute;
+            width: 264.48px;
+            height: 268.94px;
+            right: -80px;
+            top: 290px;
+            z-index: 1;
+        }
+        .form-crypto {
+            background-color: $light;
+            border-radius: 2rem;
+            padding: 2rem;
+            position: relative;
+            z-index: 100;
+            height: 100%;
+        }
+    }
+}

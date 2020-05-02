@@ -62,12 +62,25 @@ body {
     border-radius: 10px;
 }
 
+.form-control-lg {
+    background: #F5F7FB;
+    /* azul dame coins */
+    border: 1px solid #23509D;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #C7C7C7;
+}
+
 // Header
 .header {
     position: relative;
     z-index: 100;
     overflow: hidden;
     min-height: 100vh;
+    @include large {
+        height: 1100px;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -85,10 +98,10 @@ body {
             &::before {
                 content: '';
                 position: absolute;
-                width: 779.74px;
-                height: 1072.55px;
-                left: 779.75px;
-                top: -248.4px;
+                width: 1152.74px;
+                height: 872.55px;
+                left: 674.75px;
+                top: -125.4px;
                 background: #4C84FF;
                 opacity: 0.21;
                 border-radius: 45px;
@@ -186,10 +199,99 @@ body {
         .form-crypto {
             background-color: $light;
             border-radius: 2rem;
-            padding: 2rem;
+            padding: 3rem 1.5rem;
             position: relative;
             z-index: 100;
             height: 100%;
+            box-shadow: 28px 24px 83px rgba(22, 40, 94, 0.45);
+            border-radius: 35px;
+            .small {
+                color: $tertiary;
+            }
+            label {
+                color: $tertiary;
+                font-weight: 500;
+                font-size: 18px;
+            }
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
+            .center-label {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    border: 0.5px solid #CDCDCD;
+                    left: .95rem;
+                    width: 93.5%;
+                    top: .85rem;
+                    @include large {
+                        left: .95rem;
+                        width: 93.5%;
+                    }
+                }
+                label {
+                    background-color: $light;
+                    padding: 0 1rem;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+            .suggested-amount {
+                display: grid;
+                grid-template-columns: 10% 34% 58%;
+                border: 0.5px solid #23509D;
+                box-sizing: border-box;
+                border-radius: 10px;
+                padding: 0.4rem .5rem;
+                margin-bottom: 1rem;
+                .form-check-input {
+                    position: unset;
+                    margin-top: 0;
+                    margin-left: 0;
+                    background-color: #CFD6EB;
+                    /* Dark Blue */
+                    border: 1px solid #16285E;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                }
+                .check {
+                    align-self: center;
+                }
+                .amounts,
+                .receives {
+                    .title {
+                        font-weight: 300;
+                        font-size: 10px;
+                        color: $tertiary;
+                    }
+                }
+                .amounts {
+                    margin-right: .2rem;
+                }
+                .amount,
+                .crypto-amount {
+                    color: $tertiary;
+                    font-weight: bold;
+                    font-size: 13px;
+                }
+            }
+            .credit-card {
+                display: flex;
+                width: 100%;
+                input[type="email"] {
+                    padding-left: 3rem;
+                    border-radius: .25rem;
+                    background-image: url(../img/icons/email.png);
+                    background-repeat: no-repeat;
+                    background-position: calc(1% + .5rem) calc(1% + .6rem);
+                }
+            }
         }
     }
 }

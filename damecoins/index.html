@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
 
@@ -36,10 +37,20 @@
                             <a class="nav-link " href="# ">Preguntas frecuentes</a>
                         </li>
                         <li class="nav-item mx-md-2">
-                            <a class="btn btn-light " href="# ">Log In</a>
+                            <button class="btn btn-light d-flex justify-content-around" href="# ">
+                                <img src="assets/img/icons/user.png" alt="">
+                                <span>
+                                    Log In
+                                </span>
+                            </button>
                         </li>
                         <li class="nav-item mx-md-2">
-                            <a class="btn btn-primary" href="# ">Empieza ahora</a>
+                            <a class="btn btn-primary d-flex justify-content-around" href="#">
+                                <img src="assets/img/icons/rocket.png" alt="">
+                                <span>
+                                    Empieza ahora
+                                </span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -76,23 +87,28 @@
                     <div class="form-crypto">
                         <form>
                             <div class="form-row">
-                                <div class="col-md-6 col-12 px-md-3">
+                                <div class="col-md-6 col-12 pl-md-2">
                                     <label for="buy-amount">Quiero comprar:</label>
-                                    <input type="number" step='0.00000001' class="form-control form-control-lg" id="buy-amount" aria-describedby="buyAmountHelp">
-                                    <small id="buyAmountHelp" class="form-text text-muted">Mínimo de 100USD*</small>
+                                    <input type="number" step='0.0000001' class="form-control form-control-lg" placeholder="0.0000001" id="buy-amount" aria-describedby="buyAmountHelp">
+                                    <select class="selectpicker" id="selectCrypto" data-width="40%" data-show-subtext="true">
+                                        <option data-subtext="Bitcoin">BTC</option>
+                                        <option data-subtext="Litecoin">LTC</option>
+                                        <option data-subtext="Ethereum">ETH</option>
+                                    </select>
+                                    <small id="buyAmountHelp" class="form-text">Mínimo de 100USD*</small>
                                 </div>
-                                <div class="col-md-6 col-12 px-md-3">
+                                <div class="col-md-6 col-12 pr-md-2">
                                     <label for="buy-amount">Pagas</label>
                                     <input type="number" step='0.00000001' class="form-control form-control-lg" id="buy-amount" aria-describedby="buyAmountHelp">
                                 </div>
                                 <div class="col-12 text-center mt-md-3 mb-md-3 center-label px-md-3">
                                     <label>Montos sugeridos</label>
                                 </div>
-                                <div class="col-md-6 col-12 px-md-3">
+                                <div class="col-md-6 col-12 pl-md-2">
                                     <div class="suggested-amount">
                                         <div class="check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <span class="checkmark"></span>
+                                            <input class="form-check-input bounce" type="checkbox" value="" id="defaultCheck1">
+                                            <label for="defaultCheck1" class="checkmark m-0"></label>
                                         </div>
                                         <div class="amounts">
                                             <div class="title">Pagas</div>
@@ -110,16 +126,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-12 px-md-3">
+                                <div class="col-md-6 col-12 pr-md-2">
                                     <div class="suggested-amount">
                                         <div class="check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <span class="checkmark"></span>
+                                            <input class="form-check-input bounce" type="checkbox" value="" id="defaultCheck2">
+                                            <label for="defaultCheck2" class="checkmark m-0"></label>
                                         </div>
                                         <div class="amounts">
                                             <div class="title">Pagas</div>
                                             <div class="amount">
-                                                100 USD
+                                                500 USD
                                             </div>
                                         </div>
                                         <div class="receives">
@@ -132,16 +148,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-12 px-md-3">
+                                <div class="col-md-6 col-12 pl-md-2">
                                     <div class="suggested-amount">
                                         <div class="check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <span class="checkmark"></span>
+                                            <input class="form-check-input bounce" type="checkbox" value="" id="defaultCheck3">
+                                            <label for="defaultCheck3" class="checkmark m-0"></label>
                                         </div>
                                         <div class="amounts">
                                             <div class="title">Pagas</div>
                                             <div class="amount">
-                                                100 USD
+                                                900 USD
                                             </div>
                                         </div>
                                         <div class="receives">
@@ -154,16 +170,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-12 px-md-3">
+                                <div class="col-md-6 col-12 pr-md-2">
                                     <div class="suggested-amount">
                                         <div class="check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                            <span class="checkmark"></span>
+                                            <input class="form-check-input bounce" type="checkbox" value="" id="defaultCheck4">
+                                            <label for="defaultCheck4" class="checkmark m-0"></label>
                                         </div>
                                         <div class="amounts">
                                             <div class="title">Pagas</div>
                                             <div class="amount">
-                                                100 USD
+                                                1200 USD
                                             </div>
                                         </div>
                                         <div class="receives">
@@ -205,6 +221,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+    <script src="assets/js/bootstrap-select.min.js" defer></script>
 </body>
 
 </html>

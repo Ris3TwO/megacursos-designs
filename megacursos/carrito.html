@@ -15,12 +15,19 @@
     <link rel="stylesheet" href="assets/css/app.css">
 
     <script>
-        function deleteItem(id) {
-            console.log(document.getElementById(id));
+       
+       async  function   deleteItem(id) {
+        let carrito =   JSON.parse(localStorage.getItem('cartShop'));
+           await carrito.forEach((carIid,index) =>{
+                if(id===carIid.id){
+                    carrito.pop(index)
+                }
+            })
+            localStorage.setItem('cartShop', JSON.stringify(carrito))
+            console.log(id, carrito);
             var item = document.getElementById(id);
             var x = document.getElementsByClassName('cart-item');
             var cart = document.getElementById("cart-div");
-            console.log(cart.childElementCount);
             var spiner = document.getElementById('cart-load');
             spiner.style.display = null;
             for (i = 0; i < x.length; i++) {
@@ -33,7 +40,6 @@
                     x[i].style.display = "";
                 }
                 item.parentElement.removeChild(item)
-                console.log(cart.childElementCount);
 
                 if (cart.childElementCount == 1) {
                     console.log(cart.childElementCount);
@@ -42,7 +48,7 @@
                 } else {
                     document.getElementById("cart-empty").style.display = "none";
                 }
-
+                initCartInventory();
             }, 700);
 
         }
@@ -118,7 +124,7 @@
                                             <span class="sr-only">Loading...</span>
                                         </div>
                                     </div>
-<!-- example of div maked in carrito
+                                    <!-- example of div maked in carrito
     <div class="cart-item mx-4" id="1">
                                         <div class="image">
                                             <img class="img-fluid"
@@ -142,7 +148,7 @@
                                                     class="fas fa-trash-alt    "></i></button>
                                         </div>
                                     </div>-->
-                                    
+
 
                                 </div>
                                 <div class="cart-footer">
@@ -168,7 +174,13 @@
         </div>
     </nav>
 
-    <button class="btn btn-primary" onclick="ejecutar()">
+    <button class="btn btn-primary" onclick="addItemToCart({
+        id: null,
+        price: 70000 * 0.15,
+        regularprice: 70000,
+        name: 'Megacurso Photoshop',
+        subtittle: 'Maestro en 35h'
+    })">
         Apachurrale
     </button>
 
@@ -182,89 +194,107 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
-<script>
-    function ejecutar() {
+    <script>
+        function addItemToCart(item) {
+            let cartShop= JSON.parse(localStorage.getItem('cartShop'))
+            if (cartShop=== null) {
+                console.log("lol");
+                cartShop= [];
+                item.id = 0;
+                cartShop.push(item);
+                 localStorage.setItem('cartShop', JSON.stringify(cartShop))
+                 initCartInventory();
+            }else{
+               console.log(cartShop.length,"ptm");
+                console.log(typeof cartShop);
+                item.id=item.id + 1
+                cartShop.push(item);
+                 localStorage.setItem('cartShop', JSON.stringify(cartShop))
+                 initCartInventory();
+                 
+            }
 
-        var article = document.getElementById('cart-items-1');
-        var count = article.dataset.count;
-
-        if (article.dataset.count >= 0) {
-            count++;
-            article.dataset.count = count;
         }
-        console.log(article.dataset.count);
-    }
-    var carrito = [{
-        price: 70000 * 0.15,
-        regularprice: 70000,
-        name: 'Megacurso Photoshop',
-        subtittle: 'Maestro en 35h'
-    },{
-        price: 70000 * 0.15,
-        regularprice: 70000,
-        name: 'Megacurso Photoshop',
-        subtittle: 'Maestro en 35h'
-    }]
-    
-    carrito.forEach((product,index) =>{
-        var cartItem = document.createElement('div')
-    cartItem.setAttribute('class', ' cart-item mx-4');
-    cartItem.setAttribute('id', `${index}`)
-    var divImage = document.createElement('div');
-    divImage.setAttribute('class', 'image');
-    var image = document.createElement('img');
-    image.setAttribute('class', 'img-fluid')
-    image.setAttribute('src', 'https://megacursos.com/uploads/images/medium/08cb3fec9dfb2a75c35a68d9ef3d12ef.png')
-    divImage.appendChild(image);
-    cartItem.appendChild(divImage);
-    var divData = document.createElement('div');
-    divData.setAttribute('class', 'data px-md-3')
-    var divDataHeader = document.createElement('div');
-    divDataHeader.setAttribute('class', 'header')
-    divData.appendChild(divDataHeader);
-    var divDataHeaderh3 = document.createElement('h3');
-    divDataHeaderh3.setAttribute('class', 'title');
-    divDataHeaderh3.appendChild(document.createTextNode(product.name))
-    var divDataHeadersubt = document.createElement('div');
-    divDataHeadersubt.setAttribute('class', 'subtitle');
-    divDataHeadersubt.appendChild(document.createTextNode(product.subtittle))
-    divDataHeader.appendChild(divDataHeaderh3);
-    divDataHeader.appendChild(divDataHeadersubt);
+        function initCartInventory() {
+         let carrito =   JSON.parse(localStorage.getItem('cartShop'));
+            console.log( carrito);
 
-    var divprices = document.createElement('div');
-    divprices.setAttribute('class', 'prices')
-    var divpricesHeader = document.createElement('div');
-    divpricesHeader.setAttribute('class', 'd-flex align-items-center')
-    divprices.appendChild(divpricesHeader);
-    var divpricesHeaderh5 = document.createElement('h5');
-    divpricesHeaderh5.setAttribute('class', 'discount');
-    divpricesHeaderh5.appendChild(document.createTextNode(`${Math.round(product.price)} COP`))
-    var divpricesHeadersubt = document.createElement('div');
-    divpricesHeadersubt.setAttribute('class', 'regular');
-    divpricesHeadersubt.appendChild(document.createTextNode(product.regularprice + ' COP'))
-    divpricesHeader.appendChild(divpricesHeaderh5);
-    divpricesHeader.appendChild(divpricesHeadersubt);
-    
-    var divAction = document.createElement('div');
-    divAction.setAttribute('class', 'actions')
-    var button = document.createElement('button');
-        button.setAttribute('class', 'btn btn-sm');
-        button.setAttribute('onclick', `deleteItem(${index})`)
-    var ibutton = document.createElement('i');
-        ibutton.setAttribute('class','fas fa-trash-alt');
-        button.appendChild(ibutton)
-divAction.appendChild(button)
-   
-    divData.appendChild(divprices);
-    cartItem.appendChild(divData);
-    cartItem.appendChild(divAction)
-    document.getElementById('cart-div').appendChild(cartItem)
-    })
-   
+         if ( carrito === null || carrito.length == 0) {
+             console.log("aja");
+            document.getElementById("cart-container").style.display = "none"
+            document.getElementById("cart-empty").style.display = null;
+         }else{
+             console.log(215);
+            document.getElementById("cart-empty").style.display = "none";
+            document.getElementById("cart-container").style.display = null;
+            var x = document.getElementsByClassName('cart-item');
+            for (i = 0; i < x.length; i++) {
+                x[i].remove();
+            }
+            carrito.forEach((product, index) => {
+                var cartItem = document.createElement('div')
+                cartItem.setAttribute('class', ' cart-item mx-4');
+                cartItem.setAttribute('id', `${product.id}`)
+                var divImage = document.createElement('div');
+                divImage.setAttribute('class', 'image');
+                var image = document.createElement('img');
+                image.setAttribute('class', 'img-fluid')
+                image.setAttribute('src',
+                    'https://megacursos.com/uploads/images/medium/08cb3fec9dfb2a75c35a68d9ef3d12ef.png')
+                divImage.appendChild(image);
+                cartItem.appendChild(divImage);
+                var divData = document.createElement('div');
+                divData.setAttribute('class', 'data px-md-3')
+                var divDataHeader = document.createElement('div');
+                divDataHeader.setAttribute('class', 'header')
+                divData.appendChild(divDataHeader);
+                var divDataHeaderh3 = document.createElement('h3');
+                divDataHeaderh3.setAttribute('class', 'title');
+                divDataHeaderh3.appendChild(document.createTextNode(product.name))
+                var divDataHeadersubt = document.createElement('div');
+                divDataHeadersubt.setAttribute('class', 'subtitle');
+                divDataHeadersubt.appendChild(document.createTextNode(product.subtittle))
+                divDataHeader.appendChild(divDataHeaderh3);
+                divDataHeader.appendChild(divDataHeadersubt);
+
+                var divprices = document.createElement('div');
+                divprices.setAttribute('class', 'prices')
+                var divpricesHeader = document.createElement('div');
+                divpricesHeader.setAttribute('class', 'd-flex align-items-center')
+                divprices.appendChild(divpricesHeader);
+                var divpricesHeaderh5 = document.createElement('h5');
+                divpricesHeaderh5.setAttribute('class', 'discount');
+                divpricesHeaderh5.appendChild(document.createTextNode(`${Math.round(product.price)} COP`))
+                var divpricesHeadersubt = document.createElement('div');
+                divpricesHeadersubt.setAttribute('class', 'regular');
+                divpricesHeadersubt.appendChild(document.createTextNode(product.regularprice + ' COP'))
+                divpricesHeader.appendChild(divpricesHeaderh5);
+                divpricesHeader.appendChild(divpricesHeadersubt);
+
+                var divAction = document.createElement('div');
+                divAction.setAttribute('class', 'actions')
+                var button = document.createElement('button');
+                button.setAttribute('class', 'btn btn-sm');
+                button.setAttribute('onclick', `deleteItem(${product.id},$)`)
+                var ibutton = document.createElement('i');
+                ibutton.setAttribute('class', 'fas fa-trash-alt');
+                button.appendChild(ibutton)
+                divAction.appendChild(button)
+
+                divData.appendChild(divprices);
+                cartItem.appendChild(divData);
+                cartItem.appendChild(divAction)
+                document.getElementById('cart-div').appendChild(cartItem)
+            })
+
+        }
+        }
+        initCartInventory();
 
 
-    console.log(document.getElementById('cart-div'));
-</script>
+       
+        console.log(document.getElementById('cart-div'));
+    </script>
 </body>
 
 </html>

@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
 
@@ -48,16 +51,16 @@
         .row {
             margin: 0 !important;
         }
-        
+
         .cart {
             margin-right: 8rem !important;
             color: white;
         }
-        
+
         .fa-stack {
             font-size: 1.5em;
         }
-        
+
         .fa-stack[data-count]:after {
             position: absolute;
             right: 0%;
@@ -80,7 +83,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -90,12 +94,14 @@
 
                 <ul class="navbar-nav ml-auto cart-mega">
                     <li class="nav-item nav-item dropdown d-none d-md-block show">
-                        <a class="nav-link p-0" href="#" id="dropdownMenuButton" onclick="return false;" role="button" data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
+                        <a class="nav-link p-0" href="#" id="dropdownMenuButton" onclick="return false;" role="button"
+                            data-toggle="dropdown" data-target="#" style="float: left" aria-expanded="true">
                             <span class="fa-stack" id="cart-items-1" data-count="0">
                                 <i class="fa fa-shopping-cart"></i>
                             </span>
                         </a>
-                        <div class="dropdown-menu dropdown-products dropdown-menu-right show" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-menu dropdown-products dropdown-menu-right show"
+                            aria-labelledby="dropdownMenuButton">
                             <div id="cart-empty" class="empty" style="display:none;">
                                 <p> Tu cesta está vacía </p>
                             </div>
@@ -103,7 +109,8 @@
 
                                 <div class="cart-info">
                                     <p>Tienes 2 cursos en tu carrito</p>
-                                    <div class="btn btn-primary btn-block">Todos nuestros cursos a 20% de descuento</div>
+                                    <div class="btn btn-primary btn-block">Todos nuestros cursos a 20% de descuento
+                                    </div>
                                 </div>
                                 <div id="cart-div" class="cart-items">
                                     <div id="cart-load" class="w-100 text-center mt-4" style="display: none;">
@@ -111,9 +118,12 @@
                                             <span class="sr-only">Loading...</span>
                                         </div>
                                     </div>
-                                    <div class="cart-item mx-4" id="1">
+<!-- example of div maked in carrito
+    <div class="cart-item mx-4" id="1">
                                         <div class="image">
-                                            <img class="img-fluid" src="https://megacursos.com/uploads/images/medium/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" alt="">
+                                            <img class="img-fluid"
+                                                src="https://megacursos.com/uploads/images/medium/08cb3fec9dfb2a75c35a68d9ef3d12ef.png"
+                                                alt="">
                                         </div>
                                         <div class="data px-md-3">
                                             <div class="header">
@@ -131,7 +141,8 @@
                                             <button class="btn btn-sm" onclick="deleteItem(1)"><i
                                                     class="fas fa-trash-alt    "></i></button>
                                         </div>
-                                    </div>
+                                    </div>-->
+                                    
 
                                 </div>
                                 <div class="cart-footer">
@@ -161,26 +172,99 @@
         Apachurrale
     </button>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
-    <script>
-        function ejecutar() {
- 
-            var article = document.getElementById('cart-items-1');
-            var count = article.dataset.count;
+<script>
+    function ejecutar() {
 
-            if (article.dataset.count >= 0) {
-                count++;
-                article.dataset.count = count;
-            }
-            console.log(article.dataset.count);
+        var article = document.getElementById('cart-items-1');
+        var count = article.dataset.count;
+
+        if (article.dataset.count >= 0) {
+            count++;
+            article.dataset.count = count;
         }
-    </script>
+        console.log(article.dataset.count);
+    }
+    var carrito = [{
+        price: 70000 * 0.15,
+        regularprice: 70000,
+        name: 'Megacurso Photoshop',
+        subtittle: 'Maestro en 35h'
+    },{
+        price: 70000 * 0.15,
+        regularprice: 70000,
+        name: 'Megacurso Photoshop',
+        subtittle: 'Maestro en 35h'
+    }]
+    
+    carrito.forEach((product,index) =>{
+        var cartItem = document.createElement('div')
+    cartItem.setAttribute('class', ' cart-item mx-4');
+    cartItem.setAttribute('id', `${index}`)
+    var divImage = document.createElement('div');
+    divImage.setAttribute('class', 'image');
+    var image = document.createElement('img');
+    image.setAttribute('class', 'img-fluid')
+    image.setAttribute('src', 'https://megacursos.com/uploads/images/medium/08cb3fec9dfb2a75c35a68d9ef3d12ef.png')
+    divImage.appendChild(image);
+    cartItem.appendChild(divImage);
+    var divData = document.createElement('div');
+    divData.setAttribute('class', 'data px-md-3')
+    var divDataHeader = document.createElement('div');
+    divDataHeader.setAttribute('class', 'header')
+    divData.appendChild(divDataHeader);
+    var divDataHeaderh3 = document.createElement('h3');
+    divDataHeaderh3.setAttribute('class', 'title');
+    divDataHeaderh3.appendChild(document.createTextNode(product.name))
+    var divDataHeadersubt = document.createElement('div');
+    divDataHeadersubt.setAttribute('class', 'subtitle');
+    divDataHeadersubt.appendChild(document.createTextNode(product.subtittle))
+    divDataHeader.appendChild(divDataHeaderh3);
+    divDataHeader.appendChild(divDataHeadersubt);
+
+    var divprices = document.createElement('div');
+    divprices.setAttribute('class', 'prices')
+    var divpricesHeader = document.createElement('div');
+    divpricesHeader.setAttribute('class', 'd-flex align-items-center')
+    divprices.appendChild(divpricesHeader);
+    var divpricesHeaderh5 = document.createElement('h5');
+    divpricesHeaderh5.setAttribute('class', 'discount');
+    divpricesHeaderh5.appendChild(document.createTextNode(`${Math.round(product.price)} COP`))
+    var divpricesHeadersubt = document.createElement('div');
+    divpricesHeadersubt.setAttribute('class', 'regular');
+    divpricesHeadersubt.appendChild(document.createTextNode(product.regularprice + ' COP'))
+    divpricesHeader.appendChild(divpricesHeaderh5);
+    divpricesHeader.appendChild(divpricesHeadersubt);
+    
+    var divAction = document.createElement('div');
+    divAction.setAttribute('class', 'actions')
+    var button = document.createElement('button');
+        button.setAttribute('class', 'btn btn-sm');
+        button.setAttribute('onclick', `deleteItem(${index})`)
+    var ibutton = document.createElement('i');
+        ibutton.setAttribute('class','fas fa-trash-alt');
+        button.appendChild(ibutton)
+divAction.appendChild(button)
+   
+    divData.appendChild(divprices);
+    cartItem.appendChild(divData);
+    cartItem.appendChild(divAction)
+    document.getElementById('cart-div').appendChild(cartItem)
+    })
+   
+
+
+    console.log(document.getElementById('cart-div'));
+</script>
 </body>
 
 </html>

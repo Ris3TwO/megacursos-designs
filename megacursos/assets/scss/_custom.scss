@@ -1310,6 +1310,9 @@ body {
         flex: 1;
         .btn {
             padding: 10px 12px;
+            @include small {
+                padding: 2px 12px;
+            }
         }
     }
     @media(min-width:37.56em) {

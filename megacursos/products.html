@@ -1002,7 +1002,7 @@
                                     <input type="hidden" name="CoursePrice" id="CoursePrice" value="422.40">
 
                                     <div class="right-module">
-                                        <div class="shopping-cart px-md-3 px-2">
+                                        <div id="shopping-cart" class="shopping-cart px-md-3 px-2">
                                             <div class="buy-box">
                                                 <div class="buy-box-element">
                                                     <div class="buy-box-product">
@@ -5154,6 +5154,51 @@
             </div>
         </div>
         <!-- // End Comment section -->
+
+        <div data-purpose="slider-menu-container" class="course-landing-page_slider-menu-container ">
+            <div class="slider-menu" data-purpose="slider-menu">
+                <div class="slider-menu__lead">
+                    <div class="slider-menu__title" data-purpose="title">After Effects: “Maestro en 90h (actualizado 2020)”</div>
+                    <div class="slider-menu__info">
+                        <div class="slider-menu__rating" data-purpose="rating">
+                            <span class="star-rating--star-wrapper--2eczq star-rating--numeric--IWITF">
+                            <span class="udlite-heading-sm star-rating--rating-number--3lVe8" aria-hidden="true" data-purpose="rating-number">4,7</span>
+                            <i class="text-warning fa fa-star"></i>
+                            </span>
+                        </div>
+                        <div class="slider-menu__enrollment"><span>93849 alumnos</span></div>
+                    </div>
+                </div>
+                <div class="slider-menu__price-text">
+                    <div>
+                        <div class="price-text--container">
+                            <div class="price-text--price-part--Tu6MH udlite-clp-discount-price udlite-heading-lg" data-purpose="course-price-text">
+                                <span class="actual-price">
+                                    <span>211.2 $USD</span>
+                                </span>
+                            </div>
+                            <div class="price-text--price-part--Tu6MH price-text--original-price--2e-F5 udlite-clp-list-price udlite-text-sm" data-purpose="original-price-container">
+                                <div data-purpose="course-old-price-text">
+                                    <span>
+                                        <s>
+                                            <span class="regular-price">422.4 $USD</span>
+                                    </s>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-menu__buy-button">
+                    <div>
+                        <button type="button" class="btn btn-block btn-danger">
+                            <span>Comprar ahora</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- // Extras Modal -->
         <div class="modal fade" id="extrasModal" tabindex="-1" role="dialog" aria-labelledby="extrasModalLabel" style="display: none;" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -5329,7 +5374,7 @@
             var height = masthead + calc;
             $(".masthead").css("height", height + "px");
 
-            if ($(window).width() < 700) {
+            if ($(window).width() < 768) {
                 $('#nav-picker').css({
                     "display": "block"
                 });
@@ -5361,11 +5406,19 @@
                     "display": "block"
                 });
                 console.log('not mobile')
+                $(window).scroll(function() {
+                    var scroll = $(window).scrollTop();
+                    if (scroll < 1300) {
+                        $('#shopping-cart').removeClass('mi-fixed-top');
+                    } else {
+                        $('#shopping-cart').addClass('mi-fixed-top');
+                    }
+                });
             }
 
             $(window).on('resize', function() {
                 var win = $(this);
-                if (win.width() < 700) {
+                if (win.width() < 768) {
                     $('#nav-picker').css({
                         "display": "block"
                     });
@@ -5396,11 +5449,17 @@
                     $(".curriculum-wrapper .section-header-length").css({
                         "display": "block"
                     });
+                    $(window).scroll(function() {
+                        var scroll = $(window).scrollTop();
+                        if (scroll < 1300) {
+                            $('#shopping-cart').removeClass('mi-fixed-top');
+                        } else {
+                            $('#shopping-cart').addClass('mi-fixed-top');
+                        }
+                    });
                     console.log('not mobile')
                 }
             });
-
-
         });
     </script>
 </body>

@@ -85,9 +85,13 @@ body {
     border: 1px solid #23509d80;
     box-sizing: border-box;
     border-radius: .5rem;
-    font-size: 15px;
+    font-size: 12px;
     color: #C7C7C7;
-    height: calc(1.5em + 1.4rem + 2px);
+    height: calc(1.5em + 1.7rem + 2px);
+    @include medium {
+        font-size: 15px;
+        height: calc(1.5em + 1.4rem + 2px);
+    }
 }
 
 // Header
@@ -109,10 +113,13 @@ body {
         width: 2286.32px;
         height: 1367.09px;
         left: -520px;
-        top: -738.81px;
+        top: -438.81px;
         background: linear-gradient(91.48deg, #3552A2 -0.6%, #09173E 56.01%);
         border-radius: 0px 0px 0px 300px;
         transform: rotate(-38.68deg);
+        @include medium {
+            top: -738.81px;
+        }
     }
     .container-fluid {
         width: 90%;
@@ -288,7 +295,7 @@ body {
                         width: 39.5%;
                         height: 1px;
                         background-image: linear-gradient(to right, transparent 50%, #223049 50%);
-                        background-size: 10px 50%;
+                        background-size: 3px 100%;
                     }
                 }
             }
@@ -300,9 +307,6 @@ body {
                 right: .3rem;
                 top: 2.2rem;
                 width: 40%;
-                @include large {
-                    right: .4rem;
-                }
                 &.show {
                     .filter-option-inner-inner {
                         color: $light;
@@ -526,8 +530,11 @@ body {
                 .card-my {
                     border-radius: 0;
                     border-right: none;
-                    padding: .5rem .8rem;
+                    padding: .5rem .2rem;
                     text-align: center;
+                    @include small {
+                        padding: .5rem .8rem;
+                    }
                     @include large {
                         padding: .5rem .2rem;
                     }
@@ -539,6 +546,10 @@ body {
                     border-top-left-radius: 0;
                     border-bottom-left-radius: 0;
                     text-align: center;
+                    padding: .5rem .2rem;
+                    @include small {
+                        padding: .5rem .8rem;
+                    }
                     @include large {
                         padding: .5rem .2rem;
                     }

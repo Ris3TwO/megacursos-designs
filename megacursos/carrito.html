@@ -16,10 +16,14 @@
 
     <script>
         async function deleteItem(id) {
-            let carrito = [];
-            carrito = JSON.parse(localStorage.getItem('cartShop'));
-            console.log(carrito.find(carrito => );
-
+            let cartShop = [];
+            
+            cartShop = JSON.parse(localStorage.getItem('cartShop'));
+            cartShop = cartShop.filter(item => item.id != id);
+            document.getElementById(id).remove();
+            localStorage.setItem('cartShop',JSON.stringify(cartShop))
+            console.log(cartShop);
+            verifyIsCarHaveItems();
 
         }
     </script>
@@ -174,6 +178,7 @@
                 cartShop.push(item);
                 localStorage.setItem('cartShop', JSON.stringify(cartShop))
                 createNewItemCart(item);
+                verifyIsCarHaveItems()
             } else {
                 item.id = cartShop.length + 1;
                 console.log("Esta agregando un item el cual su id deberia ser "+item.id);

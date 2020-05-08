@@ -4189,4 +4189,14 @@ body {
         }
        
     }
+
+    .shadow-box{
+        width: 100%;
+        padding: 4rem;
+        background-color: #ECECEC;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

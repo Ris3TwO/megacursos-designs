@@ -1267,9 +1267,12 @@ body {
     }
     .course-landing-page_slider-menu-container {
         max-height: 5%;
-        @include medium {
+        @include large {
             display: none;
         }
+    }
+    .TrengoWidgetLauncher__iframe {
+        bottom: 80px !important;
     }
     .slider-menu {
         align-items: center;
@@ -1373,7 +1376,7 @@ body {
     }
     .masthead {
         height: 40vh;
-        min-height: 800px;
+        min-height: 1100px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1519,16 +1522,22 @@ body {
         }
     }
     .col-sliders {
-        transform: translateY(1.5rem);
-        // @include medium {
-        //     transform: translateY(-4rem);
-        // }
-        // @include large {
-        //     transform: translateY(-4.5rem);
-        // }
-        // @include extra-large {
-        //     transform: translateY(1.5rem);
-        // }
+        transform: translateY(7.8rem);
+        @include large {
+            transform: translateY(1rem);
+        }
+        .pack-contain-title {
+            color: $terciario;
+            margin-left: .5rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            @include large {
+                font-size: 1.25rem;
+                margin-left: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
         .packs_slider_container {
             padding: 0 1.5rem;
             @include small {
@@ -1536,11 +1545,14 @@ body {
             }
             .packs_nav_container {
                 bottom: unset;
-                top: 40%;
+                top: 60%;
                 @include medium {
-                    top: 36%;
+                    top: 55%;
                     right: -1%;
                 }
+            }
+            .owl-item {
+                height: 50px;
             }
             .owl-carousel .owl-stage-outer {
                 padding: 0 .5rem;
@@ -1690,6 +1702,11 @@ body {
         .payment-data {
             .ml-n7 {
                 margin-left: -5rem !important;
+            }
+        }
+        .benefits-mega {
+            .benefits-item-columns {
+            width: 100%;
             }
         }
         .descriptions-item-columns,

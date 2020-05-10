@@ -4081,6 +4081,13 @@ body {
             .owl-stage-outer {
                 padding: .5rem;
             }
+            .owl-dot {
+                span {
+                    width: 8px;
+                    height: 8px;
+                    margin: 1px 1px;
+                }
+            }
         }
     }
     .our-plans {
@@ -4212,16 +4219,14 @@ body {
     }
 }
 
-.section-descargarapp{
-    .header{
+.section-descargarapp {
+    .header {
         width: 100%;
         background-image: url('../img/component.png');
         background-position-y: bottom;
         background-size: cover;
-    
     }
-
-    .btn-window{
+    .btn-window {
         background-color: #FCC11C;
         padding: 0.9rem;
         text-align: center;
@@ -4229,11 +4234,11 @@ body {
         border: unset;
         border-radius: 0.3rem;
     }
-    .title{
+    .title {
         font-weight: 600;
         font-size: 38px;
         color: white;
-         line-height: 41px;
+        line-height: 41px;
         text-transform: capitalize;
     }
     .appbotons {
@@ -4251,26 +4256,22 @@ body {
             }
         }
     }
-
-    .list-icons{
-           
+    .list-icons {
         .list {
             padding: 5rem;
-            div{
+            div {
                 display: flex;
                 padding: 3rem;
                 align-content: center;
-                p{
+                p {
                     margin-bottom: 0px !important;
                     padding-left: 1rem;
                     align-self: center;
                 }
             }
         }
-       
     }
-
-    .shadow-box{
+    .shadow-box {
         width: 100%;
         padding: 4rem;
         background-color: #ECECEC;

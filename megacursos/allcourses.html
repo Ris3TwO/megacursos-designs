@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
 
@@ -71,25 +72,91 @@
                             <div class="menu-items">
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Diseño
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
+                                        <div class="card-header d-flex collapsed" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="header-left">
+                                                <div class="icon">
+                                                    <img src="assets/img/icons/vector.png" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="text">
+                                                    Diseño
+                                                </div>
+                                            </div>
+                                            <div class="header-right">
+                                                <i class="fas fa-chevron-up"></i>
+                                            </div>
                                         </div>
 
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                    <a class="nav-link nav-collapse" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                    <a class="nav-link nav-collapse" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                    <a class="nav-link nav-collapse" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                    <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                    <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                    <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header d-flex collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            <div class="header-left">
+                                                <div class="icon">
+                                                    <img src="assets/img/icons/3d.png" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="text">
+                                                    Animación y 3D
+                                                </div>
+                                            </div>
+                                            <div class="header-right">
+                                                <i class="fas fa-chevron-up"></i>
+                                            </div>
+                                        </div>
+
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="title mt-md-3 mb-md-3">Megapacks</div>
+                            <div class="nav flex-column nav-pills" id="v-pills-tab-all" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link item-icon" id="v-pills-allmega-tab" data-toggle="pill" href="#v-pills-allmega" role="tab" aria-controls="v-pills-allmega" aria-selected="false">
+                                    <div class="icon">
+                                        <img src="assets/img/icons/box.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="text">
+                                        Mostrar todos los megapacks
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="menu-items">
+                                <div class="accordion" id="accordionMega">
+                                    <div class="card">
+                                        <div class="card-header d-flex collapsed" id="megaOne" data-toggle="collapse" data-target="#collapseMegaOne" aria-expanded="true" aria-controls="collapseMegaOne">
+                                            <div class="header-left">
+                                                <div class="icon">
+                                                    <img src="assets/img/icons/3d.png" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="text">
+                                                    Megapacks 3D
+                                                </div>
+                                            </div>
+                                            <div class="header-right">
+                                                <i class="fas fa-chevron-up"></i>
+                                            </div>
+                                        </div>
+
+                                        <div id="collapseMegaOne" class="collapse" aria-labelledby="megaOne" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                                     <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
@@ -101,27 +168,24 @@
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <div class="card-header" id="headingTwo">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Animación y 3D
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
+                                        <div class="card-header d-flex collapsed" id="megaTwo" data-toggle="collapse" data-target="#collapseMegaTwo" aria-expanded="true" aria-controls="collapseMegaTwo">
+                                            <div class="header-left">
+                                                <div class="icon">
+                                                    <img src="assets/img/icons/audio.png" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="text">
+                                                    Megapacks Audios
+                                                </div>
+                                            </div>
+                                            <div class="header-right">
+                                                <i class="fas fa-chevron-up"></i>
+                                            </div>
                                         </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+
+                                        <div id="collapseMegaTwo" class="collapse" aria-labelledby="megaTwo" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                    <a class="nav-link" id="v-pills-home2-tab" data-toggle="pill" href="#v-pills-home2" role="tab" aria-controls="v-pills-home2" aria-selected="true">After Effects 2</a>
+                                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
                                                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
                                                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
                                                     <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
@@ -130,242 +194,28 @@
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Web e Internet
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                        <div class="card-header d-flex collapsed" id="megaThree" data-toggle="collapse" data-target="#collapseMegaThree" aria-expanded="true" aria-controls="collapseMegaThree">
+                                            <div class="header-left">
+                                                <div class="icon">
+                                                    <img src="assets/img/icons/play-button.png" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="text">
+                                                    Megapacks Vídeos
+                                                </div>
+                                            </div>
+                                            <div class="header-right">
+                                                <i class="fas fa-chevron-up"></i>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <div class="header-left">
-                                                        <div class="icon">
 
-                                                        </div>
-                                                        <div class="text">
-                                                            Programación
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div id="collapseMegaThree" class="collapse" aria-labelledby="megaThree" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Arte
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Música
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Dinero
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Ingenieria / Arquitectura
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="title mb-md-3">Megapacks</div>
-                            <div class="menu-items">
-                                <div class="accordion" id="accordionExample">
-                                    <div class="card">
-                                        <div class="card-header" id="headingOne">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Megapacks 3D
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-
-                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingTwo">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Megapacks Audio
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingThree">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <div class="header-left">
-                                                        <div class="icon">
-
-                                                        </div>
-                                                        <div class="text">
-                                                            Megapacks Vídeos
-                                                        </div>
-                                                    </div>
-                                                    <div class="header-right">
-                                                        <span class="mdi mdi-arrow-collapse"></span>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -379,6 +229,45 @@
                         <div class="tab-pane fade show active" id="v-pills-allcourses" role="tabpanel" aria-labelledby="v-pills-allcourses-tab">
                             <div class="megapack-include">
                                 <h2 class="title-mega">Todos los cursos de 0 a 100</h2>
+                                <div class="row mt-md-3">
+                                    <div class="col-12">
+                                        <div class="course-item">
+                                            <div class="card mb-3">
+                                                <div class="row no-gutters">
+                                                    <div class="col-md-3 d-flex flex-column justify-content-center align-items-center p-3 position-relative">
+                                                        <div class="tag">Actualizado 2020</div>
+                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-3" alt="...">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card-body">
+                                                            <span class="card-title">
+                                                                <div class="text">
+                                                                    Megacurso ...
+                                                                </div> 
+                                                                <div class="product-icon">
+                                                                    <img src="..." class="img-fluid" alt="">
+                                                                </div>
+                                                            </span>
+                                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 border-left">
+                                                        <div class="items d-flex flex-column justify-content-end align-items-end h-100 p-3">
+                                                            <span class="price-regular"><s>50.000COP</s></span>
+                                                            <span class="price-promo">25.000COP</span>
+                                                            <button class="btn btn-warning w-70">Comprar ahora</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-allmega" role="tabpanel" aria-labelledby="v-pills-allmega-tab">
+                            <div class="megapack-include">
+                                <h2 class="title-mega">Todos los megacursos de 0 a 100</h2>
                                 <div class="row mt-md-3">
                                     <div class="col-12">
                                         <div class="course-item">
@@ -575,6 +464,11 @@
             if (element.classList.contains('active')) {
                 element.classList.remove("active");
             }
+            var element = document.getElementById("v-pills-allmega-tab");
+            // console.log(element.classList.contains('active'));
+            if (element.classList.contains('active')) {
+                element.classList.remove("active");
+            }
         });
         $('#v-pills-allcourses-tab').on('click', function(e) {
             e.preventDefault();
@@ -588,6 +482,32 @@
                     }
                 });
             });
+            var element = document.getElementById("v-pills-allmega-tab");
+            // console.log(element.classList.contains('active'));
+            if (element.classList.contains('active')) {
+                element.classList.remove("active");
+            }
+
+            $('.collapse').collapse('hide');
+        });
+        $('#v-pills-allmega-tab').on('click', function(e) {
+            e.preventDefault();
+            var element = document.querySelectorAll("#v-pills-tab").forEach(function(el) {
+                var get = el.getElementsByClassName('nav-link');
+                var array = Array.prototype.slice.call(get);
+
+                array.forEach(function(item) {
+                    if (item.classList.contains('active')) {
+                        item.classList.remove("active");
+                    }
+                });
+            });
+
+            var element = document.getElementById("v-pills-allcourses-tab");
+            // console.log(element.classList.contains('active'));
+            if (element.classList.contains('active')) {
+                element.classList.remove("active");
+            }
 
             $('.collapse').collapse('hide');
         });

@@ -4081,6 +4081,13 @@ body {
             .owl-stage-outer {
                 padding: .5rem;
             }
+            .owl-dot {
+                span {
+                    width: 8px;
+                    height: 8px;
+                    margin: 1px 1px;
+                }
+            }
         }
     }
     .our-plans {
@@ -4117,6 +4124,69 @@ body {
     }
 }
 
+.section-descargarapp {
+    .header {
+        width: 100%;
+        background-image: url('../img/component.png');
+        background-position-y: bottom;
+        background-size: cover;
+    }
+    .btn-window {
+        background-color: #FCC11C;
+        padding: 0.9rem;
+        text-align: center;
+        width: 300px;
+        border: unset;
+        border-radius: 0.3rem;
+    }
+    .title {
+        font-weight: 600;
+        font-size: 38px;
+        color: white;
+        line-height: 41px;
+        text-transform: capitalize;
+    }
+    .appbotons {
+        @include medium {
+            background-color: unset !important;
+        }
+        a {
+            img {
+                min-width: 210px;
+                max-height: 63px;
+                margin-top: .5rem;
+                @include large {
+                    margin-top: 0rem;
+                }
+            }
+        }
+    }
+    .list-icons {
+        .list {
+            padding: 5rem;
+            div {
+                display: flex;
+                padding: 3rem;
+                align-content: center;
+                p {
+                    margin-bottom: 0px !important;
+                    padding-left: 1rem;
+                    align-self: center;
+                }
+            }
+        }
+    }
+    .box-shadow {
+        width: 100%;
+        padding: 4rem;
+        background-color: #ECECEC;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
 // Animations
 .fade-in-bottom {
     -webkit-animation: fade-in-bottom 1s cubic-bezier(.39, .575, .565, 1.000) both;
@@ -4149,16 +4219,14 @@ body {
     }
 }
 
-.section-descargarapp{
-    .header{
+.section-descargarapp {
+    .header {
         width: 100%;
         background-image: url('https://megacursos.com/themes/megacursos/assets/img/descargarapp/backgroudheader.png');
         background-position-y: bottom;
         background-size: cover;
-    
     }
-
-    .btn-window{
+    .btn-window {
         background-color: #FCC11C;
         padding: 0.9rem;
         text-align: center;
@@ -4166,11 +4234,11 @@ body {
         border: unset;
         border-radius: 0.3rem;
     }
-    .title{
+    .title {
         font-weight: 600;
         font-size: 38px;
         color: white;
-         line-height: 41px;
+        line-height: 41px;
         text-transform: capitalize;
     }
     .appbotons {
@@ -4188,26 +4256,22 @@ body {
             }
         }
     }
-
-    .list-icons{
-           
+    .list-icons {
         .list {
             padding: 5rem;
-            div{
+            div {
                 display: flex;
                 padding: 3rem;
                 align-content: center;
-                p{
+                p {
                     margin-bottom: 0px !important;
                     padding-left: 1rem;
                     align-self: center;
                 }
             }
         }
-       
     }
-
-    .shadow-box{
+    .shadow-box {
         width: 100%;
         padding: 4rem;
         background-color: #ECECEC;
@@ -4215,5 +4279,80 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.all-courses-section {
+    @include medium {
+        padding-top: 5rem;
+    }
+    .form-control {
+        height: calc(1.5em + .75rem + 8px);
+        font-size: .8rem;
+        color: #909090;
+        border: 1px solid $danger;
+        border-radius: 3px;
+    }
+    .item-icon {
+        display: flex;
+        &::after {
+            content: "\F013E";
+            font: normal normal normal 24px/1 "Material Design Icons";
+            color: $danger;
+            transition: transform .3s linear !important;
+        }
+        &.active {
+            color: #fff;
+            background: $blanco 0% 0% no-repeat padding-box;
+            box-shadow: 5px 10px 20px #00083A29;
+            border-radius: 3px;
+            &::after {
+                transform: rotate(-180deg) !important;
+            }
+        }
+        .icon {
+            margin-right: .5rem;
+        }
+        .text {
+            color: $danger;
+            font-weight: 400;
+            width: 100%;
+        }
+    }
+    .menu-items {
+        padding-left: 1rem;
+    }
+    .sidebar-search {
+        padding-top: 1rem;
+        @include medium {
+            padding-top: 1.5rem;
+        }
+        button {
+            top: 0;
+            right: 0;
+            &:focus,
+            &:hover {
+                background-color: #9090900c;
+                color: $danger;
+            }
+            .mdi {
+                color: $danger;
+            }
+        }
+    }
+    .img-pack-suggested {
+        height: 20em;
+    }
+    .course-item {
+        .card {
+            border: none;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 5px;
+        }
+        .tag {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 }

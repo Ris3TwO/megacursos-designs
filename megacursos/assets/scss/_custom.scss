@@ -4342,7 +4342,9 @@ body {
         }
     }
     .img-pack-suggested {
-        height: 20em;
+        @include medium {
+            height: 18em;
+        }
     }
     .course-item {
         .card {
@@ -4440,6 +4442,33 @@ body {
         }
         &::-webkit-scrollbar-track {
             border-radius: 10px;
+        }
+    }
+    .megapack-suggested {
+        background-image: url(../img/megapack-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 10px 10px 17px #00000029;
+        border-radius: 5px;
+        .hours {
+            color: $terciario;
+            @include medium {
+                font-size: 1.1rem;
+            }
+        }
+        .promo {
+            @include large {
+                font-size: 1.8rem;
+            }
+        }
+        .price-promo {
+            font-size: 1.4rem;
+            color: $danger;
+        }
+        .btn-outline {
+            border: 3px solid $terciario;
+            color: $blanco;
+            border-radius: 0;
         }
     }
 }

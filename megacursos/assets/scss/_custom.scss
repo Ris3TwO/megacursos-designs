@@ -4298,29 +4298,30 @@ body {
         &::after {
             content: "\F013E";
             font: normal normal normal 24px/1 "Material Design Icons";
-            color: $danger;
+            color: $negro;
             transition: transform .3s linear !important;
         }
         &.active {
-            color: #fff;
+            // color: #fff;
             background: $blanco 0% 0% no-repeat padding-box;
             box-shadow: 5px 10px 20px #00083A29;
             border-radius: 3px;
             &::after {
+                color: $danger;
                 transform: rotate(-180deg) !important;
+            }
+            .text {
+                color: $danger;
             }
         }
         .icon {
-            margin-right: .5rem;
+            margin-right: .8rem;
         }
         .text {
-            color: $danger;
+            color: $negro;
             font-weight: 400;
             width: 100%;
         }
-    }
-    .menu-items {
-        padding-left: 1rem;
     }
     .sidebar-search {
         padding-top: 1rem;
@@ -4353,6 +4354,92 @@ body {
             position: absolute;
             top: 0;
             left: 0;
+        }
+    }
+    .card {
+        border: none;
+        overflow: visible;
+    }
+    .card-header {
+        background-color: unset;
+        border-bottom: none;
+        background: $blanco 0 0 no-repeat padding-box;
+        box-shadow: 5px 10px 20px #00083A29;
+        border-radius: 3px;
+        color: $danger;
+        &.collapsed {
+            color: $negro;
+            box-shadow: unset;
+            border-radius: unset;
+            .header-right {
+                i {
+                    transform: rotate(-180deg) !important;
+                }
+            }
+        }
+    }
+    .header-left {
+        display: flex;
+        flex-basis: 75%;
+        .icon {
+            flex-basis: 10%;
+            margin-right: .8rem;
+        }
+        .text {}
+    }
+    .header-right {
+        display: flex;
+        flex-basis: 25%;
+        justify-content: flex-end;
+        align-items: center;
+        i {
+            transition: transform .3s linear !important;
+        }
+    }
+    .nav-collapse {
+        color: #727272;
+        &.active {
+            color: #727272;
+            background-color: unset;
+            position: relative;
+            &::after {
+                content: "";
+                width: 5px;
+                height: 20px;
+                background: $danger;
+                position: absolute;
+                left: 0;
+                top: 24%;
+            }
+        }
+    }
+    .card-body {
+        max-height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        &::-webkit-scrollbar:vertical {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-button:increment,
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+        &::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #d8d8d8;
+            border-radius: 20px;
+            border: 2px solid #f1f2f3;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
         }
     }
 }

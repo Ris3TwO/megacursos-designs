@@ -45,27 +45,29 @@
         <div class="container-fluid px-md-5">
             <div class="row">
                 <div class="col-12 col-md-4 px-md-5">
-                    <div class="side-bar">
-                        <div class="item-icon">
-                            <a href="#">
+                    <div class="sidebar">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab-all" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link item-icon active" id="v-pills-allcourses-tab" data-toggle="pill" href="#v-pills-allcourses" role="tab" aria-controls="v-pills-allcourses" aria-selected="false">
                                 <div class="icon">
-                                    <img src="..." alt="">
+                                    <img src="assets/img/icons/layers.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="text">
                                     Mostrar todos los cursos
                                 </div>
                             </a>
                         </div>
-                        <div class="side-bar-search">
+                        <div class="sidebar-search">
                             <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="search">
+                                <div class="form-group position-relative">
+                                    <input type="search" class="form-control shadow-none" id="search" placeholder="Buscar cursos">
+                                    <button type="button" class="btn btn-outline position-absolute shadow-none">
+                                        <span class="mdi mdi-magnify"></span>
+                                    </button>
                                 </div>
-                                <button type="button" class="btn btn-primary"></button>
                             </form>
                         </div>
                         <div class="menu">
-                            <div class="title">Categorías</div>
+                            <div class="title mb-md-3">Categorías</div>
                             <div class="menu-items">
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
@@ -89,9 +91,12 @@
 
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -115,9 +120,12 @@
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                    <a class="nav-link" id="v-pills-home2-tab" data-toggle="pill" href="#v-pills-home2" role="tab" aria-controls="v-pills-home2" aria-selected="true">After Effects 2</a>
+                                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -279,7 +287,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="title">Megapacks</div>
+                            <div class="title mb-md-3">Megapacks</div>
                             <div class="menu-items">
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
@@ -366,58 +374,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-8 mt-5">
-                    <div class="megapack-suggested">
-                        <div class="row px-md-2">
-                            <div class="col-12 col-md-6">
-                                <h5 class="hours">
-                                    500 horas de clases
-                                </h5>
-                                <h3 class="promo">
-                                    Llévate todos los cursos de <strong>DISEÑO GRÁFICO POR</strong>
-                                </h3>
-                                <div class="items d-flex flex-column">
-                                    <span class="price-regular"><s>50.000COP</s></span>
-                                    <span class="price-promo">25.000COP</span>
-                                    <div class="btn btn-danger w-50">
-                                        Comprar
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 justify-content-md-center align-items-center text-center">
-                                <img src="" alt="Pack image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="megapack-include">
-                        <h2 class="title-mega">Este mega pack incluye los siguientes cursos</h2>
-                        <div class="row mt-md-3">
-                            <div class="col-12">
-                                <div class="course-item">
-                                    <div class="tag">Actualizado 2020</div>
-                                    <div class="card mb-3">
-                                        <div class="row no-gutters">
-                                            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                                <img src="..." class="card-img" alt="...">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <span class="card-title">
-                                                        <div class="text">
-                                                            Megacurso ...
-                                                        </div> 
-                                                        <div class="product-icon">
-                                                            <img src="..." class="img-fluid" alt="">
+                <div class="col-12 col-md-8">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-allcourses" role="tabpanel" aria-labelledby="v-pills-allcourses-tab">
+                            <div class="megapack-include">
+                                <h2 class="title-mega">Todos los cursos de 0 a 100</h2>
+                                <div class="row mt-md-3">
+                                    <div class="col-12">
+                                        <div class="course-item">
+                                            <div class="card mb-3">
+                                                <div class="row no-gutters">
+                                                    <div class="col-md-3 d-flex flex-column justify-content-center align-items-center p-3 position-relative">
+                                                        <div class="tag">Actualizado 2020</div>
+                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-3" alt="...">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card-body">
+                                                            <span class="card-title">
+                                                                <div class="text">
+                                                                    Megacurso ...
+                                                                </div> 
+                                                                <div class="product-icon">
+                                                                    <img src="..." class="img-fluid" alt="">
+                                                                </div>
+                                                            </span>
+                                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                                         </div>
-                                                    </span>
-                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 border-left px-md-3">
-                                                <div class="items d-flex flex-column justify-content-end align-items-end h-100">
-                                                    <span class="price-regular"><s>50.000COP</s></span>
-                                                    <span class="price-promo">25.000COP</span>
-                                                    <button class="btn btn-warning w-70">Comprar ahora</button>
+                                                    </div>
+                                                    <div class="col-md-3 border-left">
+                                                        <div class="items d-flex flex-column justify-content-end align-items-end h-100 p-3">
+                                                            <span class="price-regular"><s>50.000COP</s></span>
+                                                            <span class="price-promo">25.000COP</span>
+                                                            <button class="btn btn-warning w-70">Comprar ahora</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -425,6 +415,131 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="megapack-suggested">
+                                <div class="row px-md-2">
+                                    <div class="col-12 col-md-6 py-md-5">
+                                        <h5 class="hours">
+                                            500 horas de clases
+                                        </h5>
+                                        <h3 class="promo">
+                                            Llévate todos los cursos de <strong>DISEÑO GRÁFICO POR</strong>
+                                        </h3>
+                                        <div class="items d-flex flex-column">
+                                            <span class="price-regular"><s>50.000COP</s></span>
+                                            <span class="price-promo">25.000COP</span>
+                                            <div class="btn btn-danger w-50">
+                                                Comprar
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 justify-content-md-center align-items-center text-center">
+                                        <img src="https://megacursos.com/uploads/images/medium/067ce75deedbdd271eb899430f3bebcd.png" class="img-fluid img-pack-suggested" alt="Pack image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="megapack-include">
+                                <h2 class="title-mega">Este mega pack incluye los siguientes cursos</h2>
+                                <div class="row mt-md-3">
+                                    <div class="col-12">
+                                        <div class="course-item">
+                                            <div class="card mb-3">
+                                                <div class="tag">Actualizado 2020</div>
+                                                <div class="row no-gutters">
+                                                    <div class="col-md-3 d-flex justify-content-center align-items-center p-3">
+                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-3" alt="...">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card-body">
+                                                            <span class="card-title">
+                                                                <div class="text">
+                                                                    Megacurso ...
+                                                                </div> 
+                                                                <div class="product-icon">
+                                                                    <img src="..." class="img-fluid" alt="">
+                                                                </div>
+                                                            </span>
+                                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 border-left">
+                                                        <div class="items d-flex flex-column justify-content-end align-items-end h-100 p-3">
+                                                            <span class="price-regular"><s>50.000COP</s></span>
+                                                            <span class="price-promo">25.000COP</span>
+                                                            <button class="btn btn-warning w-70">Comprar ahora</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-home2" role="tabpanel" aria-labelledby="v-pills-home2-tab">
+                            <div class="megapack-suggested">
+                                <div class="row px-md-2">
+                                    <div class="col-12 col-md-6 py-md-5">
+                                        <h5 class="hours">
+                                            800 horas de clases
+                                        </h5>
+                                        <h3 class="promo">
+                                            Llévate todos los cursos de <strong>DISEÑO GRÁFICO POR</strong>
+                                        </h3>
+                                        <div class="items d-flex flex-column">
+                                            <span class="price-regular"><s>50.000COP</s></span>
+                                            <span class="price-promo">25.000COP</span>
+                                            <div class="btn btn-danger w-50">
+                                                Comprar
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 justify-content-md-center align-items-center text-center">
+                                        <img src="https://megacursos.com/uploads/images/medium/067ce75deedbdd271eb899430f3bebcd.png" class="img-fluid img-pack-suggested" alt="Pack image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="megapack-include">
+                                <h2 class="title-mega">Este mega pack incluye los siguientes cursos</h2>
+                                <div class="row mt-md-3">
+                                    <div class="col-12">
+                                        <div class="course-item">
+                                            <div class="card mb-3">
+                                                <div class="tag">Actualizado 2020</div>
+                                                <div class="row no-gutters">
+                                                    <div class="col-md-3 d-flex justify-content-center align-items-center p-3">
+                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-3" alt="...">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card-body">
+                                                            <span class="card-title">
+                                                                <div class="text">
+                                                                    Megacurso ...
+                                                                </div> 
+                                                                <div class="product-icon">
+                                                                    <img src="..." class="img-fluid" alt="">
+                                                                </div>
+                                                            </span>
+                                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 border-left">
+                                                        <div class="items d-flex flex-column justify-content-end align-items-end h-100 p-3">
+                                                            <span class="price-regular"><s>50.000COP</s></span>
+                                                            <span class="price-promo">25.000COP</span>
+                                                            <button class="btn btn-warning w-70">Comprar ahora</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
                     </div>
                 </div>
             </div>
@@ -434,6 +549,49 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        // var element = document.getElementById("v-pills-allcourses-tab");
+        // console.log(element);
+        // element.classList.remove("active");
+        $('#v-pills-tab a').on('click', function(e) {
+            e.preventDefault();
+            var activeElement = this.getAttribute('aria-selected');
+            console.log(activeElement);
+            document.querySelectorAll("#v-pills-tab").forEach(function(el) {
+                var get = el.getElementsByClassName('nav-link');
+                var array = Array.prototype.slice.call(get);
+
+                array.forEach(function(item) {
+                    // console.log(item);
+                    if (item.classList.contains('active') && activeElement != true) {
+                        // console.log('Ingresó');
+                        item.classList.remove("active");
+                    }
+                });
+            });
+            var element = document.getElementById("v-pills-allcourses-tab");
+            // console.log(element.classList.contains('active'));
+            if (element.classList.contains('active')) {
+                element.classList.remove("active");
+            }
+        });
+        $('#v-pills-allcourses-tab').on('click', function(e) {
+            e.preventDefault();
+            var element = document.querySelectorAll("#v-pills-tab").forEach(function(el) {
+                var get = el.getElementsByClassName('nav-link');
+                var array = Array.prototype.slice.call(get);
+
+                array.forEach(function(item) {
+                    if (item.classList.contains('active')) {
+                        item.classList.remove("active");
+                    }
+                });
+            });
+
+            $('.collapse').collapse('hide');
+        });
+    </script>
 </body>
 
 </html>

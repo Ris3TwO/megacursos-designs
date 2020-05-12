@@ -4345,7 +4345,14 @@ body {
             }
         }
     }
+    .title-mega {
+        font-size: 1.6rem;
+        @include medium {
+            font-size: 1.8rem;
+        }
+    }
     .img-pack-suggested {
+        height: 15rem;
         @include medium {
             height: 18em;
         }
@@ -4365,6 +4372,7 @@ body {
     .card {
         border: none;
         overflow: visible;
+        cursor: pointer;
     }
     .card-header {
         background-color: unset;
@@ -4455,14 +4463,24 @@ body {
         box-shadow: 10px 10px 17px #00000029;
         border-radius: 5px;
         .hours {
+            font-size: 1rem;
             color: $terciario;
             @include medium {
                 font-size: 1.1rem;
             }
         }
         .promo {
+            width: 80%;
+            font-size: 1.45rem;
+            @include medium {
+                width: 100%;
+            }
             @include large {
                 font-size: 1.85rem;
+                width: 94%;
+            }
+            strong {
+                text-transform: uppercase;
             }
         }
         .price-promo {
@@ -4476,8 +4494,13 @@ body {
         }
     }
     .course-body {
-        display: grid;
-        grid-template-columns: 20% 60% 20%;
+        display: flex;
+        flex-direction: column;
+        @include medium {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: unset;
+        }
     }
     .course-item {
         .card-title {
@@ -4499,33 +4522,46 @@ body {
             color: #707070;
             text-align: justify;
         }
+        .card-img {
+            max-width: 10rem;
+        }
         .tag {
             color: $blanco;
             background-color: #328ACC;
             border-radius: 0px 16px 16px 5px;
             padding: .1rem;
-            font-size: .9rem;
-            width: 126px;
+            font-size: .85rem;
+            width: 118px;
             text-align: center;
+            @include medium {
+                font-size: .9rem;
+                width: 126px;
+            }
         }
         .items {
+            margin-bottom: 1rem;
+            .item {
+                @include medium {
+                    height: 100%;
+                }
+            }
             .price-regular {
                 text-decoration: line-through;
                 letter-spacing: 0px;
                 color: #707070;
-                @include medium {
-                    font-size: 1rem;
-                }
+                font-size: 1rem;
             }
             .price-promo {
                 color: $danger;
-                @include medium {
-                    font-size: 1.2rem;
-                }
+                font-size: 1.2rem
             }
             .btn-warning {
                 border-radius: 0;
                 padding: .35rem .75rem;
+                max-width: 60%;
+                @include medium {
+                    max-width: 100%;
+                }
             }
         }
     }

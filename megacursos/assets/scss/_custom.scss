@@ -4336,8 +4336,11 @@ body {
         /* Disable horizontal scroll */
         padding-top: 7rem;
         /* Place content 60px from the top */
-        transition: 0.5s;
+        transition: 0.7s;
         /* 0.5 second transition effect to slide in the sidebar */
+        @include medium {
+            left: -7rem;
+        }
         @include large {
             position: relative;
             height: unset;
@@ -4345,6 +4348,7 @@ body {
             background-color: $blanco;
             overflow-y: hidden;
             padding-top: 0;
+            left: unset;
         }
         .closebtn {
             position: absolute;
@@ -4532,12 +4536,15 @@ body {
             @include medium {
                 font-size: 1.1rem;
             }
+            @include large {
+                font-size: 1.2rem;
+            }
         }
         .promo {
             width: 80%;
             font-size: 1.45rem;
             @include medium {
-                width: 100%;
+                width: 92%;
             }
             @include large {
                 font-size: 1.85rem;
@@ -4555,7 +4562,16 @@ body {
             border: 3px solid $terciario;
             color: $blanco;
             border-radius: 0;
+            @include large {
+                font-size: .8rem;
+            }
+            @include extra-large {
+                font-size: 1rem;
+            }
         }
+    }
+    .course-item {
+        margin-bottom: 2rem;
     }
     .course-body {
         display: flex;
@@ -4563,14 +4579,27 @@ body {
         margin-top: 1rem;
         @include medium {
             display: grid;
+            grid-template-columns: 18% 60% 22%;
+            margin-top: 0;
+        }
+        @include extra-large {
+            display: grid;
             grid-template-columns: 20% 60% 20%;
-            grid-template-rows: unset;
         }
     }
     .course-item {
+        .card {
+            cursor: text;
+        }
         .card-title {
             font-weight: 600;
             @include medium {
+                font-size: 1.2rem;
+            }
+            @include large {
+                font-size: 1.1rem;
+            }
+            @include extra-large {
                 font-size: 1.2rem;
             }
             .product-icon {
@@ -4582,10 +4611,16 @@ body {
             min-height: 10rem;
             padding: 1rem;
             height: 100%;
+            @include large {
+                padding: 1rem .5rem;
+            }
         }
         .card-text {
             color: #707070;
             text-align: justify;
+            @include large {
+                font-size: .8rem;
+            }
         }
         .card-img {
             max-width: 10rem;
@@ -4602,9 +4637,21 @@ body {
                 font-size: .9rem;
                 width: 126px;
             }
+            @include large {
+                font-size: .8rem;
+                width: 112px;
+            }
+            @include extra-large {
+                font-size: .9rem;
+                width: 126px;
+            }
         }
         .items {
             margin-bottom: 1rem;
+            @include medium {
+                border-left: 1px solid #dee2e6 !important;
+                margin-bottom: 0;
+            }
             .item {
                 @include medium {
                     height: 100%;
@@ -4615,10 +4662,16 @@ body {
                 letter-spacing: 0px;
                 color: #707070;
                 font-size: 1rem;
+                @include large {
+                    font-size: .9rem;
+                }
             }
             .price-promo {
                 color: $danger;
-                font-size: 1.2rem
+                font-size: 1.2rem;
+                @include large {
+                    font-size: 1.1rem;
+                }
             }
             .btn-warning {
                 border-radius: 0;
@@ -4626,6 +4679,12 @@ body {
                 max-width: 60%;
                 @include medium {
                     max-width: 100%;
+                }
+                @include large {
+                    font-size: .8rem;
+                }
+                @include extra-large {
+                    font-size: 1rem;
                 }
             }
         }

@@ -21,10 +21,25 @@
         .row {
             margin: 0;
         }
-       
-    .normalx {
-        display: grid;
-    }
+
+        .normalx {
+            display: grid;
+        }
+
+        .premiumx {
+            display: none !important;
+            transition: all 1s linear;
+        }
+
+        .profesionalx {
+            display: none !important;
+            transition: all 1s linear;
+        }
+
+        .premium_profesionalx {
+            display: none !important;
+            transition: all 1s linear;
+        }
     </style>
 </head>
 
@@ -338,6 +353,11 @@
                                     <p>Activar</p>
                                 </div>
                             </div>
+
+                            <div class="normalx">normalx</div>
+                            <div class="premiumx">premiunx</div>
+                            <div class="premium_profesionalx">premuym profesional</div>
+                            <div class="profesionalx"> profesionalx</div>
                             <div class="body mt-md-3">
                                 <h2 class="title">Activar planes profesionales</h2>
                                 <div class="g-alert-meet">
@@ -590,119 +610,143 @@
         </div>
     </div>
 
-    <div class="normalx"></div>
-    <div class="normalx"></div>
-    <div class="normalx"></div>
-    <div class="normalx"></div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    < <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-    <script src="assets/js/owl.carousel.js"></script>
-    <script>
-        $(document).ready(function () {
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+        <script src="assets/js/owl.carousel.js"></script>
+        <script>
+            $(document).ready(function () {
 
-            initViewedSlider();
+                initViewedSlider();
 
-            function initViewedSlider() {
-                if ($('.viewed_slider').length) {
-                    var viewedSlider = $('.viewed_slider');
+                function initViewedSlider() {
+                    if ($('.viewed_slider').length) {
+                        var viewedSlider = $('.viewed_slider');
 
-                    viewedSlider.owlCarousel({
-                        loop: true,
-                        margin: 30,
-                        autoplay: false,
-                        autoplayTimeout: 6000,
-                        nav: false,
-                        dots: true,
-                        responsive: {
-                            0: {
-                                items: 1
-                            },
-                            575: {
-                                items: 2
-                            },
-                            768: {
-                                items: 3
-                            },
-                            991: {
-                                items: 4
-                            },
-                            1199: {
-                                items: 5
+                        viewedSlider.owlCarousel({
+                            loop: true,
+                            margin: 30,
+                            autoplay: false,
+                            autoplayTimeout: 6000,
+                            nav: false,
+                            dots: true,
+                            responsive: {
+                                0: {
+                                    items: 1
+                                },
+                                575: {
+                                    items: 2
+                                },
+                                768: {
+                                    items: 3
+                                },
+                                991: {
+                                    items: 4
+                                },
+                                1199: {
+                                    items: 5
+                                }
                             }
+                        });
+
+                        if ($('.viewed_prev').length) {
+                            var prev = $('.viewed_prev');
+                            prev.on('click', function () {
+                                viewedSlider.trigger('prev.owl.carousel');
+                            });
                         }
-                    });
 
-                    if ($('.viewed_prev').length) {
-                        var prev = $('.viewed_prev');
-                        prev.on('click', function () {
-                            viewedSlider.trigger('prev.owl.carousel');
-                        });
-                    }
-
-                    if ($('.viewed_next').length) {
-                        var next = $('.viewed_next');
-                        next.on('click', function () {
-                            viewedSlider.trigger('next.owl.carousel');
-                        });
+                        if ($('.viewed_next').length) {
+                            var next = $('.viewed_next');
+                            next.on('click', function () {
+                                viewedSlider.trigger('next.owl.carousel');
+                            });
+                        }
                     }
                 }
+
+            });
+            var selectBtn = {
+                switch1: false,
+                switch2: false,
+
             }
 
-        });
-        var selectBtn = {
-            switch1: false,
-            switch2: false,
+            function checklist(btn, lol) {
+                switch (btn.id) {
+                    case 'switch1':
+                        selectBtn.switch1 = !selectBtn.switch1;
+                        verifySelect();
+                        break;
 
-        }
+                    case 'switch2':
+                        selectBtn.switch2 = !selectBtn.switch2;
+                        verifySelect();
+                        break;
 
-        function checklist(btn, lol) {
-            switch (btn.id) {
-                case 'switch1':
-                    selectBtn.switch1 = !selectBtn.switch1;
-                    verifySelect();
-                    break;
+                        ;
+                }
+            };
 
-                case 'switch2':
-                    selectBtn.switch2 = !selectBtn.switch2;
-                    verifySelect();
-                    break;
+            function verifySelect() {
+                //   document.getElementById('switch1').classList.remove('normalx')
+                var normalx = document.querySelectorAll('.normalx')
+                var premiumx = document.querySelectorAll('.premiumx')
+                var premium_profesionalx = document.querySelectorAll('.premium_profesionalx')
+                var profesionalx = document.querySelectorAll('.profesionalx')
 
-                    ;
+
+                if (selectBtn.switch1 && selectBtn.switch2) {
+                    //her is bot will selected
+                    for (i = 0; i < normalx.length; ++i) {
+                        premiumx[i].setAttribute('style', "display:none !important")
+                        normalx[i].setAttribute('style', "display:none !important")
+                        profesionalx[i].setAttribute('style', "display:none !important")
+                        premium_profesionalx[i].setAttribute('style', "display:unset !important")
+                    }
+                }
+
+                if (!selectBtn.switch1 && selectBtn.switch2) {
+                    //here is professional check is selected
+                    for (i = 0; i < normalx.length; ++i) {
+                        premiumx[i].setAttribute('style', "display:none !important")
+                        normalx[i].setAttribute('style', "display:none !important")
+                        profesionalx[i].setAttribute('style', "display:unset !important")
+                        premium_profesionalx[i].setAttribute('style', "display:none !important")
+                    }
+                }
+
+                if (selectBtn.switch1 && !selectBtn.switch2) {
+                    //here is premium check is selected
+                    for (i = 0; i < normalx.length; ++i) {
+                        premiumx[i].setAttribute('style', "display:unset !important")
+                        normalx[i].setAttribute('style', "display:none !important")
+                        profesionalx[i].setAttribute('style', "display:none !important")
+                        premium_profesionalx[i].setAttribute('style', "display:none !important")
+
+                    }
+                }
+
+                if (!selectBtn.switch1 && !selectBtn.switch2) {
+                    //here is premium check is selected
+                    for (i = 0; i < normalx.length; ++i) {
+
+                        premiumx[i].setAttribute('style', "display:none !important")
+                        normalx[i].setAttribute('style', "display:unset !important")
+                        profesionalx[i].setAttribute('style', "display:none !important")
+                        premium_profesionalx[i].setAttribute('style', "display:none !important")
+
+                    }
+                }
+                
             }
-        };
-
-        function verifySelect() {
-            //   document.getElementById('switch1').classList.remove('normalx')
-            var normalx = document.querySelectorAll('.normalx')
-            console.log(normalx);
-            for (i = 0; i < normalx.length; ++i) {
-                normalx[i].classList.values('normalx');
-            }
-            if (selectBtn.switch1 && selectBtn.switch2) {
-                //her is bot will selected
-            }
-
-            if (!selectBtn.switch1 && selectBtn.switch2) {
-                //here is professional check is selected
-            }
-
-            if (selectBtn.switch1 && !selectBtn.switch2) {
-                //here is premium check is selected
-            }
-
-            if (!selectBtn.switch1 && !selectBtn.switch2) {
-                //here is premium check is selected
-            }
-        }
-    </script>
+        </script>
 </body>
 
 </html>

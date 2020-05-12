@@ -4496,6 +4496,7 @@ body {
     .course-body {
         display: flex;
         flex-direction: column;
+        margin-top: 1rem;
         @include medium {
             display: grid;
             grid-template-columns: 20% 60% 20%;

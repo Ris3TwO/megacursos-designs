@@ -4297,6 +4297,70 @@ body {
         border: 1px solid $danger;
         border-radius: 3px;
     }
+    .open-sidebar {
+        position: fixed;
+        width: 40px;
+        height: 30px;
+        top: 5rem;
+        left: 0;
+        background-color: $negro;
+        color: $blanco;
+        text-align: center;
+        box-shadow: 2px 2px 3px #999;
+        text-decoration: none;
+        transition: all .5s ease;
+        @include large {
+            display: none;
+        }
+        span {
+            height: 100%;
+        }
+        &.hide {
+            display: none;
+        }
+    }
+    .sidebar {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0;
+        left: -3rem;
+        background-color: $blanco;
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 7rem;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidebar */
+        @include large {
+            position: relative;
+            height: unset;
+            width: 100%;
+            background-color: $blanco;
+            overflow-y: hidden;
+            padding-top: 0;
+        }
+        .closebtn {
+            position: absolute;
+            top: 2rem;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: #818181;
+            @include large {
+                display: none;
+            }
+            &:hover {
+                color: #f1f1f1;
+            }
+        }
+    }
     .item-icon {
         display: flex;
         &::after {

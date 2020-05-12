@@ -45,177 +45,182 @@
     <div class="all-courses-section">
         <div class="container-fluid px-md-5">
             <div class="row">
-                <div class="col-12 col-md-4 px-md-5">
-                    <div class="sidebar">
-                        <div class="nav flex-column nav-pills" id="v-pills-tab-all" role="tablist" aria-orientation="vertical">
-                            <a class="nav-link item-icon active" id="v-pills-allcourses-tab" data-toggle="pill" href="#v-pills-allcourses" role="tab" aria-controls="v-pills-allcourses" aria-selected="false">
+                <div id="sidebar" class="col-12 col-md-4 px-md-5 sidebar">
+                    <a href="javascript:void(0)" onclick="openNav()" id="button-nav" class="open-sidebar">
+                        <span class="d-flex align-items-center justify-content-center">
+                            <i class="fas fa-angle-double-right    "></i>
+                        </span>
+                    </a>
+                    <!-- <div class="sidebar"> -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <div class="nav flex-column nav-pills" id="v-pills-tab-all" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link item-icon active" id="v-pills-allcourses-tab" data-toggle="pill" href="#v-pills-allcourses" role="tab" aria-controls="v-pills-allcourses" aria-selected="false">
+                            <div class="icon">
+                                <img src="assets/img/icons/layers.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="text">
+                                Mostrar todos los cursos
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sidebar-search">
+                        <form>
+                            <div class="form-group position-relative">
+                                <input type="search" class="form-control shadow-none" id="search" placeholder="Buscar cursos">
+                                <button type="button" class="btn btn-outline position-absolute shadow-none">
+                                        <span class="mdi mdi-magnify"></span>
+                                    </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="menu">
+                        <div class="title mb-md-3">Categorías</div>
+                        <div class="menu-items">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header d-flex collapsed" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <div class="header-left">
+                                            <div class="icon">
+                                                <img src="assets/img/icons/vector.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text">
+                                                Diseño
+                                            </div>
+                                        </div>
+                                        <div class="header-right">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </div>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="nav flex-column nav-pills pl-md-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link nav-collapse" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                <a class="nav-link nav-collapse" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                <a class="nav-link nav-collapse" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                                <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header d-flex collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <div class="header-left">
+                                            <div class="icon">
+                                                <img src="assets/img/icons/3d.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text">
+                                                Animación y 3D
+                                            </div>
+                                        </div>
+                                        <div class="header-right">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </div>
+                                    </div>
+
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="title mt-md-3 mb-md-3">Megapacks</div>
+                        <div class="nav flex-column nav-pills mb-md-3" id="v-pills-tab-all" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link item-icon" id="v-pills-allmega-tab" data-toggle="pill" href="#v-pills-allmega" role="tab" aria-controls="v-pills-allmega" aria-selected="false">
                                 <div class="icon">
-                                    <img src="assets/img/icons/layers.png" class="img-fluid" alt="">
+                                    <img src="assets/img/icons/box.png" class="img-fluid" alt="">
                                 </div>
                                 <div class="text">
-                                    Mostrar todos los cursos
+                                    Mostrar todos los megapacks
                                 </div>
                             </a>
                         </div>
-                        <div class="sidebar-search">
-                            <form>
-                                <div class="form-group position-relative">
-                                    <input type="search" class="form-control shadow-none" id="search" placeholder="Buscar cursos">
-                                    <button type="button" class="btn btn-outline position-absolute shadow-none">
-                                        <span class="mdi mdi-magnify"></span>
-                                    </button>
+                        <div class="menu-items">
+                            <div class="accordion" id="accordionMega">
+                                <div class="card">
+                                    <div class="card-header d-flex collapsed" id="megaOne" data-toggle="collapse" data-target="#collapseMegaOne" aria-expanded="true" aria-controls="collapseMegaOne">
+                                        <div class="header-left">
+                                            <div class="icon">
+                                                <img src="assets/img/icons/3d.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text">
+                                                Megapacks 3D
+                                            </div>
+                                        </div>
+                                        <div class="header-right">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </div>
+                                    </div>
+
+                                    <div id="collapseMegaOne" class="collapse" aria-labelledby="megaOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="menu">
-                            <div class="title mb-md-3">Categorías</div>
-                            <div class="menu-items">
-                                <div class="accordion" id="accordionExample">
-                                    <div class="card">
-                                        <div class="card-header d-flex collapsed" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <div class="header-left">
-                                                <div class="icon">
-                                                    <img src="assets/img/icons/vector.png" alt="" class="img-fluid">
-                                                </div>
-                                                <div class="text">
-                                                    Diseño
-                                                </div>
+                                <div class="card">
+                                    <div class="card-header d-flex collapsed" id="megaTwo" data-toggle="collapse" data-target="#collapseMegaTwo" aria-expanded="true" aria-controls="collapseMegaTwo">
+                                        <div class="header-left">
+                                            <div class="icon">
+                                                <img src="assets/img/icons/audio.png" alt="" class="img-fluid">
                                             </div>
-                                            <div class="header-right">
-                                                <i class="fas fa-chevron-up"></i>
+                                            <div class="text">
+                                                Megapacks Audios
                                             </div>
                                         </div>
-
-                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <div class="nav flex-column nav-pills pl-md-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                    <a class="nav-link nav-collapse" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
-                                                    <a class="nav-link nav-collapse" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                                                    <a class="nav-link nav-collapse" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                                                    <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-                                                    <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-                                                    <a class="nav-link nav-collapse" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                            <div class="header-left">
-                                                <div class="icon">
-                                                    <img src="assets/img/icons/3d.png" alt="" class="img-fluid">
-                                                </div>
-                                                <div class="text">
-                                                    Animación y 3D
-                                                </div>
-                                            </div>
-                                            <div class="header-right">
-                                                <i class="fas fa-chevron-up"></i>
-                                            </div>
-                                        </div>
-
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
-                                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-                                                </div>
-                                            </div>
+                                        <div class="header-right">
+                                            <i class="fas fa-chevron-up"></i>
                                         </div>
                                     </div>
 
+                                    <div id="collapseMegaTwo" class="collapse" aria-labelledby="megaTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="title mt-md-3 mb-md-3">Megapacks</div>
-                            <div class="nav flex-column nav-pills mb-md-3" id="v-pills-tab-all" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link item-icon" id="v-pills-allmega-tab" data-toggle="pill" href="#v-pills-allmega" role="tab" aria-controls="v-pills-allmega" aria-selected="false">
-                                    <div class="icon">
-                                        <img src="assets/img/icons/box.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="text">
-                                        Mostrar todos los megapacks
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu-items">
-                                <div class="accordion" id="accordionMega">
-                                    <div class="card">
-                                        <div class="card-header d-flex collapsed" id="megaOne" data-toggle="collapse" data-target="#collapseMegaOne" aria-expanded="true" aria-controls="collapseMegaOne">
-                                            <div class="header-left">
-                                                <div class="icon">
-                                                    <img src="assets/img/icons/3d.png" alt="" class="img-fluid">
-                                                </div>
-                                                <div class="text">
-                                                    Megapacks 3D
-                                                </div>
+                                <div class="card">
+                                    <div class="card-header d-flex collapsed" id="megaThree" data-toggle="collapse" data-target="#collapseMegaThree" aria-expanded="true" aria-controls="collapseMegaThree">
+                                        <div class="header-left">
+                                            <div class="icon">
+                                                <img src="assets/img/icons/play-button.png" alt="" class="img-fluid">
                                             </div>
-                                            <div class="header-right">
-                                                <i class="fas fa-chevron-up"></i>
+                                            <div class="text">
+                                                Megapacks Vídeos
                                             </div>
                                         </div>
+                                        <div class="header-right">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </div>
+                                    </div>
 
-                                        <div id="collapseMegaOne" class="collapse" aria-labelledby="megaOne" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
-                                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex collapsed" id="megaTwo" data-toggle="collapse" data-target="#collapseMegaTwo" aria-expanded="true" aria-controls="collapseMegaTwo">
-                                            <div class="header-left">
-                                                <div class="icon">
-                                                    <img src="assets/img/icons/audio.png" alt="" class="img-fluid">
-                                                </div>
-                                                <div class="text">
-                                                    Megapacks Audios
-                                                </div>
-                                            </div>
-                                            <div class="header-right">
-                                                <i class="fas fa-chevron-up"></i>
-                                            </div>
-                                        </div>
-
-                                        <div id="collapseMegaTwo" class="collapse" aria-labelledby="megaTwo" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
-                                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex collapsed" id="megaThree" data-toggle="collapse" data-target="#collapseMegaThree" aria-expanded="true" aria-controls="collapseMegaThree">
-                                            <div class="header-left">
-                                                <div class="icon">
-                                                    <img src="assets/img/icons/play-button.png" alt="" class="img-fluid">
-                                                </div>
-                                                <div class="text">
-                                                    Megapacks Vídeos
-                                                </div>
-                                            </div>
-                                            <div class="header-right">
-                                                <i class="fas fa-chevron-up"></i>
-                                            </div>
-                                        </div>
-
-                                        <div id="collapseMegaThree" class="collapse" aria-labelledby="megaThree" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                    <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
-                                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-                                                </div>
+                                    <div id="collapseMegaThree" class="collapse" aria-labelledby="megaThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">After Effects</a>
+                                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
                                             </div>
                                         </div>
                                     </div>
@@ -223,8 +228,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- </div> -->
                 </div>
-                <div class="col-12 col-md-8 mt-3 px-0 px-md-2 mt-md-0">
+                <div id="main" class="col-12 col-md-8 mt-3 px-0 px-md-2 mt-md-0">
                     <div class="tab-content" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-allcourses" role="tabpanel" aria-labelledby="v-pills-allcourses-tab">
                             <div class="megapack-suggested">
@@ -471,9 +477,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        // var element = document.getElementById("v-pills-allcourses-tab");
-        // console.log(element);
-        // element.classList.remove("active");
+        // console.log(screen.width);
         $('#v-pills-tab a').on('click', function(e) {
             e.preventDefault();
             var activeElement = this.getAttribute('aria-selected');
@@ -500,6 +504,9 @@
             if (element.classList.contains('active')) {
                 element.classList.remove("active");
             }
+            if (screen.width < "992") {
+                closeNav();
+            }
         });
         $('#v-pills-allcourses-tab').on('click', function(e) {
             e.preventDefault();
@@ -517,6 +524,9 @@
             // console.log(element.classList.contains('active'));
             if (element.classList.contains('active')) {
                 element.classList.remove("active");
+            }
+            if (screen.width < "992") {
+                closeNav();
             }
 
             $('.collapse').collapse('hide');
@@ -539,9 +549,27 @@
             if (element.classList.contains('active')) {
                 element.classList.remove("active");
             }
+            if (screen.width < "992") {
+                closeNav();
+            }
 
             $('.collapse').collapse('hide');
         });
+
+        function openNav() {
+            document.getElementById("sidebar").style.width = "100%";
+            document.getElementById("sidebar").style.left = "-1.5rem";
+            document.getElementById("sidebar").style.marginLeft = "2rem";
+            document.getElementById("button-nav").classList.add("hide");
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("sidebar").style.left = "-3rem";
+            document.getElementById("sidebar").style.marginLeft = "0";
+            document.getElementById("button-nav").classList.remove("hide");
+
+        }
     </script>
 </body>
 

@@ -53,28 +53,19 @@
                     </a>
                     <!-- <div class="sidebar"> -->
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <div class="nav flex-column nav-pills" id="v-pills-tab-all" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link item-icon active" id="v-pills-allcourses-tab" data-toggle="pill" href="#v-pills-allcourses" role="tab" aria-controls="v-pills-allcourses" aria-selected="false">
-                            <div class="icon">
-                                <img src="assets/img/icons/layers.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="text">
-                                Mostrar todos los cursos
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar-search">
-                        <form>
-                            <div class="form-group position-relative">
-                                <input type="search" class="form-control shadow-none" id="search" placeholder="Buscar cursos">
-                                <button type="button" class="btn btn-outline position-absolute shadow-none">
-                                    <span class="mdi mdi-magnify"></span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+
                     <div class="menu">
-                        <div class="title mb-md-3">Categorías</div>
+                        <div class="title mb-3">Categorías</div>
+                        <div class="nav flex-column nav-pills mb-3" id="v-pills-tab-all" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link item-icon active" id="v-pills-allcourses-tab" data-toggle="pill" href="#v-pills-allcourses" role="tab" aria-controls="v-pills-allcourses" aria-selected="false">
+                                <div class="icon">
+                                    <img src="assets/img/icons/layers.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="text">
+                                    Mostrar todos los cursos
+                                </div>
+                            </a>
+                        </div>
                         <div class="menu-items">
                             <div class="accordion" id="accordionExample">
                                 <div class="card">
@@ -233,125 +224,241 @@
                 <div id="main" class="col-12 col-lg-8 mt-3 px-0 px-md-2 mt-md-0">
                     <div class="tab-content" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-allcourses" role="tabpanel" aria-labelledby="v-pills-allcourses-tab">
-                            <div class="megapack-suggested">
-                                <div class="row p-md-3 py-lg-4 p-xl-3">
-                                    <div class="col-12 col-md-6 offset-md-1 py-4 p-md-4 text-white order-12 order-md-1">
-                                        <h5 class="hours m-0">
-                                            555 horas de clases
-                                        </h5>
-                                        <h3 class="promo">
-                                            Llevate todos los cursos de <strong>0 A 100 POR</strong>
-                                        </h3>
-                                        <div class="items d-flex">
-                                            <span class="price-promo mr-2">25.000COP</span>
-                                            <span class="price-regular">
-                                                <s>50.000COP</s>
-                                            </span>
-                                        </div>
-                                        <div class="d-flex mt-3 mt-md-4 mt-lg-3 justify-content-center justify-content-lg-start">
-                                            <div class="btn btn-outline btn-block w-50">
-                                                Comprar
+                            <div class="all-packs">
+                                <div class="ultrapack-suggested">
+                                    <div class="ultrapack-content">
+                                        <div class="row p-md-3 py-lg-4 p-xl-0 py-xl-4">
+                                            <div class="col-12 col-md-6 offset-md-1 py-4 p-md-1 text-white order-12 order-md-1 d-flex flex-wrap align-content-center">
+                                                <h5 class="hours m-0">
+                                                    555 horas de clases
+                                                </h5>
+                                                <h3 class="promo">
+                                                    Dominalo todos y conviértete <strong>en el dios del universo</strong>
+                                                </h3>
+                                                <div class="items d-flex w-100">
+                                                    <span class="price-promo mr-2">25.000COP</span>
+                                                    <span class="price-regular">
+                                                        <s>50.000COP</s>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center text-center order-1 order-md-12 py-3 py-md-0">
+                                                <img src="https://megacursos.com/uploads/images/medium/067ce75deedbdd271eb899430f3bebcd.png" class="img-fluid img-pack-suggested" alt="Pack image">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center text-center order-1 order-md-12 py-3 py-md-0">
-                                        <img src="https://megacursos.com/uploads/images/medium/067ce75deedbdd271eb899430f3bebcd.png" class="img-fluid img-pack-suggested" alt="Pack image">
+                                    <div class="ultrapack-footer">
+                                        <div class="row p-3 pb-5 pb-md-4">
+                                            <div class="col-md-8 pt-md-1 mt-2 mb-2">
+                                                <span class="text">Con nuestro ultrapack te ahorraras <strong>200.000 Cop</strong></span>
+                                            </div>
+                                            <div class="col-md-4 pt-md-1">
+                                                <div class="btn btn-outline btn-block ">
+                                                    <span class="d-flex align-content-center justify-content-center mb-1">
+                                                        Agregar al carrito
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="megapack-include mt-3 mt-md-4">
-                                <h2 class="title-mega">Todos los cursos de 0 a 100</h2>
-                                <div class="row mt-md-3">
-                                    <div class="col-12 px-0">
-                                        <div class="course-item">
-                                            <div class="card mb-3">
-                                                <div class="course-body">
-                                                    <div class="d-flex flex-column justify-content-start sjustify-content-md-center align-items-center p-md-3 position-relative">
-                                                        <div class="tag">Actualizado 2020</div>
-                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-4 mt-md-3" alt="...">
+                                <div class="megapack-suggested">
+                                    <span class="mdi mdi-arrow-down-circle"></span>
+                                    <div class="megapack-header d-flex justify-content-center align-content-center mt-3 mt-md-4 px-5 px-md-0">
+                                        <span>Este Ultrapack incluye <strong>todos nuestros cursos</strong></span>
+                                    </div>
+                                    <div class="px-md-4">
+                                        <div class="megapack-content">
+                                            <div class="row p-md-3 pb-md-5 py-lg-4 p-xl-3 pb-xl-5">
+                                                <div class="col-12 col-md-4 details d-flex flex-wrap justify-content-center align-content-center text-white">
+                                                    <h1 class="mb-2">
+                                                        Pack Diseño total
+                                                    </h1>
+                                                    <span>
+                                                        Llevate todos los cursos de diseño
+                                                    </span>
+                                                </div>
+                                                <div class="col-12 col-md-4 d-flex justify-content-center align-items-center text-center py-3 py-md-0">
+                                                    <img src="https://megacursos.com/uploads/images/medium/067ce75deedbdd271eb899430f3bebcd.png" class="img-fluid img-megapack-suggested" alt="Pack image">
+                                                </div>
+                                                <div class="col-12 col-md-4 cart-info d-flex flex-wrap justify-content-end align-content-center text-white">
+                                                    <div class="prices d-flex">
+                                                        <span class="price-regular">50.000COP</span>
+                                                        <span class="price-promo">
+                                                            <s>
+                                                                25.000COP
+                                                            </s>
+                                                        </span>
                                                     </div>
-                                                    <div class="">
-                                                        <div class="card-body">
-                                                            <span class="card-title d-flex justify-content-between">
-                                                                <div class="text">
-                                                                    Adobe After Effects CC desde cero:
-                                                                </div> 
-                                                                <div class="product-icon">
-                                                                    <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
-                                                                </div>
-                                                            </span>
-                                                            <p class="card-text">Este pack incluye los Megacursos de 0 a 100 de After Effects en 90h y de Cinema 4D en 50h, dos softwares creados para utilizarse uno con el otro y conseguir espectaculares vídeos y animaciones
-                                                                3D. Si sólo te interesa AE y C4D, este pack es para ti. </p>
+                                                    <div class="product-logos d-flex mt-3 mt-md-4">
+                                                        <div class="product-logo">
+                                                            <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
+                                                        </div>
+                                                        <div class="product-logo">
+                                                            <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
+                                                        </div>
+                                                        <div class="product-logo">
+                                                            <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
                                                         </div>
                                                     </div>
-                                                    <div class="items">
-                                                        <div class="item d-flex flex-column justify-content-end align-items-end px-2 py-md-4">
-                                                            <span class="price-regular">50.000COP</span>
-                                                            <span class="price-promo">25.000COP</span>
-                                                            <button class="btn btn-warning btn-block mt-2 mt-md-3 align-self-center align-self-md-end">Comprar ahora</button>
-                                                        </div>
+                                                    <div class="btn btn-outline btn-block mt-3 mb-5 mb-md-0">
+                                                        <span class="d-flex align-content-center justify-content-center mb-1">
+                                                            Agregar al carrito
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="course-item">
-                                            <div class="card mb-3">
-                                                <div class="course-body">
-                                                    <div class="d-flex flex-column justify-content-start sjustify-content-md-center align-items-center p-md-3 position-relative">
-                                                        <div class="tag">Actualizado 2020</div>
-                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-4 mt-md-3" alt="...">
-                                                    </div>
-                                                    <div class="">
-                                                        <div class="card-body">
-                                                            <span class="card-title d-flex justify-content-between">
-                                                                <div class="text">
-                                                                    Adobe After Effects CC desde cero:
-                                                                </div> 
-                                                                <div class="product-icon">
-                                                                    <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
+                                        <div class="megapack-items px-md-4 px-lg-3">
+                                            <div class="megapack-include text-center">
+                                                <h2 class="title-mega pt-3 pt-md-4 mb-lg-3">Este Megapack incluye <span>los siguientes cursos:</span></h2>
+                                                <div class="row mt-md-3">
+                                                    <div class="col-12 px-0">
+                                                        <div class="course-item">
+                                                            <div class="card mb-3">
+                                                                <div class="course-body">
+                                                                    <div class="d-flex flex-column justify-content-start sjustify-content-md-center align-items-center p-md-3 py-md-4 position-relative">
+                                                                        <div class="tag">Actualizado 2020</div>
+                                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-4 mt-md-3" alt="...">
+                                                                    </div>
+                                                                    <div class="">
+                                                                        <div class="card-body">
+                                                                            <span class="card-title d-flex justify-content-between mb-md-2">
+                                                                                <div class="text">
+                                                                                    Adobe After Effects
+                                                                                </div> 
+                                                                                <div class="product-icon">
+                                                                                    <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
+                                                                                </div>
+                                                                            </span>
+                                                                            <div class="card-subtitle">
+                                                                                Maestro en 35h
+                                                                            </div>
+                                                                            <p class="card-text">Illustrator es un software de ilustración vectorial enfocado principalmente a todo tipo de diseño gráfico para medios digitales e impresos, como logos, personajes, ilustraciones,
+                                                                                etc Es ampliamente utilizado por su inigualable biblioteca de herramientas con las que tu creatividad será tu única limitación</p>
+                                                                            <div class="card-tags d-flex flex-column flex-lg-row justify-content-md-start">
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    35h
+                                                                                </div>
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    De 0 a 100
+                                                                                </div>
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    Full HD
+                                                                                </div>
+                                                                                <div class="card-tag">
+                                                                                    Material descargable
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="items">
+                                                                        <div class="item d-flex flex-column justify-content-center align-items-end px-2 p-md-4">
+                                                                            <span class="price-regular">50.000COP</span>
+                                                                            <span class="price-promo">25.000COP</span>
+                                                                            <button class="btn btn-warning btn-block mt-2 mt-md-3 align-self-center align-self-md-end">Añadir al carrito</button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                            </span>
-                                                            <p class="card-text">Este pack incluye los Megacursos de 0 a 100 de After Effects en 90h y de Cinema 4D en 50h, dos softwares creados para utilizarse uno con el otro y conseguir espectaculares vídeos y animaciones
-                                                                3D. Si sólo te interesa AE y C4D, este pack es para ti. </p>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="items">
-                                                        <div class="item d-flex flex-column justify-content-end align-items-end px-2 py-md-4">
-                                                            <span class="price-regular">50.000COP</span>
-                                                            <span class="price-promo">25.000COP</span>
-                                                            <button class="btn btn-warning btn-block mt-2 mt-md-3 align-self-center align-self-md-end">Comprar ahora</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="course-item">
-                                            <div class="card mb-3">
-                                                <div class="course-body">
-                                                    <div class="d-flex flex-column justify-content-start sjustify-content-md-center align-items-center p-md-3 position-relative">
-                                                        <div class="tag">Actualizado 2020</div>
-                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-4 mt-md-3" alt="...">
-                                                    </div>
-                                                    <div class="">
-                                                        <div class="card-body">
-                                                            <span class="card-title d-flex justify-content-between">
-                                                                <div class="text">
-                                                                    Adobe After Effects CC desde cero:
-                                                                </div> 
-                                                                <div class="product-icon">
-                                                                    <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
+                                                        <div class="course-item">
+                                                            <div class="card mb-3">
+                                                                <div class="course-body">
+                                                                    <div class="d-flex flex-column justify-content-start sjustify-content-md-center align-items-center p-md-3 py-md-4 position-relative">
+                                                                        <div class="tag">Actualizado 2020</div>
+                                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-4 mt-md-3" alt="...">
+                                                                    </div>
+                                                                    <div class="">
+                                                                        <div class="card-body">
+                                                                            <span class="card-title d-flex justify-content-between mb-md-2">
+                                                                                <div class="text">
+                                                                                    Adobe After Effects
+                                                                                </div> 
+                                                                                <div class="product-icon">
+                                                                                    <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
+                                                                                </div>
+                                                                            </span>
+                                                                            <div class="card-subtitle">
+                                                                                Maestro en 35h
+                                                                            </div>
+                                                                            <p class="card-text">Illustrator es un software de ilustración vectorial enfocado principalmente a todo tipo de diseño gráfico para medios digitales e impresos, como logos, personajes, ilustraciones,
+                                                                                etc Es ampliamente utilizado por su inigualable biblioteca de herramientas con las que tu creatividad será tu única limitación</p>
+                                                                            <div class="card-tags d-flex flex-column flex-lg-row justify-content-md-start">
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    35h
+                                                                                </div>
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    De 0 a 100
+                                                                                </div>
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    Full HD
+                                                                                </div>
+                                                                                <div class="card-tag">
+                                                                                    Material descargable
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="items">
+                                                                        <div class="item d-flex flex-column justify-content-center align-items-end px-2 p-md-4">
+                                                                            <span class="price-regular">50.000COP</span>
+                                                                            <span class="price-promo">25.000COP</span>
+                                                                            <button class="btn btn-warning btn-block mt-2 mt-md-3 align-self-center align-self-md-end">Añadir al carrito</button>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                            </span>
-                                                            <p class="card-text">Este pack incluye los Megacursos de 0 a 100 de After Effects en 90h y de Cinema 4D en 50h, dos softwares creados para utilizarse uno con el otro y conseguir espectaculares vídeos y animaciones
-                                                                3D. Si sólo te interesa AE y C4D, este pack es para ti. </p>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="items">
-                                                        <div class="item d-flex flex-column justify-content-end align-items-end px-2 py-md-4">
-                                                            <span class="price-regular">50.000COP</span>
-                                                            <span class="price-promo">25.000COP</span>
-                                                            <button class="btn btn-warning btn-block mt-2 mt-md-3 align-self-center align-self-md-end">Comprar ahora</button>
+                                                        <div class="course-item">
+                                                            <div class="card mb-3">
+                                                                <div class="course-body">
+                                                                    <div class="d-flex flex-column justify-content-start sjustify-content-md-center align-items-center p-md-3 py-md-4 position-relative">
+                                                                        <div class="tag">Actualizado 2020</div>
+                                                                        <img src="https://megacursos.com/uploads/images/thumbnails/08cb3fec9dfb2a75c35a68d9ef3d12ef.png" class="card-img mt-4 mt-md-3" alt="...">
+                                                                    </div>
+                                                                    <div class="">
+                                                                        <div class="card-body">
+                                                                            <span class="card-title d-flex justify-content-between mb-md-2">
+                                                                                <div class="text">
+                                                                                    Adobe After Effects
+                                                                                </div> 
+                                                                                <div class="product-icon">
+                                                                                    <img src="https://megacursos.com/uploads/images/thumbnails/0f407d98d5ac7d17a457e07aaa4f8e74.png" class="img-fluid" alt="">
+                                                                                </div>
+                                                                            </span>
+                                                                            <div class="card-subtitle">
+                                                                                Maestro en 35h
+                                                                            </div>
+                                                                            <p class="card-text">Illustrator es un software de ilustración vectorial enfocado principalmente a todo tipo de diseño gráfico para medios digitales e impresos, como logos, personajes, ilustraciones,
+                                                                                etc Es ampliamente utilizado por su inigualable biblioteca de herramientas con las que tu creatividad será tu única limitación</p>
+                                                                            <div class="card-tags d-flex flex-column flex-lg-row justify-content-md-start">
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    35h
+                                                                                </div>
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    De 0 a 100
+                                                                                </div>
+                                                                                <div class="card-tag mb-2 mb-lg-0">
+                                                                                    Full HD
+                                                                                </div>
+                                                                                <div class="card-tag">
+                                                                                    Material descargable
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="items">
+                                                                        <div class="item d-flex flex-column justify-content-center align-items-end px-2 p-md-4">
+                                                                            <span class="price-regular">50.000COP</span>
+                                                                            <span class="price-promo">25.000COP</span>
+                                                                            <button class="btn btn-warning btn-block mt-2 mt-md-3 align-self-center align-self-md-end">Añadir al carrito</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
+
                                                     </div>
                                                 </div>
                                             </div>

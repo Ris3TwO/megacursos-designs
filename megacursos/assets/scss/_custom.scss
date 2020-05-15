@@ -4284,7 +4284,7 @@ body {
 
 .all-courses-section {
     @include medium {
-        padding-top: 5rem;
+        padding: 5rem 0;
     }
     .title,
     .text {
@@ -4303,10 +4303,11 @@ body {
         height: 30px;
         top: 5rem;
         left: 0;
-        background-color: $negro;
-        color: $blanco;
+        background-color: $blanco;
+        color: $danger;
         text-align: center;
-        box-shadow: 2px 2px 3px #999;
+        box-shadow: 3px 3px 10px #00153126;
+        border-radius: 3px;
         text-decoration: none;
         transition: all .5s ease;
         @include large {
@@ -4326,7 +4327,7 @@ body {
         /* 0 width - change this with JavaScript */
         position: fixed;
         /* Stay in place */
-        z-index: 1;
+        z-index: 300;
         /* Stay on top */
         top: 0;
         left: -3rem;
@@ -4352,7 +4353,7 @@ body {
         }
         .closebtn {
             position: absolute;
-            top: 2rem;
+            top: 3.5rem;
             right: 25px;
             font-size: 36px;
             margin-left: 50px;
@@ -4367,21 +4368,11 @@ body {
     }
     .item-icon {
         display: flex;
-        &::after {
-            content: "\F013E";
-            font: normal normal normal 24px/1 "Material Design Icons";
-            color: $negro;
-            transition: transform .3s linear !important;
-        }
         &.active {
             // color: #fff;
             background: $blanco 0% 0% no-repeat padding-box;
             box-shadow: 5px 10px 20px #00083A29;
             border-radius: 3px;
-            &::after {
-                color: $danger;
-                transform: rotate(-180deg) !important;
-            }
             .text {
                 color: $danger;
             }
@@ -4395,34 +4386,31 @@ body {
             width: 100%;
         }
     }
-    .sidebar-search {
-        padding-top: 1rem;
-        @include medium {
-            padding-top: 1.5rem;
-        }
-        button {
-            top: 0;
-            right: 0;
-            &:focus,
-            &:hover {
-                background-color: #9090900c;
-                color: $danger;
-            }
-            .mdi {
-                color: $danger;
-            }
-        }
-    }
     .title-mega {
         font-size: 1.6rem;
         @include medium {
             font-size: 1.8rem;
+            margin-bottom: 1rem !important;
         }
     }
     .img-pack-suggested {
         height: 15rem;
         @include medium {
             height: 18em;
+        }
+    }
+    .img-megapack-suggested {
+        height: 13rem;
+    }
+    .btn-outline {
+        border: 3px solid $terciario;
+        color: $blanco;
+        border-radius: 0;
+        @include large {
+            font-size: .8rem;
+        }
+        @include extra-large {
+            font-size: 1rem;
         }
     }
     .course-item {
@@ -4449,6 +4437,7 @@ body {
         box-shadow: 5px 10px 20px #00083A29;
         border-radius: 3px;
         color: $danger;
+        padding: .75rem 1.25rem;
         &.collapsed {
             color: $negro;
             box-shadow: unset;
@@ -4462,7 +4451,7 @@ body {
     }
     .header-left {
         display: flex;
-        flex-basis: 75%;
+        flex-basis: 90%;
         .icon {
             flex-basis: 10%;
             margin-right: .8rem;
@@ -4471,7 +4460,7 @@ body {
     }
     .header-right {
         display: flex;
-        flex-basis: 25%;
+        flex-basis: 10%;
         justify-content: flex-end;
         align-items: center;
         i {
@@ -4496,6 +4485,7 @@ body {
         }
     }
     .card-body {
+        min-height: 1px;
         max-height: 200px;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -4524,49 +4514,237 @@ body {
             border-radius: 10px;
         }
     }
-    .megapack-suggested {
-        background-image: url(../img/megapack-bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: 10px 10px 17px #00000029;
-        border-radius: 5px;
-        .hours {
-            font-size: 1rem;
-            color: $terciario;
-            @include medium {
-                font-size: 1.1rem;
-            }
-            @include large {
-                font-size: 1.2rem;
-            }
-        }
-        .promo {
-            width: 80%;
-            font-size: 1.45rem;
-            @include medium {
-                width: 92%;
-            }
-            @include large {
-                font-size: 1.85rem;
-                width: 94%;
-            }
-            strong {
-                text-transform: uppercase;
-            }
-        }
-        .price-promo {
-            font-size: 1.4rem;
-            color: $danger;
-        }
+    .all-packs {
+        border: 1px solid #707070;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
         .btn-outline {
-            border: 3px solid $terciario;
-            color: $blanco;
+            border: 1px solid $terciario;
+            color: $terciario;
             border-radius: 0;
             @include large {
                 font-size: .8rem;
             }
             @include extra-large {
                 font-size: 1rem;
+            }
+            &:hover {
+                background-color: darken($terciario, 5);
+                color: $blanco;
+            }
+        }
+    }
+    .ultrapack-suggested {
+        .ultrapack-content {
+            background-image: url(../img/megapack-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 10px 10px 17px #00000029;
+            border-radius: 5px;
+            .hours {
+                font-size: 1.2rem;
+                color: $terciario;
+                @include medium {
+                    font-size: 1.3rem;
+                }
+                @include large {
+                    font-size: 1.5rem;
+                }
+            }
+            .promo {
+                width: 80%;
+                font-size: 1.45rem;
+                @include medium {
+                    width: 92%;
+                    font-size: 1.65rem;
+                }
+                @include large {
+                    width: 94%;
+                    font-size: 1.85rem;
+                }
+                @include extra-large {
+                    width: 100%;
+                }
+            }
+            .price-promo {
+                font-size: 1.4rem;
+                color: $danger;
+            }
+        }
+        .ultrapack-footer {
+            margin-top: -.5rem;
+            background: #000B6B 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #0000001A;
+            min-height: 160px;
+            color: $blanco;
+            @include medium {
+                min-height: 120px;
+                margin-top: -.3rem;
+            }
+            .text {
+                font-weight: 400;
+                font-size: 1.3rem;
+                @include medium {
+                    font-size: 1.2rem;
+                }
+                @include large {
+                    font-size: 1.3rem;
+                }
+                strong {
+                    color: $terciario;
+                }
+            }
+        }
+    }
+    .megapack-suggested {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            top: -2.5rem;
+            left: 40%;
+            background-color: $blanco;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            @include medium {
+                width: 200px;
+                height: 100px;
+                /* as the half of the width */
+                top: -4rem;
+                left: 38%;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+            }
+            @include large {
+                top: -3.5rem;
+                left: 36%;
+            }
+            @include extra-large {
+                /* as the half of the width */
+                top: -4.5rem;
+                left: 40%;
+            }
+        }
+        .mdi {
+            font-size: 1.6rem;
+            color: $danger;
+            position: absolute;
+            top: -2.5rem;
+            left: 48%;
+            @include medium {
+                font-size: 2rem;
+                top: -3.5rem;
+                left: 50%;
+            }
+            @include extra-large {
+                left: 50.5%;
+            }
+        }
+        .megapack-header {
+            height: 6rem;
+            font-size: 1.35rem;
+            position: relative;
+            z-index: 100;
+            text-align: center;
+            @include medium {
+                height: 3rem;
+                font-size: 1.5rem;
+                text-align: left;
+            }
+            @include large {
+                height: 4rem;
+                font-size: 1.8rem;
+            }
+            span {
+                font-weight: bolder;
+                strong {
+                    font-weight: 600;
+                    color: $danger;
+                }
+            }
+        }
+        .megapack-content {
+            background: #000B6B 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #0000001A;
+            border-radius: 0;
+            .details {
+                @include large {
+                    padding-left: 2rem;
+                }
+                h1 {
+                    font-weight: 600;
+                }
+                span {
+                    color: $terciario;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+            }
+            .cart-info {
+                .prices {
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: flex-end;
+                    @include medium {
+                        flex-direction: row;
+                    }
+                }
+                .price-regular {
+                    font-size: 1.35rem;
+                    @include medium {
+                        margin-right: .25rem;
+                    }
+                }
+                .price-promo {
+                    @include medium {
+                        margin-bottom: 0.5rem;
+                    }
+                }
+                .product-logo {
+                    width: 33px;
+                    margin-right: .5rem;
+                    border-radius: 5px;
+                    @include large {
+                        margin-right: 1rem;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+                .btn-outline {
+                    border: 1px solid #fcc11c;
+                }
+            }
+        }
+        .megapack-items {
+            background-color: #EEEEEE;
+            position: relative;
+            margin-bottom: 2rem;
+            &:before {
+                content: '';
+                top: -1.5rem;
+                left: 43%;
+                width: 0;
+                height: 0;
+                position: absolute;
+                border-left: 25px solid transparent;
+                border-right: 25px solid transparent;
+                border-bottom: 25px solid #eeeeee;
+                @include medium {
+                    top: -2rem;
+                    left: 45%;
+                    border-left: 40px solid transparent;
+                    border-right: 40px solid transparent;
+                    border-bottom: 40px solid #eeeeee;
+                }
+            }
+            .title-mega {
+                font-size: 1.15rem;
+                span {
+                    color: $danger;
+                }
             }
         }
     }
@@ -4579,12 +4757,12 @@ body {
         margin-top: 1rem;
         @include medium {
             display: grid;
-            grid-template-columns: 18% 60% 22%;
+            grid-template-columns: 18% 54% 28%;
             margin-top: 0;
         }
         @include extra-large {
             display: grid;
-            grid-template-columns: 20% 60% 20%;
+            grid-template-columns: 20% 54% 26%;
         }
     }
     .course-item {
@@ -4593,6 +4771,7 @@ body {
         }
         .card-title {
             font-weight: 600;
+            margin-bottom: 0rem;
             @include medium {
                 font-size: 1.2rem;
             }
@@ -4602,9 +4781,23 @@ body {
             @include extra-large {
                 font-size: 1.2rem;
             }
+            .text {
+                a {
+                    color: $negro;
+                    &:hover {
+                        color: $negro;
+                    }
+                }
+            }
             .product-icon {
                 width: 25px;
             }
+        }
+        .card-subtitle {
+            margin-bottom: .75rem;
+            text-align: left;
+            font-size: 1rem;
+            color: #707070;
         }
         .card-body {
             max-height: unset;
@@ -4621,14 +4814,28 @@ body {
             @include large {
                 font-size: .8rem;
             }
+            p {
+                color: inherit;
+            }
+        }
+        .card-tags {
+            margin-bottom: 1rem;
+            .card-tag {
+                background-color: #328ACC;
+                border-radius: 17px;
+                margin-right: .75rem;
+                font-size: .8rem;
+                color: $blanco;
+                padding: 0 .45rem;
+            }
         }
         .card-img {
             max-width: 10rem;
         }
         .tag {
             color: $blanco;
-            background-color: #328ACC;
-            border-radius: 0px 16px 16px 5px;
+            background-color: #32CC7A;
+            border-radius: 5px 16px 16px 5px;
             padding: .1rem;
             font-size: .85rem;
             width: 118px;
@@ -4684,7 +4891,7 @@ body {
                     font-size: .8rem;
                 }
                 @include extra-large {
-                    font-size: 1rem;
+                    font-size: .85rem;
                 }
             }
         }
